@@ -211,8 +211,9 @@ div.topic_cannotreply_reason.forum_newtopic_box {background-color: rgba( 204, 0,
 .forumtopic_comments .commentthread_comment .commentthread_comment_author { opacity: 1.0 !important; }
 .forumtopic_comments .commentthread_comment .commentthread_comment_author, .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { opacity: 1.0; }
 .forumtopic_comments .commentthread_comment .commentthread_comment_author a.commentthread_author_link bdi { color: #8ED1F9 !important; }
-.forumtopic_answer { background: rgba( 89, 94, 100, 1.0) !important; color: #ffffff; }
-blockquote.bb_blockquote.with_author  { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
+.forumtopic_comments .commentthread_answer_bar, .forumtopic_answer { background: rgba( 89, 94, 100, 1.0) !important; color: #ffffff; }
+.forumtopic_comments .commentthread_comment.commentthread_answer_comment { border: 1px solid #595e64 !important; }
+.forumtopic_answer .answer_quote, blockquote.bb_blockquote.with_author  { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
  
 div.market_header, div.page_container.page_container_market { background:none; background-image:none !important; background-color:#161a1f !important; }
 div.partnersaledisplay_SaleOverlayCtn_3GTIc.SaleOverlayCtn { display: none !important; }
