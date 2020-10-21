@@ -195,9 +195,12 @@ a.screenshot_showcase_smallscreenshot.screenshot_count { border: 1px solid #4a54
 .btn_green_steamui.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
 .btn_green_steamui > span { background: none !important; }
 .btn_green_steamui { color: #66c0f4 !important; }
-.btn_green_steamui:hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span, .btn_green_steamui:hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
 .btn_green_steamui.btn_medium:hover { color: #ffffff; }
-a.btnv6_white_transparent.btn_small.btn_uppercase
+.btnv6_white_transparent > span { border: none !important; }
+.btn_darkblue_white_innerfade > span, .btn_medium > span, .btn_profile_action > span  { background: none !important; }
+a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
 
 .commentthread_comment.hidden_post { display: none !important; }
 .commentthread_comment.responsive_body_text.commentthread_deleted_comment { display: none !important; }
@@ -205,7 +208,8 @@ div.forum_topic_tooltip { border: 1px solid #4a545e !important; background: #161
 .forum_paging_pagelink.active, .forum_paging_controls .commentthread_pagelink.active {color:wheat !important; }
 .forum_topic, .rightbox { background-color: rgba( 55, 65, 71) !important; }
 .forum_topic_locked_notice, .forum_topic.locked { background-image: none !important; background-color: rgba(34, 38,43, 0.7) !important; color: white !important; }
-div.topic_cannotreply_reason.forum_newtopic_box {background-color: rgba( 192, 45, 46) !important; color: white !important; }
+div.topic_cannotreply_reason.forum_newtopic_box { background-color: rgba( 192, 45, 46) !important; color: white !important; }
+.forum_comment_author_banned { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forumtopic_comments .commentthread_comment { background-color: rgba( 57, 65, 71) !important; }
 .forum_op { background-image:none !important; background-color: rgba( 55, 65, 71, 0.7) !important; }
 .forumtopic_comments .commentthread_comment .commentthread_comment_author { opacity: 1.0 !important; }
@@ -214,7 +218,8 @@ div.topic_cannotreply_reason.forum_newtopic_box {background-color: rgba( 192, 45
 .forumtopic_comments .commentthread_answer_bar, .forumtopic_answer { background: rgba( 89, 94, 100, 1.0) !important; color: #ffffff; }
 .forumtopic_comments .commentthread_comment.commentthread_answer_comment { border: 1px solid #595e64 !important; }
 .forumtopic_answer .answer_quote, blockquote.bb_blockquote.with_author  { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
- 
+div#bannedNotification.bannedNotification, div#incompatibleNotification.incompatibleNotification, div#visibilityNotificationPrivate.visibilityNotification, div#visibilityNotificationFriendsOnly.visibilityNotification, div#visibilityNotificationUnlisted.visibilityNotification { background-color: rgba( 192, 45, 46) !important; color: white !important; }
+
 div.market_header, div.page_container.page_container_market { background:none; background-image:none !important; background-color:#161a1f !important; }
 div.partnersaledisplay_SaleOverlayCtn_3GTIc.SaleOverlayCtn { display: none !important; }
 .reward_bg_1, .reward_bg_2, .reward_bg_3, .reward_bg_4, .reward_bg_5, div#faq.rewards_faq_ctn, div.rewards_badge_levelup_ctn.reward_bg_3, div.rewards_profile_tier.reward_bg_4 , div.partnersaledisplay_SaleSection_1cOoC.eventbbcodeparser_SaleSectionCtn_39HWX, div.reward_items_ctn { background: transparent !important; background-color:transparent !important; }
@@ -229,12 +234,8 @@ div.games_list_tabs_ctn.responsive_hidden { border: 1px solid #4a545e; }
 div.itemHolder { width:96px !important; height:96px !important; }
 div.itemHolder.disabled { border: 1px solid #4a545e; width:96px !important; height:96px !important; }
 .market_headertip_container, .trade_item_box .item { background-color: #161a1f !important; }
+#market_advancedsearch_appselect_options .market_advancedsearch_appname { border-bottom: none !important;}
 #tabcontent_pendinggifts.no_pending_gifts, .view_inventory_page, div#tabcontent_inventory, .filter_tag_options, .trade_item_box { background-color: #353e47 !important; border: none !important; }
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover { filter:drop-shadow(8px 8px 10px gray); background-image: none); background-repeat: no-repeat; border: 1px solid #4a545e; }
-
-.btnv6_white_transparent > span { border: none !important; }
-.btn_darkblue_white_innerfade > span, .btn_medium > span, .btn_profile_action > span  { background: none !important; }
-a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
-.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
 
 div.responsive_page_content, body.v6.labs, .trending_reviews_controls_ctn { background:none !important; background-image:none !important; background-color:#161a1f !important; }

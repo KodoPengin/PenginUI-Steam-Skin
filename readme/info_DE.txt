@@ -1,8 +1,8 @@
 ####Versionsdetails####
 
 Steam Layout - PenginUI
-Letzte Änderungen: 18.10.2020
-Version: 0.99.5
+Letzte Änderungen: 21.10.2020
+Version: 0.99.6
 
 Steamprofil: https://steamcommunity.com/id/pen-chan/
 Webseite: https://www.gameindustry.eu/
@@ -11,7 +11,9 @@ Webseite: https://www.gameindustry.eu/
 Einzigartiger Steam Style. Es wurde Wert darauf gelegt unnötige Funktionen und Werbung weitesgehend im Client auszublenden und somit eine minimalistische und saubere UI zu erstellen.
 
 #### Letzte Änderungen ####
-Farbliche Anpassung der Forenbereiche (weiterhin in Arbeit)
+Überflüssigen Ballast abgeworfen
+Kleinere Änderungen der Farbgestaltung
+Optionalen Ordner für weitere Änderungen beigefügt
 
 #### Skin installieren ####
 
@@ -25,6 +27,9 @@ Den Steamclient öffnen
 Einstellungen -> Oberfläche -> Wählen Sie den Namen Pengin aus der Liste aus und bestätigen aus
 Steam neustarten
 fertig
+
+#### Optional ####
+Im Ordner "optional" befinden sich kleinere Anpassungen für die Bibliothek die selbst hinzugefügt oder entfernt werden können
 
 #### Eigener Skin schon in Verwendung? ####
 Kein Problem, die webkit.css aus dem Verzeichnins *\Pengin\resource\ kann entweder im Ganzen für den eigenen Skin übernommen werden oder pickt für sich benötigte Stellen aus dem Guide oder der Datei für sich heraus. Daran denken von einer bereits vorhandenen Datei ein Backup anzulegen.
@@ -140,4 +145,4 @@ Sonstiges:
 - Kommentarabofunktion wird nun in geposteten Statusmeldungen, Screenshots, Favouriten usw. direkt angezeigt
 
 ###Zusatzinformationen###
-Die 0.99.5 Version ist bei noch nicht perfekt, aber es ist eine Menge an Werbung und überflüssigen Funktionen verschwunden.
+Die 0.99.6 Version ist bei noch nicht perfekt, aber es ist eine Menge an Werbung und überflüssigen Funktionen verschwunden.

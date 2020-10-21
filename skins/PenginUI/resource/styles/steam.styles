@@ -33,7 +33,7 @@ steam.styles
     buttontextactive=Text
 
     // cool we can define font-families here as well
-    basefont="Arial"
+    basefont="Segoe UI"
     basefont="Helvetica" [$OSX]
 
     // new control colors
@@ -115,12 +115,12 @@ steam.styles
     ClientBG="18 26 42 255"
     ClientBGTop="25 32 46 255"
     ClientGrouper="40 46 54 255"
-    DialogBG="42 46 51 255"
-    DialogBGFade1="42 46 51 255"
-    DialogBGFade2="42 46 51 0"
+    DialogBG="47 54 62 255"
+    DialogBGFade1="47 54 62 255"
+    DialogBGFade2="47 54 62 255"
 
-    DarkClientBG="31 34 41 255"
-    DarkDialogBG="31 34 41 255"
+    DarkClientBG="47 54 62 255"
+    DarkDialogBG="47 54 62 255"
     DarkClientBGTransparent="28 31 37 19"
     DarkDialogBGTransparent="41 47 55 170"
 

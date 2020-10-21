@@ -27,9 +27,7 @@
 	{
 		text="#steam_menu_view"
 		Library							{	text="#steam_menu_library"				shellcmd="steam://nav/games" }
-		HiddenGames					{	text="#steam_menu_hidden_games"			shellcmd="steam://nav/library/collection/hidden" }
 		Tools								{	text="#steam_menu_tools"				shellcmd="steam://nav/tools" }
-		Media								{	text="#steam_menu_media"				shellcmd="steam://nav/media" }
 		Downloads						{	text="#steam_menu_downloads"			shellcmd="steam://open/downloads" }
 		Divider							{}
 		MiniMode			[!$OSX]		{	text="#steam_menu_minimode"				shellcmd="steam://open/minigameslist" }
@@ -40,6 +38,7 @@
 		Divider							{}
 		ExitVR							{	text="#steam_menu_exitvr"				command="exitvr" }
 		Divider							{}
+		Media								{	text="#steam_menu_media"				shellcmd="steam://nav/media" }
 		MusicPlayer						{	text="#steam_menu_view_musicplayer"		shellcmd="steam://open/musicplayer" }
 		Divider							{}
 		Friends							{	text="#steam_menu_friends"				shellcmd="steam://open/friends" }
@@ -47,7 +46,6 @@
 		Servers							{	text="#steam_menu_servers"				shellcmd="steam://open/servers" }
 		Screenshots						{	text="#steam_screenshots"				command="Screenshots" }
 		Inventory						{	text="#steam_inventory"					shellcmd="steam://open/inventory" }
-		NewForYou						{	text="#SteamUI_GameProperties_UpdateNews"		shellcmd="steam://open/newforyou" }
 	}
 	
 	Friends
@@ -110,7 +108,7 @@
 		SystemInfo						{	text="#steam_menu_systeminfo"			command="SystemInfo" }
 		About							{	text="#steam_about"						command="About" }
 		Divider							{}
-		SteamStatus	{			"text"		"Status"	"shellcmd"		"steam://openurl/https://steamstat.us/"	}
+		SteamStatus	{			"text"		"SteamStatus"	"shellcmd"		"steam://openurl/https://steamstat.us/"	}
 		}
 		
 		Dev {
@@ -128,11 +126,12 @@
 	
 		Web {
 		text="GameIndustry.eu"
-		Hosts						{ text="hosts Download"						shellcmd="steam://openurl/https://www.gameindustry.eu/hosts/hosts.php"}
+		Hosts						{ text="hosts Download"						shellcmd="steam://openurl/https://hosts.gameindustry.eu/"}
 		Produktsuche				{ text="Search"						shellcmd="steam://openurl/https://www.gameindustry.eu/search/"}
 		Reviews				{ text="Reviews"						shellcmd="steam://openurl/https://www.gameindustry.eu/reviews/"}
 		Divider							{}
 		Curation			{ text="Curation"						shellcmd="steam://openurl/https://store.steampowered.com/curator/29092638/"}
 		Steamgruppe				{ text="Steamgroup"						shellcmd="steam://openurl/https://steamcommunity.com/groups/penguindome"}
+		SteamChat			{ text="Chat"						shellcmd="steam://friends/joinchat/103582791458614046"}
 	}
 }

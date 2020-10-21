@@ -1,8 +1,8 @@
 ####Version details####
 
 Steam Layout - PenginUI
-Last changes: 18.10.2020
-Version: 0.99.5
+Last changes: 21.10.2020
+Version: 0.99.6
 
 Steamprofile: https://steamcommunity.com/id/pen-chan/
 Website: https://www.gameindustry.eu/
@@ -11,7 +11,9 @@ Website: https://www.gameindustry.eu/
 Unique Steam style. Focus was placed on eliminating unnecessary functions and advertising on the current Steam layout to deliver a minimalistic and clean UI.
 
 #### Latest Changes ####
-Discussions: Color adjustments of the forums (work in progress)
+Kicked unnecessary stuff 
+Little color changes
+Attached an optional folder
 
 #### Installation ####
 
@@ -26,6 +28,9 @@ Open the Steamclient
 Settings -> Interface -> Select the name PenginUI from the list and confirm
 Restart Steam
 finished
+
+#### Optional ####
+Optional folder contains some library adjustments which can be used by own preferences
 
 #### Already an own skin in use? ####
 No problem. The webkit.css from *PenginUI\resource folder can be used too or use as alternative single passsages from my guide/webkit.css for own needs. Make sure to make a backup of an already existing file before.
@@ -141,4 +146,4 @@ Misc:
 - Hidden rightcol for Daily deal, Spotlight and Recommended specials advertising
 
 ###Additional information###
-The 0.99.5 version is not perfect but a lot of advertising and unnecessary features are gone.
+The 0.99.6 version is not perfect but a lot of advertising and unnecessary features are gone.
