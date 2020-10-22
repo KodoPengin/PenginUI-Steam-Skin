@@ -111,20 +111,18 @@
 		SteamStatus	{			"text"		"SteamStatus"	"shellcmd"		"steam://openurl/https://steamstat.us/"	}
 		}
 		
-		Dev {
+	Dev
+	{
 		text="Dev"
 		Console							{	text="Console"		  		  shellcmd="steam://open/console" }
 		Divider							{}
 		APIKey							{ text="API Key"						shellcmd="steam://openurl/https://steamcommunity.com/dev/apikey"}
-	}
-	
-		Admin {
-		text="Admin"
-
+		Divider							{}
 		ServerAdministration{	text="Server"	shellcmd="steam://openurl/https://steamcommunity.com/dev/managegameservers" }
 	}
 	
-		Web {
+	Web
+		{
 		text="GameIndustry.eu"
 		Hosts						{ text="hosts Download"						shellcmd="steam://openurl/https://hosts.gameindustry.eu/"}
 		Produktsuche				{ text="Search"						shellcmd="steam://openurl/https://www.gameindustry.eu/search/"}
