@@ -32,7 +32,7 @@ Adjustments to the code took a lot of time and effort. If the files (or componen
 Website & Support: <a href="https://www.gameindustry.eu">GameIndustry.eu</a> and <a href="https://www.gameindustry.eu/u/kontakt/">Contact site</a><br>
 Steam Profile: <a href="https://steamcommunity.com/profiles/76561198113455411">ペンギン</a> and <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2253017064">Guide</a>
 
-License: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons by-nc-sa 4.0</a>
+License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons CC BY-NC-ND 4.0</a>
 
 # Other projects - Security
 Unique host templates to enhance own privacy in games, websites and regulary software
