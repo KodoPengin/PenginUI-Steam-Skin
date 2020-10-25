@@ -114,22 +114,24 @@
 	Dev
 	{
 		text="Dev"
-		Console							{	text="Console"		  		  shellcmd="steam://open/console" }
-		Divider							{}
 		APIKey							{ text="API Key"						shellcmd="steam://openurl/https://steamcommunity.com/dev/apikey"}
 		Divider							{}
-		ServerAdministration{	text="Server"	shellcmd="steam://openurl/https://steamcommunity.com/dev/managegameservers" }
+		Console							{	text="Console"		  		  shellcmd="steam://open/console" }
+		Divider							{}
+		DMCATakedown				{ text="DMCA Takedown	"			shellcmd="steam://openurl/https://steamcommunity.com/dmca/create/"}
+		Divider							{}
+		ServerAdministration{	text="Server Management"	shellcmd="steam://openurl/https://steamcommunity.com/dev/managegameservers" }
 	}
 	
 	Web
 		{
 		text="GameIndustry.eu"
-		Hosts						{ text="hosts Download"						shellcmd="steam://openurl/https://hosts.gameindustry.eu/"}
-		Produktsuche				{ text="Search"						shellcmd="steam://openurl/https://www.gameindustry.eu/search/"}
-		Reviews				{ text="Reviews"						shellcmd="steam://openurl/https://www.gameindustry.eu/reviews/"}
-		Divider							{}
-		Curation			{ text="Curation"						shellcmd="steam://openurl/https://store.steampowered.com/curator/29092638/"}
-		Steamgruppe				{ text="Steamgroup"						shellcmd="steam://openurl/https://steamcommunity.com/groups/penguindome"}
-		SteamChat			{ text="Chat"						shellcmd="steam://friends/joinchat/103582791458614046"}
+		Hosts						{ text="hosts Download"		shellcmd="steam://openurl/https://hosts.gameindustry.eu/"}
+		Produktsuche		{ text="Search"						shellcmd="steam://openurl/https://www.gameindustry.eu/search/"}
+		Reviews					{ text="Reviews"					shellcmd="steam://openurl/https://www.gameindustry.eu/reviews/"}
+		Divider					{}
+		Curation				{ text="Curation"					shellcmd="steam://openurl/https://store.steampowered.com/curator/29092638/"}
+		Steamgruppe			{ text="Steamgroup"				shellcmd="steam://openurl/https://steamcommunity.com/groups/penguindome"}
+		SteamChat				{ text="Chat"							shellcmd="steam://friends/joinchat/103582791458614046"}
 	}
 }
