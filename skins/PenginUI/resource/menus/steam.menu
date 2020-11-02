@@ -111,16 +111,17 @@
 		SteamStatus	{			"text"		"SteamStatus"	"shellcmd"		"steam://openurl/https://steamstat.us/"	}
 		}
 		
-	Dev
+	Dev&Security
 	{
-		text="Dev"
-		APIKey							{ text="API Key"						shellcmd="steam://openurl/https://steamcommunity.com/dev/apikey"}
+		text="Dev & Security"
+		Console							{	text="Console"						shellcmd="steam://open/console" }
 		Divider							{}
-		Console							{	text="Console"		  		  shellcmd="steam://open/console" }
-		Divider							{}
-		DMCATakedown				{ text="DMCA Takedown	"			shellcmd="steam://openurl/https://steamcommunity.com/dmca/create/"}
+		DMCATakedown				{ text="DMCA	"							shellcmd="steam://openurl/https://steamcommunity.com/dmca/create/"}
 		Divider							{}
 		ServerAdministration{	text="Server Management"	shellcmd="steam://openurl/https://steamcommunity.com/dev/managegameservers" }
+		Divider							{}
+		APIKey							{ text="API Key"						shellcmd="steam://openurl/https://steamcommunity.com/dev/apikey"}
+		2FA									{ text="2FA Management"			shellcmd="steam://openurl/https://store.steampowered.com/twofactor/manage"}
 	}
 	
 	Web
