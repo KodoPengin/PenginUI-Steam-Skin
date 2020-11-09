@@ -229,7 +229,7 @@ div.forum_topic_needs_content_check_notice.forum_newtopic_box img {display: none
 div.DRM_notice, .ack_message_header, .support_message_header { background: none; background-color: rgba(192,45,46) !important; color: white !important; }
 div.DRM_notice a:hover { color:white; }
 div.ack_message, div.support_message { border:3px solid #cc0000; }
-div#error_display.workshop_paymentinfo_validation_error, div.incompatibleNotification, div.forum_topic_needs_content_check_notice.forum_newtopic_box, div#bannedNotification.bannedNotification, div#incompatibleNotification.incompatibleNotification, div#visibilityNotificationPrivate.visibilityNotification, div#visibilityNotificationFriendsOnly.visibilityNotification, div#visibilityNotificationUnlisted.visibilityNotification { background-color: rgba( 192, 45, 46) !important; color: white !important; }
+div.notification.failed_content_check, div#error_display.workshop_paymentinfo_validation_error, div.incompatibleNotification, div.forum_topic_needs_content_check_notice.forum_newtopic_box, div#bannedNotification.bannedNotification, div#incompatibleNotification.incompatibleNotification, div#visibilityNotificationPrivate.visibilityNotification, div#visibilityNotificationFriendsOnly.visibilityNotification, div#visibilityNotificationUnlisted.visibilityNotification { background-color: rgba( 192, 45, 46) !important; color: white !important; }
 div.topic_cannotreply_reason.forum_newtopic_box { background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forum_comment_author_banned { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
@@ -239,6 +239,10 @@ div.market_header, div.page_container.page_container_market { background:none; b
 div.partnersaledisplay_SaleOverlayCtn_3GTIc.SaleOverlayCtn { display: none !important; }
 .reward_bg_1, .reward_bg_2, .reward_bg_3, .reward_bg_4, .reward_bg_5, div#faq.rewards_faq_ctn, div.rewards_badge_levelup_ctn.reward_bg_3, div.rewards_profile_tier.reward_bg_4 , div.partnersaledisplay_SaleSection_1cOoC.eventbbcodeparser_SaleSectionCtn_39HWX, div.reward_items_ctn { background: transparent !important; background-color:transparent !important; }
 div.responsive_page_content, body.v6.labs, .trending_reviews_controls_ctn { background:none !important; background-image:none !important; background-color:#161a1f !important; }
+div#together.rpt_section1_container, div#anywhere.rpt_section2_container, div.rpt_section3_container, div.rpt_section4_container { background:none !important; background-color: rgb(53, 62, 71) !important; }
+div.rpt_section4_container { color: #ffffff; }
+div.rpt_monsterhunter_ctn, div.rpt_anywhere_header_left, div.remoteplay_howto_section, div#anywhere_how.rpt_anywhere_how_ctn { background-image:none !important; }
+div.remoteplay_overcooked_section, div.rpt_circles_img { display:none !important; }
 
 /* Marktanpassungen, Inventar etc */
 .market_headertip { border:1px solid #cc0000; background-color:#161a1f; }
