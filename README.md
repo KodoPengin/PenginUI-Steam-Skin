@@ -10,6 +10,7 @@ It's a <b>WIP project</b> and only updated irregularly. Deal with it ;]
 - Some library changes ( e.g. stopped animations, removed broadcasting), removed backgrounds and some graphics
 - Added additional Menu items to the header
 - Complete profile overhaul with transparency and fixed background
+- Additional Script to delete Unity Spyware from Steam game folders
 
 # Installation & readme
 - Copy the whole content into your Steam folder
