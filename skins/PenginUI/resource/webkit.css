@@ -69,7 +69,7 @@
 }
 
 /*
-  Template: PenginUI - v0.99.6 - Stand 23.10.2020
+  Template: PenginUI - v0.99.6 - Stand 10.11.2020
   Website: www.gameindustry.eu
 */
 
@@ -222,7 +222,6 @@ div.forum_topic_tooltip { border: 1px solid #4a545e !important; background: #161
 .forumtopic_comments .commentthread_answer_bar, .forumtopic_answer { background: rgba( 89, 94, 100, 1.0) !important; color: #ffffff; }
 .forumtopic_comments .commentthread_comment.commentthread_answer_comment { border: 1px solid #595e64 !important; }
 div.bb_code, blockquote.bb_blockquote, .forumtopic_answer .answer_quote, blockquote.bb_blockquote.with_author { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
-
 div.forum_topic_needs_content_check_notice.forum_newtopic_box img {display: none !important; }
 
 /* Warnmeldungen */
@@ -243,6 +242,9 @@ div#together.rpt_section1_container, div#anywhere.rpt_section2_container, div.rp
 div.rpt_section4_container { color: #ffffff; }
 div.rpt_monsterhunter_ctn, div.rpt_anywhere_header_left, div.remoteplay_howto_section, div#anywhere_how.rpt_anywhere_how_ctn { background-image:none !important; }
 div.remoteplay_overcooked_section, div.rpt_circles_img { display:none !important; }
+.lists_more_container .item .bg { filter:none !important; }
+.lists_more_container .item .overlay { background: none !important; }
+.light_container.bezel { box-shadow:none !important; }
 
 /* Marktanpassungen, Inventar etc */
 .market_headertip { border:1px solid #cc0000; background-color:#161a1f; }

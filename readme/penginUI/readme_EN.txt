@@ -1,8 +1,8 @@
 ####Version details####
 
 Steam Layout - PenginUI
-Last changes: 23.10.2020
-Version: 0.99.6
+Last changes: 10.11.2020
+Version: 0.99.7
 
 Steamprofile: https://steamcommunity.com/id/pen-chan/
 Website: https://www.gameindustry.eu/
@@ -147,4 +147,4 @@ Misc:
 - Hidden rightcol for Daily deal, Spotlight and Recommended specials advertising
 
 ###Additional information###
-The 0.99.6 version is not perfect but a lot of advertising and unnecessary features are gone.
+The 0.99.7 version is not perfect but a lot of advertising and unnecessary features are gone.

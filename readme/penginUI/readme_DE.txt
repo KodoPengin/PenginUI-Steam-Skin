@@ -1,8 +1,8 @@
 ####Versionsdetails####
 
 Steam Layout - PenginUI
-Letzte Änderungen: 23.10.2020
-Version: 0.99.6
+Letzte Änderungen: 10.11.2020
+Version: 0.99.7
 
 Steamprofil: https://steamcommunity.com/id/pen-chan/
 Webseite: https://www.gameindustry.eu/
@@ -146,4 +146,4 @@ Sonstiges:
 - Kommentarabofunktion wird nun in geposteten Statusmeldungen, Screenshots, Favouriten usw. direkt angezeigt
 
 ###Zusatzinformationen###
-Die 0.99.6 Version ist bei noch nicht perfekt, aber es ist eine Menge an Werbung und überflüssigen Funktionen verschwunden.
+Die 0.99.7 Version ist bei noch nicht perfekt, aber es ist eine Menge an Werbung und überflüssigen Funktionen verschwunden.
