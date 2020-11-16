@@ -1,11 +1,11 @@
 Name: Unity3D Analytics Crashlytics aus Spieleverzeichnissen von Steam löschen
 Quelle: https://gameindustry.eu/
-Version: 1
-Datum: 10.11.2020
+Version: 2
+Datum: 16.11.2020
 
 Datei/en:
 del_u3a_de.bat
-Hash: 172626a6567fbcd07e8f335e2e194909782cf963b128c27f636da51bbc0bd8ad
+Hash: e26d00717db73223a43ff83fe1cd39b9e20617ceb87d740cbac3face17dbd287
 
 --------------------------
 
@@ -20,3 +20,9 @@ Dies beugt einer heimlichen Datenaufnahme und Versand von Crashlytics der Firma 
 Installation:
 
 Kopiere die Datei ins Steam-Installationsverzeichnis z.b. "C:\Steam" und starte die Datei
+
+--------------------------
+
+Letzte Änderungen:
+
+- Es wird angezeigt wieviele Dateien gelöscht wurden

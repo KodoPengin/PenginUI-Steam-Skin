@@ -4,7 +4,7 @@ echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics der Firma Unity Technologies, ApS     #
 echo # aus den Installationsverzeichnissen der verschiedenen Spiele in Steam #
 echo # um unerlaubten Uploads vorzubeugen und Datensicherheit zu verst„rken  #
-echo # by GameIndustry.eu - 10/11/2020 - Version 1                           #
+echo # by GameIndustry.eu - 16/11/2020 - Version 2                           #
 echo -------------------------------------------------------------------------
 echo/
 
@@ -35,6 +35,9 @@ if errorlevel 2 goto :EOF
 set ORIGINAL_DIR=%CD%
 
 set folder="steamapps\common"
+
+for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
+echo Es wurden %VAR% Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
 IF EXIST "%folder%" (
     cd /d %folder%
     for /f "delims=" %%i in ('dir /a-d /s /b UnityCrashHandler64.exe') do del "%%~i"
