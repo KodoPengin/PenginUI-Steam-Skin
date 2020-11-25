@@ -276,5 +276,9 @@ div#home_takeunder_ctn.home_ctn, div.home_page_content_takeunder { display: none
 div.home_page_content.deep_dive_block { display: none !important; }
 div.react_landing_background {background-image: none !important; background-color:transparent !important; }
 div#SaleSection_10548 { display: none; }
-body.v6.sale_autumn2020 { background: none !important; }
+body.steamaward_nominations_faq { color: #c6d4df !important;}
+body.v6.steamaward.steamaward_nominations_faq.steamaward_nominations_modal, body.v6.steamaward_nominations_modal { background: none !important; color: unset !important; }
 body.v6.sale_autumn2020 .home_page_takeover_sizer, body.v6.sale_autumn2020 .page_background_holder { display: none !important; }
+video.nominations_header_video { transform: none !important; display: none !important; }
+body.v6.sale_autumn2020, div.nominations_video_ctn { background-color: transparent !important; }
+div.faq_section.teal, div.faq_section.darkteal { background: transparent !important; }

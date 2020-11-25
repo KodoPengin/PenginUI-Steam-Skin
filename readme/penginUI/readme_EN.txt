@@ -1,7 +1,7 @@
 ####Version details####
 
 Steam Layout - PenginUI
-Last changes: 10.11.2020
+Last changes: 25.11.2020
 Version: 0.99.7
 
 Steamprofile: https://steamcommunity.com/id/pen-chan/
@@ -12,9 +12,7 @@ License: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
 Unique Steam style. Focus was placed on eliminating unnecessary functions and advertising on the current Steam layout to deliver a minimalistic and clean UI.
 
 #### Latest Changes ####
-Kicked unnecessary stuff 
-Little color changes
-Attached an optional folder
+Additions to the Autumn Sale 2020
 
 #### Installation ####
 
