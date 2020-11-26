@@ -4,7 +4,7 @@ echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics spyware from Unity Technologies, ApS  #
 echo # from games in the standard install directory of Steam to enhance      #
 echo # own privacy and disallow hidden data theft                            #
-echo # by GameIndustry.eu - 16/11/2020 - Version 2                           #
+echo # by GameIndustry.eu - 2020/11/26 - Version 2.1                         #
 echo -------------------------------------------------------------------------
 echo/
 
@@ -40,7 +40,8 @@ for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do s
 echo %VAR% files were deleted from the existing game directories
 IF EXIST "%folder%" (
     cd /d %folder%
-    for /f "delims=" %%i in ('dir /a-d /s /b UnityCrashHandler64.exe') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b UnityCrashHandler32.exe') do del "%%~i"
+    for /f "delims=" %%i in ('dir /a-d /s /b UnityCrashHandler*.exe' 2^>nul') do del "%%~i"
 )
 chdir /d %ORIGINAL_DIR%
+@echo off 
+pause
