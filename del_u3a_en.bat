@@ -57,14 +57,22 @@ if errorlevel 2 goto :EOF
 
 :Continue
 
-::Beende Tasks, sofern diese offen sind
+::Kill tasks if open
 echo/
-echo Aktive Programminstanzen werden automatisch geschlossen...
+echo Active program instances will be closed...
 echo/
-::Wenn offen, beende Steam
+::If open, close Steam
 taskkill /f /im steam.exe 2> nul
 taskkill /f /im SteamService.exe 2> nul
 taskkill /f /im steamwebhelper.exe 2> nul
+echo STEAM.CFG
+echo A steam.cfg is written into the installation folder. It prevents Steam from automatic updates.
+echo This is necessary, because Steam will download and rewrite all files to each startup.
+echo/
+::steam.cfg
+@echo off
+echo BootStrapperInhibitAll=enable> steam.cfg
+echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 
 ::Delete Folder
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
@@ -84,7 +92,8 @@ set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo Es wurden %VAR% Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
+echo Spyware and Crashlytics in game folders
+echo %VAR% file/s were deleted from game folders
 IF EXIST "%folder%" (
     cd /d %folder%
     for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"

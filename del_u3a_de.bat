@@ -1,9 +1,9 @@
 @echo off
 echo/
 echo -------------------------------------------------------------------------
-echo # Das Script entfernt Crashlytics und Spyware verschiedener Firmen aus  #
-echo # den Installationsverzeichnissen von Steam und den verschiedenen       #
-echo # Spielen in Steam um nicht genehmigte Uploads zu unterbinden.          #
+echo # Das Script entfernt Crashlytics verschiedener Firmen aus den          #
+echo # Installationsverzeichnissen der verschiedenen Spiele in Steam         #
+echo # um unerlaubten Uploads vorzubeugen und Datensicherheit zu verst„rken  #
 echo # by GameIndustry.eu - 27/11/2020 - Version 2.2                         #
 echo -------------------------------------------------------------------------
 echo/
@@ -65,6 +65,14 @@ echo/
 taskkill /f /im steam.exe 2> nul
 taskkill /f /im SteamService.exe 2> nul
 taskkill /f /im steamwebhelper.exe 2> nul
+echo STEAM.CFG
+echo Eine steam.cfg wird ins Installationsverzeichnis geschrieben, die eine eigenst„ndige Aktualisierung
+echo des Clients verhindert. Dies ist notwendig, da sonst zu jedem Start die Dateien neu downgeloadet werden.
+echo/
+::steam.cfg
+@echo off
+echo BootStrapperInhibitAll=enable> steam.cfg
+echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 
 ::Entferne Ordner
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
@@ -84,6 +92,7 @@ set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
+echo Spyware und Crashlytics in Spieleverzeichnissen
 echo Es wurden %VAR% Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
 IF EXIST "%folder%" (
     cd /d %folder%
