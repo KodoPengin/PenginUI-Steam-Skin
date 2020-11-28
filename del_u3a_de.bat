@@ -59,7 +59,7 @@ if errorlevel 2 goto :EOF
 
 ::Beende Tasks, sofern diese offen sind
 echo/
-echo Aktive Programminstanzen werden automatisch geschlossen...
+echo Aktive Steamprozesse werden automatisch geschlossen...
 echo/
 ::Wenn offen, beende Steam
 taskkill /f /im steam.exe 2> nul
@@ -74,6 +74,7 @@ echo/
 echo BootStrapperInhibitAll=enable> steam.cfg
 echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 
+echo 1. Entferne Daten mit Bezug auf crash.steampowered.com (permanenter Upload von Hard und Softwaredaten)
 ::Entferne Daten die fr Uploads an crash.steampowered.com zust„ndig sind
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
@@ -85,6 +86,7 @@ IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
+echo 2. Entferne Crashlytics von Drittanbietern
 ::Crashlytics von Drittanbietern
 del /s /f /q CrashUploader.Base.Azure.dll 2> nul
 del /s /f /q CrashUploader.Base.dll 2> nul
@@ -106,12 +108,14 @@ set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo Spyware und Crashlytics in Spieleverzeichnissen
+echo 3. Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen
+echo/
 echo Es wurden %VAR% Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
 IF EXIST "%folder%" (
     cd /d %folder%
 for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"
 )
 chdir /d %ORIGINAL_DIR%
+echo/
 @echo off 
 pause
