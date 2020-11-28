@@ -4,7 +4,7 @@ echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics and spyware from several companies    #
 echo # from installation folders in Steam itself and from game folders       #
 echo # to enhance own privacy and disallow hidden data theft                 #
-echo # by GameIndustry.eu - 2020/11/27 - Version 2.2                         #
+echo # by GameIndustry.eu - 2020/11/28 - Version 2.3                         #
 echo -------------------------------------------------------------------------
 echo/
 
@@ -78,17 +78,31 @@ echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
 IF EXIST "bin\cef\cef.win7x64\crash_reporter.cfg" del "bin\cef\cef.win7x64\crash_reporter.cfg" /q
-::Delete files
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "crashhandler.dll" del "crashhandler.dll" /f /q
 IF EXIST "steamerrorreporter.exe" del "steamerrorreporter.exe" /f /q
 IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
-echo/
 
+::Crashlytics von Drittanbietern
+del /s /f /q CrashUploader.Base.Azure.dll 2> nul
+del /s /f /q CrashUploader.Base.dll 2> nul
+del /s /f /q CrashUploader.Base.UI.dll 2> nul
+del /s /f /q CrashUploader.Publish.exe 2> nul
+del /s /f /q CrashUploader.Publish.exe.config 2> nul
+del /s /f /q crashpad_handler.exe 2> nul
+del /s /f /q CrashSender1403.exe 2> nul
+del /s /f /q crashrpt_lang.ini 2> nul
+del /s /f /q CrashRpt1403.dll 2> nul
+del /s /f /q CrashRptProbe1403.dll 2> nul
+del /s /f /q CrashReporter.dll 2> nul
+del /s /f /q CrashReporter.exe 2> nul
+del /s /f /q CrashUploader.Publish.exe.config 2> nul
+del /s /f /q CrashReporter.exe.config 2> nul
+
+::Unity Analytics
 set ORIGINAL_DIR=%CD%
-
 set folder="steamapps\common"
 
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
@@ -97,14 +111,6 @@ echo %VAR% file/s were deleted from game folders
 IF EXIST "%folder%" (
     cd /d %folder%
     for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ crashpad_handler.exe') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ CrashSender1403.exe') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ crashrpt_lang.ini') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ CrashRpt1403.dll') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ CrashRptProbe1403.dll') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ CrashReporter.dll') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ CrashReporter.exe') do del "%%~i"
-	for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ CrashReporter.exe.config') do del "%%~i"
 )
 chdir /d %ORIGINAL_DIR%
 @echo off 
