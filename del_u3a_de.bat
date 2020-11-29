@@ -1,10 +1,11 @@
 @echo off
+Color 0A
 echo/
 echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics verschiedener Firmen aus den          #
 echo # Installationsverzeichnissen der verschiedenen Spiele in Steam         #
 echo # um unerlaubten Uploads vorzubeugen und Datensicherheit zu verst„rken  #
-echo # by GameIndustry.eu - 28/11/2020 - Version 2.3                         #
+echo # by GameIndustry.eu - 29/11/2020 - Version 2.4                         #
 echo -------------------------------------------------------------------------
 echo/
 
@@ -79,6 +80,7 @@ echo 1. Entferne Daten mit Bezug auf crash.steampowered.com (permanenter Upload 
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
 IF EXIST "bin\cef\cef.win7x64\crash_reporter.cfg" del "bin\cef\cef.win7x64\crash_reporter.cfg" /q
+IF EXIST "bin\cef\cef.win7x64\debug.log" del "bin\cef\cef.win7x64\debug.log" /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "crashhandler.dll" del "crashhandler.dll" /f /q
 IF EXIST "steamerrorreporter.exe" del "steamerrorreporter.exe" /f /q

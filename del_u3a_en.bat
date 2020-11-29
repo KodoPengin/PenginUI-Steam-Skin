@@ -1,10 +1,11 @@
 @echo off
+Color 0A
 echo/
 echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics and spyware from several companies    #
 echo # from installation folders in Steam itself and from game folders       #
 echo # to enhance own privacy and disallow hidden data theft                 #
-echo # by GameIndustry.eu - 2020/11/28 - Version 2.3                         #
+echo # by GameIndustry.eu - 2020/11/29 - Version 2.4                         #
 echo -------------------------------------------------------------------------
 echo/
 
@@ -13,7 +14,7 @@ REM  --> Check for permissions
 
 REM --> If error flag set, we do not have admin.
 if '%errorlevel%' NEQ '0' (
-    echo Fordere Adminrechte zum Entfernen der Dateien an
+    echo Request admin rights to remove the files
     goto UACPrompt
 ) else ( goto gotAdmin )
 
@@ -75,10 +76,11 @@ echo BootStrapperInhibitAll=enable> steam.cfg
 echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 
 echo 1. Delete files regarded to crash.steampowered.com (hidden upload of hard and software data)
-::Delete Folder
+::Delete Folder and files related to crash.steampowered.com
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
 IF EXIST "bin\cef\cef.win7x64\crash_reporter.cfg" del "bin\cef\cef.win7x64\crash_reporter.cfg" /q
+IF EXIST "bin\cef\cef.win7x64\debug.log" del "bin\cef\cef.win7x64\debug.log" /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "crashhandler.dll" del "crashhandler.dll" /f /q
 IF EXIST "steamerrorreporter.exe" del "steamerrorreporter.exe" /f /q
