@@ -1,5 +1,5 @@
 @echo off
-title GameIndustry.eu Analytics Cleaner v2.4
+title GameIndustry.eu - Analytics Cleaner v2.5
 SETLOCAL EnableExtensions DisableDelayedExpansion
 for /F %%a in ('echo prompt $E ^| cmd') do (
   set "ESC=%%a"
@@ -10,7 +10,7 @@ echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics, Logs und Analyticsdienste aus dem    #
 echo # Steam-Verzeichnis und dazugeh”rigen (Spiele)verzeichnissen um         #
 echo # Uploads vorzubeugen und die eigene Datensicherheit zu verst„rken      #
-echo # (c) by GameIndustry.eu - 29/11/2020 - Version 2.4                     #
+echo # (c) by GameIndustry.eu - 30/11/2020 - Version 2.5                     #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -65,19 +65,25 @@ echo/
 echo Aktive Steamprozesse werden automatisch geschlossen...
 echo/
 ::Wenn offen, beende Steam
-taskkill /f /im steam.exe 2> nul
-taskkill /f /im SteamService.exe 2> nul
-taskkill /f /im steamwebhelper.exe 2> nul
-echo STEAM.CFG
-echo Eine steam.cfg wird ins Installationsverzeichnis geschrieben, die eine eigenst„ndige Aktualisierung
+taskkill /f /im steam.exe >nul 2>&1
+taskkill /f /im SteamService.exe >nul 2>&1
+taskkill /f /im steamwebhelper.exe >nul 2>&1
+
+::steam.cfg
+IF EXIST "steam.cfg" (
+goto :Crash
+) ELSE (
+echo Vorbereitung: !ESC![92mSTEAM.CFG!ESC![0m
+echo Eine !ESC![4msteam.cfg!ESC![0m wird ins Installationsverzeichnis geschrieben, die eine eigenst„ndige Aktualisierung
 echo des Clients verhindert. Dies ist notwendig, da sonst zu jedem Start die Dateien neu downgeloadet werden.
 echo/
-::steam.cfg
 @echo off
 echo BootStrapperInhibitAll=enable> steam.cfg
 echo BootStrapperForceSelfUpdate=disable>> steam.cfg
+)
 
-echo !ESC![92m1.!ESC![0m Entferne Daten mit Bezug auf crash.steampowered.com (permanenter Upload von Hard und Softwaredaten)
+:Crash
+echo !ESC![92m1.!ESC![0m Entferne Daten mit Bezug auf crash.steampowered.com....!ESC![92mOK!ESC![0m
 ::Entferne Daten die fr Uploads an crash.steampowered.com zust„ndig sind
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
@@ -93,11 +99,11 @@ IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
-echo !ESC![92m2.!ESC![0m Entferne (sofern vorhanden) Crashdumps im Systemverzeichnis
+echo !ESC![92m2.!ESC![0m Entferne (sofern vorhanden) Crashdumps im Systemverzeichnis....!ESC![92mOK!ESC![0m
 ::Entferne Crashdumps
 IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData\Local\CrashDumps\*.*" /q
 
-echo !ESC![92m3.!ESC![0m Entferne Crashlytics von Drittanbietern
+echo !ESC![92m3.!ESC![0m Entferne Crashlytics von Drittanbietern....!ESC![92mOK!ESC![0m
 ::Crashlytics von Drittanbietern
 del /s /f /q CrashUploader.Base.Azure.dll 2> nul
 del /s /f /q CrashUploader.Base.dll 2> nul
@@ -119,11 +125,11 @@ del /s /f /q CrashReportClient.pdb 2> nul
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
-
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo !ESC![92m4.!ESC![0m Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen
+echo !ESC![92m4.!ESC![0m Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen....!ESC![92mOK!ESC![0m
 echo/
-echo Es wurden %VAR% Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
+if [%VAR%]==[0] echo Super, es befanden sich keine UnityCrashHandler in den Spiele-Verzeichnissen
+if %VAR% gtr 0 echo Es wurden !ESC![92m%VAR%!ESC![0m Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
 IF EXIST "%folder%" (
     cd /d %folder%
 for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"

@@ -1,12 +1,12 @@
 Name: Crashlytics, Logs und Spyware aus Steam und dazugehörigen (Spiele)verzeichnissen löschen
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.4
-Datum: 29.11.2020
+Version: 2.5
+Datum: 30.11.2020
 
 Datei/en:
 del_u3a_de.bat
-Hash: 091712e4ceb9c46f672aa4b329cccdc1d68bfe2e9a441d7781cfa373218910f8
+Hash: 55c2d74ea1e2a63188da68b47f54eae9e63d52043a2ef4f180676f918e377817
 
 --------------------------
 
@@ -39,6 +39,8 @@ Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Ins
 
 Letzte Änderungen:
 
+- Es wird nun überprüft ob eine Steam.cfg vorhanden ist
+- Bessere Ausgabe der Unity Analytics
 - CrashDump Ordner hinzugefügt
 - Beschreibungen während des Löschvorgangs ergänzt
 - Dateiliste hinzugefügt

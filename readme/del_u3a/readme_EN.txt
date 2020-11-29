@@ -1,12 +1,12 @@
 Name: Delete Crashlytics, logs and spyware from Steam and related (game) folders
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.4
-Date: 2020.11.29
+Version: 2.5
+Date: 30 November 2020
 
 File/s:
 del_u3a_en.bat
-Hash: c7a55f547ad2fa4ddf9581a40676dfeac0a29f217edd45643c7e12ccd9edbc85
+Hash: 503c3a08195dd97631da958f819f4fd108a7aea54419cd937e2b88afe84f8737
 
 --------------------------
 
@@ -37,6 +37,8 @@ Users who use their own layout modifications for Steam probably know this proced
 
 Latest changes:
 
+- Additional check if steam.cfg exist
+- Better output for Unity Analytics
 - CrashDump folder added
 - More detailed info during the deleting process
 - File-List attached
