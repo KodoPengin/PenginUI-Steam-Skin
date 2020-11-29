@@ -136,7 +136,7 @@ for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do d
 )
 chdir /d %ORIGINAL_DIR%
 echo/
-echo !ESC![92mFertig :]!ESC![0m
+echo !ESC![92mDone :]!ESC![0m
 echo/
 @echo off 
 pause
