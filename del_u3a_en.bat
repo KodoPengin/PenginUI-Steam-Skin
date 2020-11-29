@@ -1,4 +1,5 @@
 @echo off
+title GameIndustry.eu Analytics Cleaner v2.4
 SETLOCAL EnableExtensions DisableDelayedExpansion
 for /F %%a in ('echo prompt $E ^| cmd') do (
   set "ESC=%%a"

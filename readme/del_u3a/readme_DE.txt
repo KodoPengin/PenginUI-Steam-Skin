@@ -6,7 +6,7 @@ Datum: 29.11.2020
 
 Datei/en:
 del_u3a_de.bat
-Hash: 0b12887a442d59013066eccec52a8cbe0c602b3b45f06f486f9107abb07b4004
+Hash: 091712e4ceb9c46f672aa4b329cccdc1d68bfe2e9a441d7781cfa373218910f8
 
 --------------------------
 
