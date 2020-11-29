@@ -1,4 +1,4 @@
-Name: Delete Unity3D Analytics Crashlytics from gamefolders in Steam
+Name: Delete Crashlytics, logs and spyware from Steam and related (game) folders
 Quelle: https://gameindustry.eu/
 Author: Pengin
 Version: 2.4
@@ -14,15 +14,24 @@ Installation:
 
 Copy the file del_u3a_en.bat into your Steam installation folder e.g. "C:\Steam" and run the file
 
+If alternative steam libraries were created, the file must be copied into the respective directory
+and started from there
+
 --------------------------
 
-The batch scans files within the steam folder for crashlytics and logs and deletes associated files. Additionally the CrashDump folder (if available) in the user directory is emptied.
+Description:´
 
-This prevents a secret data mining and sending of Crashlytics by companies like Unity Technologies, ApS, Epic Games, Inc. or the Valve Corporations and increases the own privacy during the own game sessions.
+The batch scans files within the steam folder for crashlytics and logs and deletes associated files.
+Additionally the CrashDump folder (if available) in the user directory is emptied.
+
+This prevents a secret data mining and sending of Crashlytics by companies like Unity Technologies, ApS, Epic Games, Inc.
+or the Valve Corporations and increases the own privacy during the own game sessions.
 
 The script will be extended as needed.
 
-The batch creates a "steam.cfg". This file prevents the automatic update of the Steam client. This is necessary, because otherwise Steam downloads and overwrites files every time it is started. Users who use their own layout modifications for Steam probably know this procedure. 
+The batch creates a "steam.cfg". This file prevents the automatic update of the Steam client.
+This is necessary, because otherwise Steam downloads and overwrites files every time it is started.
+Users who use their own layout modifications for Steam probably know this procedure. 
 
 --------------------------
 

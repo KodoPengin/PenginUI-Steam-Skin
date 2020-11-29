@@ -1,4 +1,4 @@
-Name: Unity3D Analytics Crashlytics aus Spieleverzeichnissen von Steam löschen
+Name: Crashlytics, Logs und Spyware aus Steam und dazugehörigen (Spiele)verzeichnissen löschen
 Quelle: https://gameindustry.eu/
 Author: Pengin
 Version: 2.4
@@ -14,17 +14,24 @@ Installation:
 
 Kopiere die Datei del_u3a_de.bat das Steam-Installationsverzeichnis z.b. "C:\Steam" und starte die Datei
 
+Wurden alternative Steambibliotheken angelegt, muss die Datei ins jeweilige Verzeichnis kopiert
+und von dort aus gestartet werden
+
 --------------------------
 
 Beschreibung:
 
-Die Batch durchforstet innerhalb des Steamordners Dateien nach Crashlytics und Logs und löscht dazugehörige Dateien. Zusätzlich wird der CrashDump Ordner (sofern vorhanden) im Nutzerverzeichnis geleert.
+Die Batch durchforstet innerhalb des Steamordners Dateien nach Crashlytics und Logs und löscht dazugehörige Dateien.
+Zusätzlich wird der CrashDump Ordner (sofern vorhanden) im Nutzerverzeichnis geleert.
 
-Dies beugt einer heimlichen Datenaufnahme und Versand von Crashlytics durch Firmen wie Unity Technologies, ApS, Epic Games, Inc., oder der Valve Corporations vor und verstärkt die eigene Privatsphäre während der eigenen Spiele-Sessions.
+Dies beugt einer heimlichen Datenaufnahme und Versand von Crashlytics durch Firmen wie Unity Technologies, ApS, Epic Games, Inc.,
+oder der Valve Corporations vor und verstärkt die eigene Privatsphäre während der eigenen Spiele-Sessions.
 
 Das Script wird nach Bedarf erweitert.
 
-Die Batch erstellt eine "steam.cfg". Die Datei verhindert die automatische Aktualisierung des Steam-Clients. Dies ist notwendig, da Steam sonst zu jedem Start Dateien neu downloadet und überschreibt. Anwender die eigene Layoutmodifikationen für Steam nutzen kennen das Vorgehen wahrscheinlich. 
+Die Batch erstellt eine "steam.cfg". Die Datei verhindert die automatische Aktualisierung des Steam-Clients.
+Dies ist notwendig, da Steam sonst zu jedem Start Dateien neu downloadet und überschreibt.
+Anwender die eigene Layoutmodifikationen für Steam nutzen kennen das Vorgehen wahrscheinlich. 
 
 Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Installationsverzeichnis entfernt werden.
 
