@@ -1,13 +1,17 @@
 @echo off
-Color 0A
-echo/
+SETLOCAL EnableExtensions DisableDelayedExpansion
+for /F %%a in ('echo prompt $E ^| cmd') do (
+  set "ESC=%%a"
+)
+SETLOCAL EnableDelayedExpansion
+echo !ESC![92m
 echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics verschiedener Firmen aus den          #
 echo # Installationsverzeichnissen der verschiedenen Spiele in Steam         #
 echo # um unerlaubten Uploads vorzubeugen und Datensicherheit zu verst„rken  #
 echo # by GameIndustry.eu - 29/11/2020 - Version 2.4                         #
 echo -------------------------------------------------------------------------
-echo/
+echo/!ESC![0m
 
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
@@ -31,11 +35,8 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------
 
-echo/
-echo Das Script entfernt Crashlytics und Spyware aus dem Steamverzeichnis
-echo und dazugeh”rigen Unterverzeichnissen.
-echo/
-echo Achtung, aktive Programminstanzen werden fr diesen Vorgang geschlossen.
+:: Sicherheitsabfrage
+echo !ESC![31mAchtung - Aktive Steaminstanzen werden geschlossen.!ESC![0m
 echo/
 echo M”chten Sie fortfahren? Drcken Sie auf [Y]
 echo Wenn Sie den Vorgang abbrechen m”chten, drcken sie auf [N]. 
@@ -75,7 +76,7 @@ echo/
 echo BootStrapperInhibitAll=enable> steam.cfg
 echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 
-echo 1. Entferne Daten mit Bezug auf crash.steampowered.com (permanenter Upload von Hard und Softwaredaten)
+echo !ESC![92m1.!ESC![0m Entferne Daten mit Bezug auf crash.steampowered.com (permanenter Upload von Hard und Softwaredaten)
 ::Entferne Daten die fr Uploads an crash.steampowered.com zust„ndig sind
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
@@ -88,7 +89,7 @@ IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
-echo 2. Entferne Crashlytics von Drittanbietern
+echo !ESC![92m2.!ESC![0m Entferne Crashlytics von Drittanbietern
 ::Crashlytics von Drittanbietern
 del /s /f /q CrashUploader.Base.Azure.dll 2> nul
 del /s /f /q CrashUploader.Base.dll 2> nul
@@ -104,13 +105,14 @@ del /s /f /q CrashReporter.dll 2> nul
 del /s /f /q CrashReporter.exe 2> nul
 del /s /f /q CrashUploader.Publish.exe.config 2> nul
 del /s /f /q CrashReporter.exe.config 2> nul
+del /s /f /q CrashReportClient.exe 2> nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo 3. Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen
+echo !ESC![92m3.!ESC![0m Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen
 echo/
 echo Es wurden %VAR% Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
 IF EXIST "%folder%" (
@@ -118,6 +120,8 @@ IF EXIST "%folder%" (
 for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"
 )
 chdir /d %ORIGINAL_DIR%
+echo/
+echo !ESC![92mFertig :]!ESC![0m
 echo/
 @echo off 
 pause

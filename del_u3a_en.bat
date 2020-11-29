@@ -1,13 +1,17 @@
 @echo off
-Color 0A
-echo/
+SETLOCAL EnableExtensions DisableDelayedExpansion
+for /F %%a in ('echo prompt $E ^| cmd') do (
+  set "ESC=%%a"
+)
+SETLOCAL EnableDelayedExpansion
+echo !ESC![92m
 echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics and spyware from several companies    #
 echo # from installation folders in Steam itself and from game folders       #
 echo # to enhance own privacy and disallow hidden data theft                 #
 echo # by GameIndustry.eu - 2020/11/29 - Version 2.4                         #
 echo -------------------------------------------------------------------------
-echo/
+echo/!ESC![0m
 
 REM  --> Check for permissions
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
@@ -32,10 +36,7 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------
 
 :: Security question
-echo/
-echo This script deletes spyware and crashlytics from Steam folders and subfolders
-echo/
-echo Attention! Active program instances will be closed.
+echo !ESC![31mAttention - Active Steaminstances will be closed.!ESC![0m
 echo/
 echo Do you want to continue? Press [Y]
 echo If you want to cancel the process, press [N]. 
@@ -75,7 +76,7 @@ echo/
 echo BootStrapperInhibitAll=enable> steam.cfg
 echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 
-echo 1. Delete files regarded to crash.steampowered.com (hidden upload of hard and software data)
+echo !ESC![92m1.!ESC![0m Delete files regarded to crash.steampowered.com (hidden upload of hard and software data)
 ::Delete Folder and files related to crash.steampowered.com
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
@@ -88,7 +89,7 @@ IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
-echo 2. Deletes Crashlytics from Thirdparty companies
+echo !ESC![92m2.!ESC![0m Deletes Crashlytics from Thirdparty companies
 :: Thirdparty Crashlytics
 del /s /f /q CrashUploader.Base.Azure.dll 2> nul
 del /s /f /q CrashUploader.Base.dll 2> nul
@@ -110,7 +111,7 @@ set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo 3. Deletes Unity Spyware and Crashlytics in game folders
+echo !ESC![92m3.!ESC![0m Deletes Unity Spyware and Crashlytics in game folders
 echo/
 echo %VAR% file/s were deleted from game folders
 IF EXIST "%folder%" (
@@ -118,6 +119,8 @@ IF EXIST "%folder%" (
     for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"
 )
 chdir /d %ORIGINAL_DIR%
+echo/
+echo !ESC![92mFertig :]!ESC![0m
 echo/
 @echo off 
 pause
