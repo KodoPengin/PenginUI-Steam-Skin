@@ -106,6 +106,7 @@ del /s /f /q CrashReporter.exe 2> nul
 del /s /f /q CrashUploader.Publish.exe.config 2> nul
 del /s /f /q CrashReporter.exe.config 2> nul
 del /s /f /q CrashReportClient.exe 2> nul
+del /s /f /q CrashReportClient.pdb 2> nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
