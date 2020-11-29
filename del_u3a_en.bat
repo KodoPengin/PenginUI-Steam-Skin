@@ -93,8 +93,8 @@ IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
-echo !ESC![92m2.!ESC![0m Entferne (sofern vorhanden) Crashdumps im Systemverzeichnis
-::Entferne Crashdumps
+echo !ESC![92m2.!ESC![0m Delete (if exist) Crashdumps in system folder
+::Delete Crashdumps
 IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData\Local\CrashDumps\*.*" /q
 
 echo !ESC![92m3.!ESC![0m Deletes Crashlytics from Thirdparty companies
