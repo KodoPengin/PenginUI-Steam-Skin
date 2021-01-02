@@ -1,5 +1,5 @@
 @echo off
-title GameIndustry.eu - Analytics Cleaner v2.5
+title GameIndustry.eu - Analytics Cleaner v2.6
 SETLOCAL EnableExtensions DisableDelayedExpansion
 for /F %%a in ('echo prompt $E ^| cmd') do (
   set "ESC=%%a"
@@ -10,7 +10,7 @@ echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics, logs and spyware from the            #
 echo # Steamfolder and from related (game) folders to disallow hidden        #
 echo # data theft and to enhance own privacy.                                #
-echo # (c) by GameIndustry.eu - 30 November 2020 - Version 2.5               #
+echo # (c) by GameIndustry.eu - 01 January 2021 - Version 2.6                #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -96,7 +96,6 @@ IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "crashhandler.dll" del "crashhandler.dll" /f /q
 IF EXIST "steamerrorreporter.exe" del "steamerrorreporter.exe" /f /q
 IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
-IF EXIST "crashhandler64.dll" del "crashhandler64.dll" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
 echo !ESC![92m2.!ESC![0m Delete (if exist) Crashdumps in system folder....!ESC![92mOK!ESC![0m
@@ -105,22 +104,24 @@ IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData
 
 echo !ESC![92m3.!ESC![0m Deletes Crashlytics from Thirdparty companies....!ESC![92mOK!ESC![0m
 :: Thirdparty Crashlytics
-del /s /f /q CrashUploader.Base.Azure.dll 2> nul
-del /s /f /q CrashUploader.Base.dll 2> nul
-del /s /f /q CrashUploader.Base.UI.dll 2> nul
-del /s /f /q CrashUploader.Publish.exe 2> nul
-del /s /f /q CrashUploader.Publish.exe.config 2> nul
-del /s /f /q crashpad_handler.exe 2> nul
-del /s /f /q CrashSender1403.exe 2> nul
-del /s /f /q crashrpt_lang.ini 2> nul
-del /s /f /q CrashRpt1403.dll 2> nul
-del /s /f /q CrashRptProbe1403.dll 2> nul
-del /s /f /q CrashReporter.dll 2> nul
-del /s /f /q CrashReporter.exe 2> nul
-del /s /f /q CrashUploader.Publish.exe.config 2> nul
-del /s /f /q CrashReporter.exe.config 2> nul
-del /s /f /q CrashReportClient.exe 2> nul
-del /s /f /q CrashReportClient.pdb 2> nul
+del /s /f /q CrashUploader.Base.Azure.dll >nul 2>nul
+del /s /f /q CrashUploader.Base.dll >nul 2>nul
+del /s /f /q CrashUploader.Base.UI.dll >nul 2>nul
+del /s /f /q CrashUploader.Publish.exe >nul 2>nul
+del /s /f /q CrashUploader.Publish.exe.config >nul 2>nul
+del /s /f /q crashpad_handler.exe >nul 2>nul
+del /s /f /q CrashSender1403.exe >nul 2>nul
+del /s /f /q crashrpt_lang.ini >nul 2>nul
+del /s /f /q CrashRpt1403.dll >nul 2>nul
+del /s /f /q CrashRptProbe1403.dll >nul 2>nul
+del /s /f /q CrashReporter.dll >nul 2>nul
+del /s /f /q CrashReporter.exe >nul 2>nul
+del /s /f /q CrashUploader.Publish.exe.config >nul 2>nul
+del /s /f /q CrashReporter.exe.config >nul 2>nul
+del /s /f /q CrashReportClient.exe >nul 2>nul
+del /s /f /q CrashReportClient.pdb >nul 2>nul
+del /s /f /q CrashReporter.resources.dll >nul 2>nul
+del /s /f /q REDEngineErrorReporter.exe >nul 2>nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%

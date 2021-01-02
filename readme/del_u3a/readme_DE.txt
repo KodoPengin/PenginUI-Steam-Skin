@@ -1,21 +1,25 @@
 Name: Crashlytics, Logs und Spyware aus Steam und dazugehörigen (Spiele)verzeichnissen löschen
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.5
-Datum: 30.11.2020
+Version: 2.6
+Datum: 02.01.2021
 
 Datei/en:
 del_u3a_de.bat
-Hash: 55c2d74ea1e2a63188da68b47f54eae9e63d52043a2ef4f180676f918e377817
+Hash: 59b8c2b47e935ad6bc0d9b7730613e0e2d54c0dbeab1e6994c32930176740d9c
 
 --------------------------
 
 Installation:
 
-Kopiere die Datei del_u3a_de.bat das Steam-Installationsverzeichnis z.b. "C:\Steam" und starte die Datei
+Kopiere die del_u3a_de.bat in das jeweilige Steam oder "Bücherei"verzeichnis und starte die Datei.
+Das Script beendet Steam, sofern der Client im Hintergrund läuft.
 
-Wurden alternative Steambibliotheken angelegt, muss die Datei ins jeweilige Verzeichnis kopiert
-und von dort aus gestartet werden
+Zusätzlich wird eine steam.cfg ins Hauptverzeichnis geschrieben, die verhindert, dass sich zu Steam-Start
+der Client selbst aktualisiert und die Änderungen rückgängig macht. Nutzer die sich mit eigenen Skins
+und Modifizierungen beschäftigen kennen das Verhalten schon.
+
+Möchte man den Client wieder wie gehabt aktualisieren, muss die steam.cfg aus dem Verzeichnis (temporär) wieder gelöscht werden.
 
 --------------------------
 
@@ -39,6 +43,7 @@ Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Ins
 
 Letzte Änderungen:
 
+- CD Project RED Crashlytics hinzugefügt
 - Es wird nun überprüft ob eine Steam.cfg vorhanden ist
 - Bessere Ausgabe der Unity Analytics
 - CrashDump Ordner hinzugefügt
@@ -58,16 +63,15 @@ Folgende Dateien und Ordner werden mit dieser Batch gelöscht:
 %Nutzername%\Appdata\Local\CrashDumps\*.*
 
 - Steam
+bin\cef\cef.win7\*.*
 dumps\*.*
-bin\cef\cef.win7\
 bin\cef\cef.win7x64\crash_reporter.cfg
 bin\cef\cef.win7x64\debug.log
 .crash
-crashhandler64.dll
 crashhandler.dll
+crashhandler64.dll
 steamerrorreporter.exe
 steamerrorreporter64.exe
-crashhandler64.dll
 WriteMiniDump.exe
 
 - Drittanbieter Crashlytics
@@ -87,5 +91,7 @@ CrashUploader.Publish.exe.config
 CrashReporter.exe.config
 CrashReportClient.exe
 CrashReportClient.pdb
+CrashReporter.resources.dll
+REDEngineErrorReporter.exe
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe

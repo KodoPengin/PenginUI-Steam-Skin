@@ -1,12 +1,12 @@
 Name: Delete Crashlytics, logs and spyware from Steam and related (game) folders
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.5
-Date: 30 November 2020
+Version: 2.6
+Date: 02.01.2021
 
 File/s:
 del_u3a_en.bat
-Hash: 083a6760c2e0e413d2f668f242782b31e0c32bea0618c8b40a2cb29268885c46
+Hash: ae85b45853c5f1cd962ada6fb5776a2a6e18c71a941bd36ec522f862a0d6eda6
 
 --------------------------
 
@@ -37,6 +37,7 @@ Users who use their own layout modifications for Steam probably know this proced
 
 Latest changes:
 
+- CD Project RED Crashlytics added
 - Additional check if steam.cfg exist
 - Better output for Unity Analytics
 - CrashDump folder added
@@ -57,16 +58,15 @@ Following files and folders will be deleted:
 %username%\Appdata\Local\CrashDumps\*.*
 
 - Steam
+bin\cef\cef.win7\*.*
 dumps\*.*
-bin\cef\cef.win7\
 bin\cef\cef.win7x64\crash_reporter.cfg
 bin\cef\cef.win7x64\debug.log
 .crash
-crashhandler64.dll
 crashhandler.dll
+crashhandler64.dll
 steamerrorreporter.exe
 steamerrorreporter64.exe
-crashhandler64.dll
 WriteMiniDump.exe
 
 - Third party crashlytics
@@ -86,5 +86,7 @@ CrashUploader.Publish.exe.config
 CrashReporter.exe.config
 CrashReportClient.exe
 CrashReportClient.pdb
+CrashReporter.resources.dll
+REDEngineErrorReporter.exe
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe
