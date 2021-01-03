@@ -1,7 +1,7 @@
 ####Versionsdetails####
 
 Steam Layout - PenginUI
-Letzte Änderungen: 25.11.2020
+Letzte Änderungen: 03.01.2021
 Version: 0.99.7
 
 Steamprofil: https://steamcommunity.com/id/pen-chan/
@@ -12,7 +12,7 @@ Lizenz: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.de
 Einzigartiger Steam Style. Es wurde Wert darauf gelegt unnötige Funktionen und Werbung weitesgehend im Client auszublenden und somit eine minimalistische und saubere UI zu erstellen.
 
 #### Letzte Änderungen ####
-Anpassungen für das Herbstevent 2020
+- Fix für die Bücherei. Die Kategorie Was ist neu? wird wieder ausgeblendet
 
 #### Skin installieren ####
 
@@ -77,6 +77,7 @@ Sonderaktionen / Events / Publisheraktionen (bisher nur ein Event):
 - Bafta (Eventbanner) auf Produktseiten entfernt
 - Golden Week Hintergrund  entfernt
 - Weitere Eventbanner ausgeblendet
+- Anpassungen für das Herbstevent 2020
 
 Startseite Änderungen und ausgeblendet:
 - Geschenkgutkartenwerbung

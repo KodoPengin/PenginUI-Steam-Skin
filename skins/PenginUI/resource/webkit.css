@@ -282,7 +282,9 @@ div.react_landing_background {background-image: none !important; background-colo
 div#SaleSection_10548 { display: none; }
 body.steamaward_nominations_faq { color: #c6d4df !important; }
 body.v6.steamaward.steamaward_nominations_faq.steamaward_nominations_modal, body.v6.steamaward_nominations_modal { background: none !important; color: unset !important; }
+div.home_page_takeover_sizer {display:none !important;}
 body.v6.sale_autumn2020 .home_page_takeover_sizer, body.v6.sale_autumn2020 .page_background_holder { display: none !important; }
 video.nominations_header_video { transform: none !important; display: none !important; }
 body.v6.sale_autumn2020, div.nominations_video_ctn { background-color: transparent !important; }
 div.faq_section.teal, div.faq_section.darkteal { background: transparent !important; }
+.hero_capsule .hover_screenshots { display:none !important; }

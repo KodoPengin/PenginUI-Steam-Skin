@@ -1,7 +1,7 @@
 ####Version details####
 
 Steam Layout - PenginUI
-Last changes: 25.11.2020
+Last changes: 03.01.2021
 Version: 0.99.7
 
 Steamprofile: https://steamcommunity.com/id/pen-chan/
@@ -12,7 +12,7 @@ License: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
 Unique Steam style. Focus was placed on eliminating unnecessary functions and advertising on the current Steam layout to deliver a minimalistic and clean UI.
 
 #### Latest Changes ####
-Additions to the Autumn Sale 2020
+- Bugfix for library changes. Category "What's new?" should be hidden again
 
 #### Installation ####
 
@@ -77,6 +77,7 @@ Events / Sales / Publishersales (only 1 so far, more will follow)
 - Hidden Bafta (Eventbanner) from product sites
 - Golden Week hidden background
 - More Event banner hidden
+- Additions to the Autumn Sale 2020
 
 Mainpage:
 - Hidden Gift advertising
