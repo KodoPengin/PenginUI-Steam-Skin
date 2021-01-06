@@ -69,7 +69,7 @@ echo/
 echo Initialisierung der "%~nx0" fr Anwender: %USERNAME%
 echo/
 echo !ESC![92mSteam-Client!ESC![0m
-echo 1) Men: Steam & Spieleverzeichnisse s„ubern
+echo 1) Men: Steam ^& Spieleverzeichnisse s„ubern
 echo/
 echo !ESC![92mHauptmen!ESC![0m
 echo 2) Versionshistorie
