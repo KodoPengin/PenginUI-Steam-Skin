@@ -1,6 +1,8 @@
-/* 
-Anpassungen Januar 2021
- */
+/*
+  Template: PenginUI - v0.99.7 - Stand 06.01.2021
+  Website: www.gameindustry.eu
+  Library Anpassungen: Januar 2021
+*/
 
 /* Menüs & Hintergründe */
 .libraryhome_UpdatesContainer_17uEB {
@@ -31,7 +33,12 @@ Anpassungen Januar 2021
 .sharedappdetailsheader_TopCapsule_NZMJ6.sharedappdetailsheader_TopCapsule_NZMJ6{
 	overflow: hidden !important;
 }
-/* Erfolge, Badges & Karten */
+/* Animation Karten */
+.appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_AnimateHover_QljE8:hover .appdetailstradingcardssection_CardContainer_2DUDv, .appdetailstradingcardssection_Card_1WsOn {
+transform: none !important;
+}
+
+/* Erfolge & Badges */
 .appdetailsachievementssection_Icon_zcasg.appdetailsachievementssection_IconGlow_2V3rF {
     box-shadow: 0px 0px 2px 1px rgba(133, 140, 153, 0.6) !important;
 }
@@ -54,9 +61,31 @@ animation-duration: 0s !important;
 	margin-top: 2px !important;
 	margin-bottom:3px !important;
 }
+/* Werbebanner */
+.spotlight_MajorEventBackground_388Iu, .spotlight_MajoreEventImageContentContainer_3mREW, .spotlight_MajorEventImageTemplate_lQR9_ {
+	display:none !important;
+}
+.spotlight_MajorEventContainer_dVJB2 {
+	border:1px solid #7c8088 !important;
+}
+.spotlight_MajorEventContainer_dVJB2:hover .spotlight_MajorEventImage_25fL1 {
+	transform:none !important;
+}
+.spotlight_MajorEventImageContainer_1PkTB {
+	-webkit-mask-image: unset !important;
+}
+.spotlight_MajorEventImageContainer_1PkTB
 /* Buttons */
 .appdetailscommunityfeed_HeaderStyles_2lNdD {
 	background: none !important;
+}
+/* Kollektionen */
+.allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_CollectionBG_akZKn .allcollections_BackgroundImage_2I7jw {
+    object-fit: cover;
+    /* width: 100%; */
+}
+.allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_DisplayCaseContainer_3vMgn {
+transform-style:unset !important;
 }
 /* Ende */
 
