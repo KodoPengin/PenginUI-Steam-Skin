@@ -1,16 +1,18 @@
 @echo off
-title GameIndustry.eu - Analytics Cleaner v2.6
+set "filename=%~nx0"
+for %%A in (%filename%) do title GameIndustry.eu - Spyware ^& Crashlytics Cleaner for Steam - v2.7 - %%~zA bytes
 SETLOCAL EnableExtensions DisableDelayedExpansion
 for /F %%a in ('echo prompt $E ^| cmd') do (
   set "ESC=%%a"
 )
+:menu
 SETLOCAL EnableDelayedExpansion
 echo !ESC![92m
 echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics, logs and spyware from the            #
 echo # Steamfolder and from related (game) folders to disallow hidden        #
 echo # data theft and to enhance own privacy.                                #
-echo # (c) by GameIndustry.eu - 03 January 2021 - Version 2.6                #
+echo # (c) by GameIndustry.eu - 06 January 2021 - Version 2.7                #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -60,10 +62,31 @@ if errorlevel 2 goto :EOF
 
 :Continue
 
-::Kill tasks if open
+@echo off
+:home
+cls
+echo/
+echo Initialization of "%~nx0" for user: %USERNAME%
+echo/
+echo !ESC![92mSteam-Client!ESC![0m
+echo 1) Menu: Cleaning Steam and game folders
+echo/
+echo !ESC![92mMain Menu!ESC![0m
+echo 2) Version history
+echo 3) Close batch
+echo.
+set /p navi=Eingabe:
+if "%navi%"=="1" goto Steam
+cls
+if "%navi%"=="2" goto Version
+if "%navi%"=="3" goto exit
+goto home
+
+:Steam
+cls
+::Close open Steam tasks
 echo/
 echo Active Steam instances will be closed...
-echo/
 ::If open, close Steam
 taskkill /f /im steam.exe >nul 2>&1
 taskkill /f /im SteamService.exe >nul 2>&1
@@ -71,11 +94,10 @@ taskkill /f /im steamwebhelper.exe >nul 2>&1
 
 ::steam.cfg
 IF EXIST "steam.cfg" (
+echo/
 goto :Crash
 ) ELSE (
-echo Preparation: !ESC![92mSTEAM.CFG!ESC![0m
-echo A steam.cfg is written into the installation folder. It prevents Steam from automatic updates.
-echo This is necessary, because Steam will download and rewrite all files to each startup.
+echo Eine !ESC![4msteam.cfg!ESC![0m was created...
 echo/
 @echo off
 echo BootStrapperInhibitAll=enable> steam.cfg
@@ -83,8 +105,8 @@ echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 )
 
 :Crash
-echo !ESC![92m1.!ESC![0m Delete files regarded to crash.steampowered.com....!ESC![92mOK!ESC![0m
-::Delete Folder and files related to crash.steampowered.com
+echo !ESC![92m1.!ESC![0m Delete files with relation to crash.steampowered.com....!ESC![92mOK!ESC![0m
+::Entferne Daten die fr Uploads an crash.steampowered.com zust„ndig sind
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
 IF EXIST "dumps\*.*" del "dumps\*.*" /q
@@ -98,12 +120,12 @@ IF EXIST "steamerrorreporter.exe" del "steamerrorreporter.exe" /f /q
 IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
-echo !ESC![92m2.!ESC![0m Delete (if exist) Crashdumps in system folder....!ESC![92mOK!ESC![0m
-::Delete Crashdumps
+echo !ESC![92m2.!ESC![0m Delete (if exist) Crashdumps from system folder....!ESC![92mOK!ESC![0m
+::Entferne Crashdumps
 IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData\Local\CrashDumps\*.*" /q
 
-echo !ESC![92m3.!ESC![0m Deletes Crashlytics from Thirdparty companies....!ESC![92mOK!ESC![0m
-:: Thirdparty Crashlytics
+echo !ESC![92m3.!ESC![0m Delete Crashlytics, Logs ^& Dumps from Third party companies....!ESC![92mOK!ESC![0m
+::Crashlytics from Third party companies
 del /s /f /q CrashUploader.Base.Azure.dll >nul 2>nul
 del /s /f /q CrashUploader.Base.dll >nul 2>nul
 del /s /f /q CrashUploader.Base.UI.dll >nul 2>nul
@@ -123,6 +145,8 @@ del /s /f /q CrashReportClient.pdb >nul 2>nul
 del /s /f /q CrashReporter.resources.dll >nul 2>nul
 del /s /f /q REDEngineErrorReporter.exe >nul 2>nul
 del /s /f /q UnityEngine.CrashReportingModule* >nul 2>nul
+del /s /f /q *.dmp >nul 2>nul
+del /s /f /q *.log >nul 2>nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
@@ -138,7 +162,32 @@ for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do d
 )
 chdir /d %ORIGINAL_DIR%
 echo/
-echo !ESC![92mDone :]!ESC![0m
+echo !ESC![92mDone:]!ESC![0m
 echo/
-@echo off 
-pause
+echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m2.!ESC![0m Close Batch
+echo/
+set /p navi=Eingabe: 
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:Version
+@cls
+echo !ESC![92mFilename:!ESC![0m %~nx0
+@echo off
+echo |set /p ="!ESC![92mHash:!ESC![0m "
+CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
+echo/
+echo !ESC![92mDate:!ESC![0m          !ESC![92mDescription:!ESC![0m
+echo 06.01.2021      Changed Menu structure, added Hash, filesize and history
+echo/
+echo 1) Back to Choice
+echo 2) Close Batch
+echo/
+set /p navi=Eingabe:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause

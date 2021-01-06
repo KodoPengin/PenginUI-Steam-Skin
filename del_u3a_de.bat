@@ -1,16 +1,18 @@
 @echo off
-title GameIndustry.eu - Analytics Cleaner v2.6
+set "filename=%~nx0"
+for %%A in (%filename%) do title GameIndustry.eu - Spyware ^& Crashlytics Cleaner fÅr Steam - v2.7 - %%~zA bytes
 SETLOCAL EnableExtensions DisableDelayedExpansion
 for /F %%a in ('echo prompt $E ^| cmd') do (
   set "ESC=%%a"
 )
+:menu
 SETLOCAL EnableDelayedExpansion
 echo !ESC![92m
 echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics, Logs und Analyticsdienste aus dem    #
 echo # Steam-Verzeichnis und dazugehîrigen (Spiele)verzeichnissen um         #
 echo # Uploads vorzubeugen und die eigene Datensicherheit zu verstÑrken      #
-echo # (c) by GameIndustry.eu - 03/01/2021 - Version 2.6                     #
+echo # (c) by GameIndustry.eu - 06/01/2021 - Version 2.7                     #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -60,10 +62,31 @@ if errorlevel 2 goto :EOF
 
 :Continue
 
+@echo off
+:home
+cls
+echo/
+echo Initialisierung der "%~nx0" fÅr Anwender: %USERNAME%
+echo/
+echo !ESC![92mSteam-Client!ESC![0m
+echo 1) MenÅ: Steam & Spieleverzeichnisse sÑubern
+echo/
+echo !ESC![92mHauptmenÅ!ESC![0m
+echo 2) Versionshistorie
+echo 3) Beenden
+echo.
+set /p navi=Eingabe:
+if "%navi%"=="1" goto Steam
+cls
+if "%navi%"=="2" goto Version
+if "%navi%"=="3" goto exit
+goto home
+
+:Steam
+cls
 ::Beende Tasks, sofern diese offen sind
 echo/
 echo Aktive Steamprozesse werden automatisch geschlossen...
-echo/
 ::Wenn offen, beende Steam
 taskkill /f /im steam.exe >nul 2>&1
 taskkill /f /im SteamService.exe >nul 2>&1
@@ -71,11 +94,10 @@ taskkill /f /im steamwebhelper.exe >nul 2>&1
 
 ::steam.cfg
 IF EXIST "steam.cfg" (
+echo/
 goto :Crash
 ) ELSE (
-echo Vorbereitung: !ESC![92mSTEAM.CFG!ESC![0m
-echo Eine !ESC![4msteam.cfg!ESC![0m wird ins Installationsverzeichnis geschrieben, die eine eigenstÑndige Aktualisierung
-echo des Clients verhindert. Dies ist notwendig, da sonst zu jedem Start die Dateien neu downgeloadet werden.
+echo Eine !ESC![4msteam.cfg!ESC![0m wird erstellt...
 echo/
 @echo off
 echo BootStrapperInhibitAll=enable> steam.cfg
@@ -102,7 +124,7 @@ echo !ESC![92m2.!ESC![0m Entferne (sofern vorhanden) Crashdumps im Systemverzeic
 ::Entferne Crashdumps
 IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData\Local\CrashDumps\*.*" /q
 
-echo !ESC![92m3.!ESC![0m Entferne Crashlytics von Drittanbietern....!ESC![92mOK!ESC![0m
+echo !ESC![92m3.!ESC![0m Entferne Crashlytics, Logs ^& Dumps von Drittanbietern....!ESC![92mOK!ESC![0m
 ::Crashlytics von Drittanbietern
 del /s /f /q CrashUploader.Base.Azure.dll >nul 2>nul
 del /s /f /q CrashUploader.Base.dll >nul 2>nul
@@ -123,6 +145,8 @@ del /s /f /q CrashReportClient.pdb >nul 2>nul
 del /s /f /q CrashReporter.resources.dll >nul 2>nul
 del /s /f /q REDEngineErrorReporter.exe >nul 2>nul
 del /s /f /q UnityEngine.CrashReportingModule* >nul 2>nul
+del /s /f /q *.dmp >nul 2>nul
+del /s /f /q *.log >nul 2>nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
@@ -140,5 +164,30 @@ chdir /d %ORIGINAL_DIR%
 echo/
 echo !ESC![92mFertig :]!ESC![0m
 echo/
-@echo off 
-pause
+echo !ESC![92m1.!ESC![0m ZurÅck zur Auswahl
+echo !ESC![92m2.!ESC![0m Batch schlie·en
+echo/
+set /p navi=Eingabe: 
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:Version
+@cls
+echo !ESC![92mDateiname:!ESC![0m %~nx0
+@echo off
+echo |set /p ="!ESC![92mHash:!ESC![0m "
+CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
+echo/
+echo !ESC![92mDatum:!ESC![0m          !ESC![92mBeschreibung:!ESC![0m
+echo 06.01.2021      MenÅ Åberarbeitet, Hash, Dateigrî·e und Historie hinzugefÅgt
+echo/
+echo 1) ZurÅck zur Auswahl
+echo 2) Batch schlie·en
+echo/
+set /p navi=Eingabe:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+PauseSome localized OEM text 
