@@ -10,7 +10,7 @@ echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics, Logs und Analyticsdienste aus dem    #
 echo # Steam-Verzeichnis und dazugeh”rigen (Spiele)verzeichnissen um         #
 echo # Uploads vorzubeugen und die eigene Datensicherheit zu verst„rken      #
-echo # (c) by GameIndustry.eu - 01/01/2021 - Version 2.6                     #
+echo # (c) by GameIndustry.eu - 03/01/2021 - Version 2.6                     #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -122,6 +122,7 @@ del /s /f /q CrashReportClient.exe >nul 2>nul
 del /s /f /q CrashReportClient.pdb >nul 2>nul
 del /s /f /q CrashReporter.resources.dll >nul 2>nul
 del /s /f /q REDEngineErrorReporter.exe >nul 2>nul
+del /s /f /q UnityEngine.CrashReportingModule* >nul 2>nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
@@ -130,7 +131,7 @@ for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do s
 echo !ESC![92m4.!ESC![0m Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen....!ESC![92mOK!ESC![0m
 echo/
 if [%VAR%]==[0] echo Super, es befanden sich keine UnityCrashHandler in den Spiele-Verzeichnissen
-if %VAR% gtr 0 echo Es wurden !ESC![92m%VAR%!ESC![0m Datei/en aus den vorhandenen Spieleverzeichnissen gel”scht
+if %VAR% gtr 0 echo Es wurden !ESC![92m%VAR%!ESC![0m UnityCrashHandler aus den vorhandenen Spieleverzeichnissen gel”scht
 IF EXIST "%folder%" (
     cd /d %folder%
 for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"

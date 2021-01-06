@@ -10,7 +10,9 @@ It's a <b>WIP project</b> and only updated irregularly. Deal with it ;]
 - Some library changes ( e.g. stopped animations, removed broadcasting), removed backgrounds and some graphics
 - Added additional Menu items to the header
 - Complete profile overhaul with transparency and fixed background
-- Additional Script to delete Unity Spyware from Steam game folders
+- Additional Batch Script to delete Spyware and Crashlytics from Steam game folders
+
+The Script can be downloaded as Standalone version: <a href="https://www.gameindustry.eu/downloads/#DelU3A">DelU3A Batch Script</a>
 
 # Installation & readme
 - Copy the whole content into your Steam folder

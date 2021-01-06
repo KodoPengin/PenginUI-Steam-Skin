@@ -1,75 +1,42 @@
-::-webkit-scrollbar,
-::-webkit-scrollbar-corner {
-	width: 15px;
-	height: 15px;
-	background: #171717;
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: transparent;
+    z-index: 12;
+    overflow: visible;
 }
-::-webkit-scrollbar-button,
-::-webkit-scrollbar-track,
-::-webkit-scrollbar-thumb {
-	background: #575552 center no-repeat;
-	border: 1px solid #171717;
-}
-
-::-webkit-scrollbar-track:horizontal,
-::-webkit-scrollbar-thumb:horizontal {
-	border-left: 0;
-	border-rigtht: 0;
-}
-
-::-webkit-scrollbar-track:vertical,
-::-webkit-scrollbar-thumb:vertical {
-	border-top: 0;
-	border-bottom: 0;
-}
-
 
 ::-webkit-scrollbar-thumb {
-	background-color: #5d5b58;
+    width: 4px;
+    min-height: 32px;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    z-index: 12;
+    background-image: none;
+    background-color: rgba( 67, 73, 83, 1 );
+    background-clip: padding-box;
+    transition: background-color .32s ease-in-out;
+    // margin: 4px;
+    // min-width: 32px;
 }
 
-::-webkit-scrollbar-track:vertical {
-	background: #171717 -webkit-gradient(linear, center top, center 89, from(rgb(59, 59, 59)), to(rgb(23, 23, 23)));
-}
-
-::-webkit-scrollbar-track:horizontal {
-	background: #171717 -webkit-gradient(linear, left center, 89 center, from(rgb(59, 59, 59)), to(rgb(23, 23, 23)));
-}
-
-
-::-webkit-scrollbar-button:hover,
 ::-webkit-scrollbar-thumb:hover {
-	background-color: #676461;
+    background-color: rgb(96, 103, 116);
+    background-clip: padding-box;
 }
 
-::-webkit-scrollbar-thumb {
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJCAYAAADgkQYQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNpi/P//PwMhwAQibly/9h8fzUi0SefPnfuPjybepKNHjvxHpQ+j0MSbtGvXzv/I9G44vYN4kwACDAA7RESWY5qxTAAAAABJRU5ErkJggg==);
+::-webkit-scrollbar-corner {
+    background: #202020;
+    background-color: rgb(67, 73, 83);
 }
 
-::-webkit-scrollbar-button:vertical:decrement {
-	height: 23px;
-	background-position: center 7px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD9JREFUeNpi+P//PwMyTk6I+48uxsSABFIS4//7+PqDaWRxJnQFIICukAldAQwgK2QEuQFdATLYsnkjA0CAAQCJHDCKKVQLaAAAAABJRU5ErkJggg==);
-}
-
-::-webkit-scrollbar-button:vertical:increment {
-	height: 23px;
-	background-position: center 9px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAYAAACXU8ZrAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpiTE6I++/j68+AC2zZvJGBac78hYwgBi4FIHkmEAebQpgCMOf///9wDLJ6/dq1/0E0sjiKIphCdDGAAAMAtQVIOLvLsjoAAAAASUVORK5CYII=);
-}
-
-::-webkit-scrollbar-button:horizontal:decrement {
-	width: 23px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEZJREFUeNpi+P//PwMyTk6I+8/EgARSEuP/+/j6MzChC4AAE7oACDA/eXgfRQCscs78hYxbNm9EFQQR6BJwi1AksLkTIMAAsFg1w4z04pgAAAAASUVORK5CYII=);
-}
-
-::-webkit-scrollbar-button:horizontal:increment {
-	width: 23px;
-	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAJCAYAAAD6reaeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAENJREFUeNpiSE6I+w8EDMiYycfXnyElMf4/AxJgAhHoEkwwBrIEE7I2mASK4JbNGxnmzF/IyIQuANeOLAAG2NwJEGAAuVg0Qtlxn1kAAAAASUVORK5CYII=);
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-button {
+    display: none;
 }
 
 /*
-  Template: PenginUI - v0.99.7 - Stand 25.11.2020
+  Template: PenginUI - v0.99.6 - Stand 23.10.2020
   Website: www.gameindustry.eu
 */
 
@@ -123,6 +90,7 @@ div.home_rightcol { background:transparent; }
 body.v6 .store_nav .popup_block_new .popup_body, body.v6 #footer_nav .popup_block_new .popup_body { background: #373e47 !important; color: white !important; }
 .store_nav .popup_menu .popup_menu_item, .creator .responsive_page_template_content .popup_menu .popup_menu_item, .curator .responsive_page_template_content .popup_menu .popup_menu_item, .footer_content .popup_menu .popup_menu_item, .search_area .popup_body .match, .search_area .popup_body .match .match_name, body.v6 .store_nav .popup_block_new .popup_body, body.v6 #footer_nav .popup_block_new .popup_body a { color: white !important;}
 .store_nav .tab:hover > span, .store_nav.tab:hover, .store_nav .tab.focus > span, .store_nav .tab.focus { background: #373e47 !important; color: white !important; }
+div.home_ctn.marketingmessage_area { display:none !important; }
 
 /* Ausgeblendetes Zeug */
 div.game_area_description.game_area_description img { display: none !important; }
@@ -136,7 +104,7 @@ a.franchise_notice { display: none !important; }
 div#game_area_reviews.game_area_description { display: none !important; }
 div.recommended_by_steam_labs_ctn.home_ctn.ir_ctn { display: none !important; }
 div.home_ctn.community_recommendations_by_steam_labs_ctn { display: none !important; }
-a.btn_next_in_queue.btn_next_in_queue_trigger, div.discovery_queue_ctn.home_ctn { display: none !important; }
+div.discovery_queue_ctn.home_ctn { display: none !important; }
 div.home_index_banner.home_page_content { display: none !important; }
 div#news div.newshr, div.newsPostBlock.eurogamer, div.newsPostBlock.rps, div.newsPostBlock.pcgamer, div.newsPostBlock.kotaku { display: none !important; }
 
@@ -206,10 +174,6 @@ a.btnv6_lightblue_blue.btnv6_border_2px.btn_medium { background: -webkit-linear-
 .btn_darkblue_white_innerfade > span, .btn_medium > span, .btn_profile_action > span  { background: none !important; }
 a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
 .btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
-a.btn_nominate.btn_uppercase.btn_medium.nominate_button { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; }
-.btn_nominate:hover, .newmodal_buttons .btn_grey_steamui:hover, body.v6 .newmodal_buttons .btn_grey_steamui:hover > span { box-shadow: none !important;}
-.btn_nominate span, body.v6 .newmodal_buttons .btn_grey_steamui > span { color: #c6d4df !important; }
-.btn_nominate:hover, .newmodal_buttons .btn_grey_steamui:hover, body.v6 .newmodal_buttons .btn_grey_steamui:hover > span { background: -webkit-linear-gradient( 326deg, rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%) !important; background: linear-gradient( 124deg, rgba(97,100,101,0.3) 0%,rgba(226,244,255,0.3) 100%) !important; color: #c6d4df !important; }
 
 /* Diskussionsbereiche und Warnmeldungen */
 .commentthread_comment.hidden_post { display: none !important; }
@@ -226,13 +190,14 @@ div.forum_topic_tooltip { border: 1px solid #4a545e !important; background: #161
 .forumtopic_comments .commentthread_answer_bar, .forumtopic_answer { background: rgba( 89, 94, 100, 1.0) !important; color: #ffffff; }
 .forumtopic_comments .commentthread_comment.commentthread_answer_comment { border: 1px solid #595e64 !important; }
 div.bb_code, blockquote.bb_blockquote, .forumtopic_answer .answer_quote, blockquote.bb_blockquote.with_author { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
+
 div.forum_topic_needs_content_check_notice.forum_newtopic_box img {display: none !important; }
 
 /* Warnmeldungen */
 div.DRM_notice, .ack_message_header, .support_message_header { background: none; background-color: rgba(192,45,46) !important; color: white !important; }
 div.DRM_notice a:hover { color:white; }
 div.ack_message, div.support_message { border:3px solid #cc0000; }
-div.notification.failed_content_check, div#error_display.workshop_paymentinfo_validation_error, div.incompatibleNotification, div.forum_topic_needs_content_check_notice.forum_newtopic_box, div#bannedNotification.bannedNotification, div#incompatibleNotification.incompatibleNotification, div#visibilityNotificationPrivate.visibilityNotification, div#visibilityNotificationFriendsOnly.visibilityNotification, div#visibilityNotificationUnlisted.visibilityNotification { background-color: rgba( 192, 45, 46) !important; color: white !important; }
+div#error_display.workshop_paymentinfo_validation_error, div.incompatibleNotification, div.forum_topic_needs_content_check_notice.forum_newtopic_box, div#bannedNotification.bannedNotification, div#incompatibleNotification.incompatibleNotification, div#visibilityNotificationPrivate.visibilityNotification, div#visibilityNotificationFriendsOnly.visibilityNotification, div#visibilityNotificationUnlisted.visibilityNotification { background-color: rgba( 192, 45, 46) !important; color: white !important; }
 div.topic_cannotreply_reason.forum_newtopic_box { background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forum_comment_author_banned { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
@@ -242,13 +207,6 @@ div.market_header, div.page_container.page_container_market { background:none; b
 div.partnersaledisplay_SaleOverlayCtn_3GTIc.SaleOverlayCtn { display: none !important; }
 .reward_bg_1, .reward_bg_2, .reward_bg_3, .reward_bg_4, .reward_bg_5, div#faq.rewards_faq_ctn, div.rewards_badge_levelup_ctn.reward_bg_3, div.rewards_profile_tier.reward_bg_4 , div.partnersaledisplay_SaleSection_1cOoC.eventbbcodeparser_SaleSectionCtn_39HWX, div.reward_items_ctn { background: transparent !important; background-color:transparent !important; }
 div.responsive_page_content, body.v6.labs, .trending_reviews_controls_ctn { background:none !important; background-image:none !important; background-color:#161a1f !important; }
-div#together.rpt_section1_container, div#anywhere.rpt_section2_container, div.rpt_section3_container, div.rpt_section4_container { background:none !important; background-color: rgb(53, 62, 71) !important; }
-div.rpt_section4_container { color: #ffffff; }
-div.rpt_monsterhunter_ctn, div.rpt_anywhere_header_left, div.remoteplay_howto_section, div#anywhere_how.rpt_anywhere_how_ctn { background-image:none !important; }
-div.remoteplay_overcooked_section, div.rpt_circles_img { display:none !important; }
-.lists_more_container .item .bg { filter:none !important; }
-.lists_more_container .item .overlay { background: none !important; }
-.light_container.bezel { box-shadow:none !important; }
 
 /* Marktanpassungen, Inventar etc */
 .market_headertip { border:1px solid #cc0000; background-color:#161a1f; }
@@ -273,18 +231,10 @@ div.SaleSchedDetailCtn { background-color: transparent !important; }
 div.partnersaledisplay_SaleSection_1cOoC.salesectioneventschedule_SaleSchedCtn_2g7il.SaleSchedCtn { background-image:none !important; background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; }
 div.partnersaledisplay_SaleOuterContainer_150kd.undefined { margin-top:100px !important; }
 .best_button_container > a { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); color: white !important; }
-div#sale_root.react_landing_background, div.partnersaledisplay_SaleBackground_2N8Se.SaleBackground, div.partnersaledisplay_SaleBackground_2N8Se.undefined, body.sale_page_background, body.v6.sale_page_background.sale_page_n_section.responsive_page, body.v6.responsive_page, body.v6.sale_page_background.sale_page_n_section { background:none !important; background-image:none !important; background-color:#161a1f !important; }
+div#sale_root.react_landing_background, div.partnersaledisplay_SaleBackground_2N8Se.SaleBackground, div.partnersaledisplay_SaleBackground_2N8Se.undefined, body.sale_page_background, body.v6.sale_page_background.sale_page_n_section.responsive_page, body.v6, body.v6.responsive_page, body.v6.sale_page_background.sale_page_n_section { background:none !important; background-image:none !important; background-color:#161a1f !important; }
 div.best_title, div.best_title_sub, div.partnereventshared_SaleSectionHeader_2WMiQ { color:#bac0c6 !important; }
 img.saleEventBannerStyle.saleEventBannerBig { display: none; }
 div#home_takeunder_ctn.home_ctn, div.home_page_content_takeunder { display: none; }
 div.home_page_content.deep_dive_block { display: none !important; }
 div.react_landing_background {background-image: none !important; background-color:transparent !important; }
 div#SaleSection_10548 { display: none; }
-body.steamaward_nominations_faq { color: #c6d4df !important; }
-body.v6.steamaward.steamaward_nominations_faq.steamaward_nominations_modal, body.v6.steamaward_nominations_modal { background: none !important; color: unset !important; }
-div.home_page_takeover_sizer {display:none !important;}
-body.v6.sale_autumn2020 .home_page_takeover_sizer, body.v6.sale_autumn2020 .page_background_holder { display: none !important; }
-video.nominations_header_video { transform: none !important; display: none !important; }
-body.v6.sale_autumn2020, div.nominations_video_ctn { background-color: transparent !important; }
-div.faq_section.teal, div.faq_section.darkteal { background: transparent !important; }
-.hero_capsule .hover_screenshots { display:none !important; }

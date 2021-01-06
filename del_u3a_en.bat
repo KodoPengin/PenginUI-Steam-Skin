@@ -10,7 +10,7 @@ echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics, logs and spyware from the            #
 echo # Steamfolder and from related (game) folders to disallow hidden        #
 echo # data theft and to enhance own privacy.                                #
-echo # (c) by GameIndustry.eu - 01 January 2021 - Version 2.6                #
+echo # (c) by GameIndustry.eu - 03 January 2021 - Version 2.6                #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -122,6 +122,7 @@ del /s /f /q CrashReportClient.exe >nul 2>nul
 del /s /f /q CrashReportClient.pdb >nul 2>nul
 del /s /f /q CrashReporter.resources.dll >nul 2>nul
 del /s /f /q REDEngineErrorReporter.exe >nul 2>nul
+del /s /f /q UnityEngine.CrashReportingModule* >nul 2>nul
 
 ::Unity Analytics
 set ORIGINAL_DIR=%CD%
@@ -130,7 +131,7 @@ for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do s
 echo !ESC![92m4.!ESC![0m Deletes Unity Spyware and Crashlytics in game folders....!ESC![92mOK!ESC![0m
 echo/
 if [%VAR%]==[0] echo Great. There were no UnityCrashHandler in game folders.
-if %VAR% gtr 0 echo !ESC![92m%VAR%!ESC![0m file/s were deleted from game folders
+if %VAR% gtr 0 echo !ESC![92m%VAR%!ESC![0m UnityCrashHandler were deleted from game folders
 IF EXIST "%folder%" (
     cd /d %folder%
 for /f "delims=" %%i in ('dir /a-d /s /b 2^> nul ^ UnityCrashHandler*.exe') do del "%%~i"
