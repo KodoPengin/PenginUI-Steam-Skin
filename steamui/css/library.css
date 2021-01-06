@@ -37,7 +37,6 @@
 .appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_AnimateHover_QljE8:hover .appdetailstradingcardssection_CardContainer_2DUDv, .appdetailstradingcardssection_Card_1WsOn {
 transform: none !important;
 }
-
 /* Erfolge & Badges */
 .appdetailsachievementssection_Icon_zcasg.appdetailsachievementssection_IconGlow_2V3rF {
     box-shadow: 0px 0px 2px 1px rgba(133, 140, 153, 0.6) !important;
@@ -86,6 +85,10 @@ animation-duration: 0s !important;
 }
 .allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_DisplayCaseContainer_3vMgn {
 transform-style:unset !important;
+}
+/* Hotfix Review-Awards */
+.awardicon_IconList_2cI0L {
+    flex-flow: wrap !important;
 }
 /* Ende */
 
