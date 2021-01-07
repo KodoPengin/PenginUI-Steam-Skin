@@ -1,7 +1,7 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #                                                               #
-# Additions to "libraryroot.css" in folder "steamui/css"        #
-# Ergänzungen für die "libraryroot.css" im Ordner "steamui/css" #
+# Additions to "library.css" in folder "steamui/css"            #
+# Ergänzungen für die "library.css" im Ordner "steamui/css"     #
 #                                                               #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
