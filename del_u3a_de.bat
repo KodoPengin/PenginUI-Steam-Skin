@@ -98,9 +98,7 @@ cls
 echo/
 echo Aktive Steamprozesse werden automatisch geschlossen...
 ::Wenn offen, beende Steam
-taskkill /f /im steam.exe >nul 2>&1
-taskkill /f /im SteamService.exe >nul 2>&1
-taskkill /f /im steamwebhelper.exe >nul 2>&1
+taskkill /F /T /IM steam.exe >nul 2>&1
 
 ::steam.cfg
 IF EXIST "steam.cfg" (
@@ -288,10 +286,8 @@ Pause
 echo/
 echo HTML-Cache leeren
 echo Aktive Steamprozesse werden automatisch geschlossen...
-::Wenn offen, beende Steam
-taskkill /f /im steam.exe >nul 2>&1
-taskkill /f /im SteamService.exe >nul 2>&1
-taskkill /f /im steamwebhelper.exe >nul 2>&1
+::Wenn offen, beende Steam inkl. Unterprozessen
+taskkill /F /T /IM steam.exe >nul 2>&1
 echo/
 echo !ESC![92m1.!ESC![0m HTML-Cache wird geleert....
 echo/
@@ -315,10 +311,10 @@ echo |set /p ="!ESC![92mHash:!ESC![0m "
 CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
 echo/
 echo !ESC![92mDatum:!ESC![0m          !ESC![92mBeschreibung:!ESC![0m
-echo 07.01.2021      Verschiedene Cacheordner des Steam-Clients kînnen nun geleert werden
+echo 07.01.2021      Verschiedene Cacheordner des Steam-Clients kînnen nun geleert werden, Taskkill Optimierung
 echo                 Verschiedene Dienste kînnen nun per hosts blockiert werden. Siehe Readme
-echo 06.01.2021      MenÅ Åberarbeitet, Hash, Dateigrî·e und Historie hinzugefÅgt
-echo                 Funktionen zum Leeren des Steam-Cache's hinzugefÅgt
+echo 06.01.2021      Historie aus dem Thunderfox Script Åbernommen, MenÅ Åberarbeitet, Hash und
+echo                 Dateigrî·e hinzugefÅgt, Funktionen zum Leeren des Steam-Cache's hinzugefÅgt
 echo/
 echo 1) ZurÅck zur Auswahl
 echo 2) Batch schlie·en

@@ -98,9 +98,7 @@ cls
 echo/
 echo Active Steam instances will be closed...
 ::If open, close Steam
-taskkill /f /im steam.exe >nul 2>&1
-taskkill /f /im SteamService.exe >nul 2>&1
-taskkill /f /im steamwebhelper.exe >nul 2>&1
+taskkill /F /T /IM steam.exe >nul 2>&1
 
 ::steam.cfg
 IF EXIST "steam.cfg" (
@@ -287,9 +285,7 @@ Pause
 echo/
 echo Delete HTML-Cache
 echo Active Steam instances will be closed...
-taskkill /f /im steam.exe >nul 2>&1
-taskkill /f /im SteamService.exe >nul 2>&1
-taskkill /f /im steamwebhelper.exe >nul 2>&1
+taskkill /F /T /IM steam.exe >nul 2>&1
 echo/
 echo !ESC![92m1.!ESC![0m Delete HTML-Cache....
 echo/
@@ -313,9 +309,10 @@ echo |set /p ="!ESC![92mHash:!ESC![0m "
 CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
 echo/
 echo !ESC![92mDate:!ESC![0m           !ESC![92mDescription:!ESC![0m
-echo 07.01.2021      Function to delete several Cache folders
+echo 07.01.2021      Function to delete several Cache folders, Taskkill optimization
 echo                 Several services can be blocked via hosts, see readme
-echo 06.01.2021      Menu overhaul, Hash, filesize and history added
+echo 06.01.2021      History function from Thunderfox Script, Menu overhaul,
+echo                 Hash, filesize and history added
 echo/
 echo !ESC![92mDone:]!ESC![0m
 echo/

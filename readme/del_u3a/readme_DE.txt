@@ -6,7 +6,7 @@ Datum: 07.01.2021
 
 Datei/en:
 del_u3a_de.bat
-Hash: fa83e18d718bbac0eaa8f5bdf95edbbdc15a36196280901cc2e8fad03b4adc3c
+Hash: f6e6c92bcf4551a010388b723d63200beb8e8b695f8d6e93ecb589cc12c9a596
 
 --------------------------
 
@@ -37,8 +37,8 @@ Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Ins
 hosts:
 
 Die hosts Datei dient für unseren Zweck als Schutz vor ausgehendem Verkehr und dem Versand unserer Daten. Die Batch tätigt
-unter Punkt 2 einige Einträge in dieser Datei und blockiert Analytics der Firma Unity Technologies und den Crashsender der
-Valve Corporation, welcher im Hintergrund der eigenen Steamsession aktiv ist.
+unter Punkt 5 einige Einträge in dieser Datei und blockiert Analytics der Firma Unity Technologies, sowie Crashsender der
+Firmen Valve Corporation und Avalanche Studios.
 
 hosts-Ordner: C:\Windows\System32\drivers\etc
 

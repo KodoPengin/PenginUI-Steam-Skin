@@ -6,7 +6,7 @@ Date: 07.01.2021
 
 File/s:
 del_u3a_en.bat
-Hash: 24de9ffb16b5199dcd2a4e1c49ddbcfdc73ec740cfbe914939d3aed28e5dfc3b
+Hash: 8d026695d61e321be34267e0b845cc0414b94b386f36043288b387e8db61fd78
 
 --------------------------
 
@@ -34,9 +34,9 @@ Users who use their own layout modifications for Steam probably know this proced
 
 hosts:
 
-The hosts file is used for our purpose as protection against outbound traffic and sending our data. The batch makes
-under point 5 some entries in this file and blocks analytics of the company Unity Technologies and the crashsender of the
-Valve Corporation, which is active in the background of the own steamsession.
+The hosts file is used for our purpose as protection against outbound traffic and sending our data.
+The batch (Point 5) in this file is used to block some analytics of the company Unity Technologies
+and crashlytics of Valve Corporation and Avalanche Studios.
 
 hosts folder: C:\Windows\System32\drivers\etc
 
