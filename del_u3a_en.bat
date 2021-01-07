@@ -77,7 +77,7 @@ echo !ESC![92mMain Menu!ESC![0m
 echo 4) Version history
 echo 5) Close batch
 echo.
-set /p navi=Eingabe:
+set /p navi=Choose:
 if "%navi%"=="1" goto Steam
 if "%navi%"=="2" goto Biblio
 if "%navi%"=="3" goto DL_Cache
@@ -171,7 +171,7 @@ echo/
 echo !ESC![92m1.!ESC![0m Back to Choice
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
-set /p navi=Eingabe: 
+set /p navi=Choose:
 cls
 if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
@@ -195,7 +195,7 @@ echo/
 echo !ESC![92m1.!ESC![0m Back to Choice
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
-set /p navi=Eingabe: 
+set /p navi=Choose:
 cls
 if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
@@ -223,7 +223,7 @@ echo/
 echo !ESC![92m1.!ESC![0m Back to Choice
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
-set /p navi=Eingabe: 
+set /p navi=Choose:
 cls
 if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
@@ -245,7 +245,7 @@ echo/
 echo !ESC![92m1.!ESC![0m Back to Choice
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
-set /p navi=Eingabe: 
+set /p navi=Choose:
 cls
 if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
