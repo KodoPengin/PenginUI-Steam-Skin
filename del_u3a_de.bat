@@ -71,19 +71,25 @@ echo/
 echo !ESC![92mSteam-Client!ESC![0m
 echo 1) Crashlytics ^& Spyware entfernen
 echo 2) Bibliothek-Cache leeren
-echo 3) Download ^& Shadercache
+echo 3) Bilder, Download ^& Shadercache leeren
+echo 4) HTML-Cache leeren
+echo/
+echo !ESC![92mHosts!ESC![0m
+echo 5) Analytics ^& Crashlytics via hosts blockieren
 echo/
 echo !ESC![92mHauptmenÅ!ESC![0m
-echo 4) Versionshistorie
-echo 5) Beenden
+echo 6) Versionshistorie
+echo 7) Beenden
 echo.
 set /p navi=Eingabe:
 if "%navi%"=="1" goto Steam
 if "%navi%"=="2" goto Biblio
 if "%navi%"=="3" goto DL_Cache
+if "%navi%"=="4" goto HT_Cache
+if "%navi%"=="5" goto Hosts_Block
 cls
-if "%navi%"=="4" goto Version
-if "%navi%"=="5" goto exit
+if "%navi%"=="6" goto Version
+if "%navi%"=="7" goto exit
 goto home
 
 :Steam
@@ -177,6 +183,53 @@ if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
 Pause
 
+:Hosts_Block
+@cls
+echo/
+echo Unity Analytics, Avalanche Studios ^& Valve Crashlytics via hosts blockieren
+echo/
+echo !ESC![92m1.!ESC![0m EintrÑge werden in die hosts Datei geschrieben....
+echo/
+FIND /C /I "remote-config-proxy-prd.uca.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "thind-gke-euw.prd.data.corp.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 thind-gke-euw.prd.data.corp.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "thind-gke-usc.prd.data.corp.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "thind-gke-ape.prd.data.corp.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 thind-gke-ape.prd.data.corp.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "53.26.241.35.bc.googleusercontent.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 53.26.241.35.bc.googleusercontent.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "186.194.186.35.bc.googleusercontent.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 186.194.186.35.bc.googleusercontent.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "config.uca.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 config.uca.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "cdp.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 cdp.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "api.uca.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 api.uca.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "perf-events.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 perf-events.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "stats.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 stats.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "crash.steampowered.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 crash.steampowered.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "crashreporter.avalanchestudios.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 crashreporter.avalanchestudios.com>>%WINDIR%\System32\drivers\etc\hosts
+echo !ESC![92mFertig :]!ESC![0m
+echo/
+echo Weitere BlockeintrÑge fÅr Åber 1300 Spiele und Programme gibt es
+echo auf der Webseite !ESC![92mhttps://hosts.gameindustry.eu!ESC![0m zu finden.
+echo/
+echo 1) ZurÅck zur Auswahl
+echo 2) Batch schlie·en
+echo/
+set /p navi=Eingabe:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
 :Biblio
 @cls
 echo Bibliothek-Cache leeren (Dies kann je nach Grî·e des Ordners etwas dauern)
@@ -203,7 +256,7 @@ Pause
 
 :DL_Cache
 @cls
-echo Download-Cache ^& Shadercache leeren (Dies kann je nach Grî·e des Ordners etwas dauern)
+echo Bilder, Download-Cache ^& Shadercache leeren (Dies kann je nach Grî·e des Ordners etwas dauern)
 echo/
 echo !ESC![92m1.!ESC![0m Download-Cache wird geleert....
 echo/
@@ -217,7 +270,32 @@ IF EXIST "steamapps\workshop\downloads\*.*" del "steamapps\workshop\downloads\" 
 IF EXIST "steamapps\workshop\downloads\" RMDIR "steamapps\workshop\downloads\" /s /q
 IF EXIST "steamapps\workshop\temp\*.*" del "steamapps\workshop\temp\" /q
 IF EXIST "steamapps\workshop\temp\" RMDIR "steamapps\workshop\temp\" /s /q
+IF EXIST "steam\games\*.*" del "steam\games\*.*" /q
 echo/
+echo !ESC![92mFertig :]!ESC![0m
+echo/
+echo 1) ZurÅck zur Auswahl
+echo 2) Batch schlie·en
+echo/
+set /p navi=Eingabe:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:HT_Cache
+@cls
+echo/
+echo HTML-Cache leeren
+echo Aktive Steamprozesse werden automatisch geschlossen...
+::Wenn offen, beende Steam
+taskkill /f /im steam.exe >nul 2>&1
+taskkill /f /im SteamService.exe >nul 2>&1
+taskkill /f /im steamwebhelper.exe >nul 2>&1
+echo/
+echo !ESC![92m1.!ESC![0m HTML-Cache wird geleert....
+echo/
+IF EXIST "%userprofile%\AppData\Local\Steam\htmlcache\Cache\*.*" del "%userprofile%\AppData\Local\Steam\htmlcache\Cache\*.*" /q >nul 2>&1
 echo !ESC![92mFertig :]!ESC![0m
 echo/
 echo 1) ZurÅck zur Auswahl
@@ -237,8 +315,10 @@ echo |set /p ="!ESC![92mHash:!ESC![0m "
 CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
 echo/
 echo !ESC![92mDatum:!ESC![0m          !ESC![92mBeschreibung:!ESC![0m
+echo 07.01.2021      Verschiedene Cacheordner des Steam-Clients kînnen nun geleert werden
+echo                 Verschiedene Dienste kînnen nun per hosts blockiert werden. Siehe Readme
 echo 06.01.2021      MenÅ Åberarbeitet, Hash, Dateigrî·e und Historie hinzugefÅgt
-echo                 Datei umbenannt, Funktionen zum Leeren des Steam-Cache's hinzugefÅgt
+echo                 Funktionen zum Leeren des Steam-Cache's hinzugefÅgt
 echo/
 echo 1) ZurÅck zur Auswahl
 echo 2) Batch schlie·en

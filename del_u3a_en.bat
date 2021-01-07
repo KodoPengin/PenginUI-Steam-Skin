@@ -69,21 +69,27 @@ echo/
 echo Initialization of "%~nx0" for user: %USERNAME%
 echo/
 echo !ESC![92mSteam-Client!ESC![0m
-echo 1) Cleaning Crashlytics ^& Spyware
-echo 2) Cleaning Library Cache
-echo 3) Cleaning Download ^& Shadercache
+echo 1) Clean Crashlytics ^& Spyware
+echo 3) Clean Library Cache
+echo 3) Clean Picture, Download ^& Shadercache
+echo 4) Clean HTML-Cache
+echo/
+echo !ESC![92mHosts!ESC![0m
+echo 5) Block Unity Analytics ^& Valve Crashlytics via hosts
 echo/
 echo !ESC![92mMain Menu!ESC![0m
-echo 4) Version history
-echo 5) Close batch
+echo 6) Version history
+echo 7) Close batch
 echo.
 set /p navi=Choose:
 if "%navi%"=="1" goto Steam
 if "%navi%"=="2" goto Biblio
 if "%navi%"=="3" goto DL_Cache
+if "%navi%"=="4" goto HT_Cache
+if "%navi%"=="5" goto Hosts_Block
 cls
-if "%navi%"=="4" goto Version
-if "%navi%"=="5" goto exit
+if "%navi%"=="6" goto Version
+if "%navi%"=="7" goto exit
 goto home
 
 :Steam
@@ -168,7 +174,54 @@ chdir /d %ORIGINAL_DIR%
 echo/
 echo !ESC![92mDone:]!ESC![0m
 echo/
-echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m1.!ESC![0m Back to Menu
+echo !ESC![92m2.!ESC![0m Close Batch
+echo/
+set /p navi=Choose:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:Hosts_Block
+@cls
+echo/
+echo Blocking Unity Analytics, Avalanche Studios ^& Valve Crashlytics via hosts
+echo/
+echo !ESC![92m1.!ESC![0m Write entries to hosts....
+echo/
+FIND /C /I "remote-config-proxy-prd.uca.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "thind-gke-euw.prd.data.corp.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 thind-gke-euw.prd.data.corp.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "thind-gke-usc.prd.data.corp.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "thind-gke-ape.prd.data.corp.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 thind-gke-ape.prd.data.corp.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "53.26.241.35.bc.googleusercontent.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 53.26.241.35.bc.googleusercontent.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "186.194.186.35.bc.googleusercontent.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 186.194.186.35.bc.googleusercontent.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "config.uca.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 config.uca.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "cdp.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 cdp.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "api.uca.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 api.uca.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "perf-events.cloud.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 perf-events.cloud.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "stats.unity3d.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 stats.unity3d.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "crash.steampowered.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 crash.steampowered.com>>%WINDIR%\System32\drivers\etc\hosts
+FIND /C /I "crashreporter.avalanchestudios.com" %WINDIR%\system32\drivers\etc\hosts >nul 2>&1
+IF %ERRORLEVEL% NEQ 0 ECHO 0.0.0.0 crashreporter.avalanchestudios.com>>%WINDIR%\System32\drivers\etc\hosts
+echo !ESC![92mDone:]!ESC![0m
+echo/
+echo More host entries for over 1300 games and programs
+echo can be found on !ESC![92mhttps://hosts.gameindustry.eu!ESC![0m.
+echo/
+echo !ESC![92m1.!ESC![0m Back to Menu
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
 set /p navi=Choose:
@@ -192,7 +245,7 @@ IF EXIST "appcache\stats\" RMDIR "appcache\stats\" /s /q
 echo/
 echo !ESC![92mDone:]!ESC![0m
 echo/
-echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m1.!ESC![0m Back to Menu
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
 set /p navi=Choose:
@@ -220,7 +273,30 @@ IF EXIST "steamapps\workshop\temp\" RMDIR "steamapps\workshop\temp\" /s /q
 echo/
 echo !ESC![92mDone:]!ESC![0m
 echo/
-echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m1.!ESC![0m Back to Menu
+echo !ESC![92m2.!ESC![0m Close Batch
+echo/
+set /p navi=Choose:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:HT_Cache
+@cls
+echo/
+echo Delete HTML-Cache
+echo Active Steam instances will be closed...
+taskkill /f /im steam.exe >nul 2>&1
+taskkill /f /im SteamService.exe >nul 2>&1
+taskkill /f /im steamwebhelper.exe >nul 2>&1
+echo/
+echo !ESC![92m1.!ESC![0m Delete HTML-Cache....
+echo/
+IF EXIST "%userprofile%\AppData\Local\Steam\htmlcache\Cache\*.*" del "%userprofile%\AppData\Local\Steam\htmlcache\Cache\*.*" /q >nul 2>&1
+echo !ESC![92mDone:]!ESC![0m
+echo/
+echo !ESC![92m1.!ESC![0m Back to Menu
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
 set /p navi=Choose:
@@ -237,12 +313,13 @@ echo |set /p ="!ESC![92mHash:!ESC![0m "
 CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
 echo/
 echo !ESC![92mDate:!ESC![0m           !ESC![92mDescription:!ESC![0m
-echo 07.01.2021      Function to delete the Steam-Cache added
+echo 07.01.2021      Function to delete several Cache folders
+echo                 Several services can be blocked via hosts, see readme
 echo 06.01.2021      Menu overhaul, Hash, filesize and history added
 echo/
 echo !ESC![92mDone:]!ESC![0m
 echo/
-echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m1.!ESC![0m Back to Menu
 echo !ESC![92m2.!ESC![0m Close Batch
 echo/
 set /p navi=Choose:

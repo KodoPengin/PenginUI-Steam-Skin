@@ -6,7 +6,7 @@ Date: 07.01.2021
 
 File/s:
 del_u3a_en.bat
-Hash: 4102a68299828553ee7230dce2ae1911d8ce34b8a265d0eb280ee3bb3ab5a0b8
+Hash: 24de9ffb16b5199dcd2a4e1c49ddbcfdc73ec740cfbe914939d3aed28e5dfc3b
 
 --------------------------
 
@@ -32,8 +32,38 @@ Users who use their own layout modifications for Steam probably know this proced
 
 --------------------------
 
+hosts:
+
+The hosts file is used for our purpose as protection against outbound traffic and sending our data. The batch makes
+under point 5 some entries in this file and blocks analytics of the company Unity Technologies and the crashsender of the
+Valve Corporation, which is active in the background of the own steamsession.
+
+hosts folder: C:\Windows\System32\drivers\etc
+
+The batch inserts the following entries once (if they do not exist):
+
+0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com
+0.0.0.0 thind-gke-euw.prd.data.corp.unity3d.com
+0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com
+0.0.0.0 thind-gke-ape.prd.data.corp.unity3d.com
+0.0.0.0 53.26.241.35.bc.googleusercontent.com
+0.0.0.0 186.194.186.35.bc.googleusercontent.com
+0.0.0.0 config.uca.cloud.unity3d.com
+0.0.0.0 cdp.cloud.unity3d.com
+0.0.0.0 api.uca.cloud.unity3d.com
+0.0.0.0 perf-events.cloud.unity3d.com
+0.0.0.0 stats.unity3d.com
+0.0.0.0 crash.steampowered.com
+0.0.0.0 crashreporter.avalanchestudios.com
+
+More host entries for over 1300 games and programs
+can be found on https://hosts.gameindustry.eu
+
+--------------------------
+
 Latest changes:
 
+- Several analytics and crashlytics can be blocked now
 - Function added to delete the Cache folders
 - Changed Menu structure, added Hash, filesize and history
 - UnityEngine.CrashReportingModules added

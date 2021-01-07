@@ -6,7 +6,7 @@ Datum: 07.01.2021
 
 Datei/en:
 del_u3a_de.bat
-Hash: 0f0448fb2abbdc1e8a3fc59b1cd3c1375051b0f4c1525b986ad356be2c9df143
+Hash: fa83e18d718bbac0eaa8f5bdf95edbbdc15a36196280901cc2e8fad03b4adc3c
 
 --------------------------
 
@@ -34,9 +34,39 @@ Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Ins
 
 --------------------------
 
+hosts:
+
+Die hosts Datei dient für unseren Zweck als Schutz vor ausgehendem Verkehr und dem Versand unserer Daten. Die Batch tätigt
+unter Punkt 2 einige Einträge in dieser Datei und blockiert Analytics der Firma Unity Technologies und den Crashsender der
+Valve Corporation, welcher im Hintergrund der eigenen Steamsession aktiv ist.
+
+hosts-Ordner: C:\Windows\System32\drivers\etc
+
+Die Batch fügt (sofern diese nicht existieren) einmalig folgende Einträge ein:
+
+0.0.0.0 remote-config-proxy-prd.uca.cloud.unity3d.com
+0.0.0.0 thind-gke-euw.prd.data.corp.unity3d.com
+0.0.0.0 thind-gke-usc.prd.data.corp.unity3d.com
+0.0.0.0 thind-gke-ape.prd.data.corp.unity3d.com
+0.0.0.0 53.26.241.35.bc.googleusercontent.com
+0.0.0.0 186.194.186.35.bc.googleusercontent.com
+0.0.0.0 config.uca.cloud.unity3d.com
+0.0.0.0 cdp.cloud.unity3d.com
+0.0.0.0 api.uca.cloud.unity3d.com
+0.0.0.0 perf-events.cloud.unity3d.com
+0.0.0.0 stats.unity3d.com
+0.0.0.0 crash.steampowered.com
+0.0.0.0 crashreporter.avalanchestudios.com
+
+Weitere Blockeinträge für über 1300 Spiele und Programme gibt es
+auf der Webseite https://hosts.gameindustry.eu
+
+--------------------------
+
 Letzte Änderungen:
 
-- Funktionen zum Leeren des "Caches" hinzugefügt
+- Unity Analytics und Valve Crashlytics können via hosts zu blockiert werden
+- Funktionen zum Leeren verschiedener Cacheordner von Steam hinzugefügt
 - Menü überarbeitet, Hash, Dateigröße und Historie hinzugefügt
 - UnityEngine.CrashReportingModules hinzugefügt
 - CD Projekt RED Crashlytics hinzugefügt
