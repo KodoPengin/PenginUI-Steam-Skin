@@ -69,8 +69,8 @@ echo/
 echo Initialization of "%~nx0" for user: %USERNAME%
 echo/
 echo !ESC![92mSteam-Client!ESC![0m
-echo 1) Cleaning Steam and game folders
-echo 2) Cleaning library folders
+echo 1) Cleaning Crashlytics ^& Spyware
+echo 2) Cleaning Library Cache
 echo 3) Cleaning Download ^& Shadercache
 echo/
 echo !ESC![92mMain Menu!ESC![0m
