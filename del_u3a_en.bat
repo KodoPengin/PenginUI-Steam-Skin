@@ -12,7 +12,7 @@ echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics, logs and spyware from the            #
 echo # Steamfolder and from related (game) folders to disallow hidden        #
 echo # data theft and to enhance own privacy.                                #
-echo # (c) by GameIndustry.eu - 06 January 2021 - Version 2.7                #
+echo # (c) by GameIndustry.eu - 07 January 2021 - Version 2.7                #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -69,17 +69,21 @@ echo/
 echo Initialization of "%~nx0" for user: %USERNAME%
 echo/
 echo !ESC![92mSteam-Client!ESC![0m
-echo 1) Menu: Cleaning Steam and game folders
+echo 1) Cleaning Steam and game folders
+echo 2) Cleaning library folders
+echo 3) Cleaning Download ^& Shadercache
 echo/
 echo !ESC![92mMain Menu!ESC![0m
-echo 2) Version history
-echo 3) Close batch
+echo 4) Version history
+echo 5) Close batch
 echo.
 set /p navi=Eingabe:
 if "%navi%"=="1" goto Steam
+if "%navi%"=="2" goto Biblio
+if "%navi%"=="3" goto DL_Cache
 cls
-if "%navi%"=="2" goto Version
-if "%navi%"=="3" goto exit
+if "%navi%"=="4" goto Version
+if "%navi%"=="5" goto exit
 goto home
 
 :Steam
@@ -105,8 +109,8 @@ echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 )
 
 :Crash
-echo !ESC![92m1.!ESC![0m Delete files with relation to crash.steampowered.com....!ESC![92mOK!ESC![0m
-::Entferne Daten die fr Uploads an crash.steampowered.com zust„ndig sind
+echo !ESC![92m1.!ESC![0m Delete files with relation to crash.steampowered.com....
+::Delete files with relation to crash.steampowered.com
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
 IF EXIST "dumps\*.*" del "dumps\*.*" /q
@@ -124,7 +128,7 @@ echo !ESC![92m2.!ESC![0m Delete (if exist) Crashdumps from system folder....!ESC
 ::Entferne Crashdumps
 IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData\Local\CrashDumps\*.*" /q
 
-echo !ESC![92m3.!ESC![0m Delete Crashlytics, Logs ^& Dumps from Third party companies....!ESC![92mOK!ESC![0m
+echo !ESC![92m3.!ESC![0m Delete Crashlytics, Logs ^& Dumps from Third party companies....
 ::Crashlytics from Third party companies
 del /s /f /q CrashUploader.Base.Azure.dll >nul 2>nul
 del /s /f /q CrashUploader.Base.dll >nul 2>nul
@@ -152,7 +156,7 @@ del /s /f /q *.log >nul 2>nul
 set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo !ESC![92m4.!ESC![0m Deletes Unity Spyware and Crashlytics in game folders....!ESC![92mOK!ESC![0m
+echo !ESC![92m4.!ESC![0m Delete Unity Spyware and Crashlytics in game folders....
 echo/
 if [%VAR%]==[0] echo Great. There were no UnityCrashHandler in game folders.
 if %VAR% gtr 0 echo !ESC![92m%VAR%!ESC![0m UnityCrashHandler were deleted from game folders
@@ -173,6 +177,58 @@ if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
 Pause
 
+:Biblio
+@cls
+echo Delete Library-Cache (Can take a little while)
+echo/
+echo !ESC![92m1.!ESC![0m Delete Library-Cache....
+echo/
+IF EXIST "appcache\httpcache\*.*" del "appcache\httpcache\" /q
+IF EXIST "appcache\httpcache\" RMDIR "appcache\httpcache\" /s /q
+IF EXIST "appcache\librarycache\*.*" del "appcache\librarycache\" /q
+IF EXIST "appcache\librarycache\" RMDIR "appcache\librarycache\" /s /q
+IF EXIST "appcache\stats\*.*" del "appcache\stats\" /q
+IF EXIST "appcache\stats\" RMDIR "appcache\stats\" /s /q
+echo/
+echo !ESC![92mDone:]!ESC![0m
+echo/
+echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m2.!ESC![0m Close Batch
+echo/
+set /p navi=Eingabe: 
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:DL_Cache
+@cls
+echo Delete Download-Cache ^& Shadercache (Can take a little while)
+echo/
+echo !ESC![92m1.!ESC![0m Delete Download-Cache....
+echo/
+IF EXIST "steamapps\downloading\*.*" del "steamapps\downloading\" /q
+IF EXIST "steamapps\downloading" RMDIR "steamapps\downloading" /s /q
+IF EXIST "steamapps\shadercache\*.*" del "steamapps\shadercache\" /q
+IF EXIST "steamapps\shadercache\" RMDIR "steamapps\shadercache\" /s /q
+IF EXIST "steamapps\temp\*.*" del "steamapps\temp\" /q
+IF EXIST "steamapps\temp\" RMDIR "steamapps\temp\" /s /q
+IF EXIST "steamapps\workshop\downloads\*.*" del "steamapps\workshop\downloads\" /q
+IF EXIST "steamapps\workshop\downloads\" RMDIR "steamapps\workshop\downloads\" /s /q
+IF EXIST "steamapps\workshop\temp\*.*" del "steamapps\workshop\temp\" /q
+IF EXIST "steamapps\workshop\temp\" RMDIR "steamapps\workshop\temp\" /s /q
+echo/
+echo !ESC![92mDone:]!ESC![0m
+echo/
+echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m2.!ESC![0m Close Batch
+echo/
+set /p navi=Eingabe: 
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
 :Version
 @cls
 echo !ESC![92mFilename:!ESC![0m %~nx0
@@ -180,13 +236,16 @@ echo !ESC![92mFilename:!ESC![0m %~nx0
 echo |set /p ="!ESC![92mHash:!ESC![0m "
 CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
 echo/
-echo !ESC![92mDate:!ESC![0m          !ESC![92mDescription:!ESC![0m
-echo 06.01.2021      Changed Menu structure, added Hash, filesize and history
+echo !ESC![92mDate:!ESC![0m           !ESC![92mDescription:!ESC![0m
+echo 07.01.2021      Function to delete the Steam-Cache added
+echo 06.01.2021      Menu overhaul, Hash, filesize and history added
 echo/
-echo 1) Back to Choice
-echo 2) Close Batch
+echo !ESC![92mDone:]!ESC![0m
 echo/
-set /p navi=Eingabe:
+echo !ESC![92m1.!ESC![0m Back to Choice
+echo !ESC![92m2.!ESC![0m Close Batch
+echo/
+set /p navi=Eingabe: 
 cls
 if "%navi%"=="1" goto home
 if "%navi%"=="2" exit

@@ -1,25 +1,18 @@
 Name: Crashlytics, Logs und Spyware aus Steam und dazugehörigen (Spiele)verzeichnissen löschen
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.6
-Datum: 02.01.2021
+Version: 2.7
+Datum: 07.01.2021
 
 Datei/en:
 del_u3a_de.bat
-Hash: 59b8c2b47e935ad6bc0d9b7730613e0e2d54c0dbeab1e6994c32930176740d9c
+Hash: 0f0448fb2abbdc1e8a3fc59b1cd3c1375051b0f4c1525b986ad356be2c9df143
 
 --------------------------
 
 Installation:
 
-Kopiere die del_u3a_de.bat in das jeweilige Steam oder "Bücherei"verzeichnis und starte die Datei.
-Das Script beendet Steam, sofern der Client im Hintergrund läuft.
-
-Zusätzlich wird eine steam.cfg ins Hauptverzeichnis geschrieben, die verhindert, dass sich zu Steam-Start
-der Client selbst aktualisiert und die Änderungen rückgängig macht. Nutzer die sich mit eigenen Skins
-und Modifizierungen beschäftigen kennen das Verhalten schon.
-
-Möchte man den Client wieder wie gehabt aktualisieren, muss die steam.cfg aus dem Verzeichnis (temporär) wieder gelöscht werden.
+Kopiere die del_u3a_de.bat in das jeweilige Steam,- oder "Bibliotheks"verzeichnis und starte die Datei.
 
 --------------------------
 
@@ -43,7 +36,10 @@ Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Ins
 
 Letzte Änderungen:
 
-- CD Project RED Crashlytics hinzugefügt
+- Funktionen zum Leeren des "Caches" hinzugefügt
+- Menü überarbeitet, Hash, Dateigröße und Historie hinzugefügt
+- UnityEngine.CrashReportingModules hinzugefügt
+- CD Projekt RED Crashlytics hinzugefügt
 - Es wird nun überprüft ob eine Steam.cfg vorhanden ist
 - Bessere Ausgabe der Unity Analytics
 - CrashDump Ordner hinzugefügt
@@ -75,6 +71,8 @@ steamerrorreporter64.exe
 WriteMiniDump.exe
 
 - Drittanbieter Crashlytics
+*.log
+*.dmp
 CrashUploader.Base.Azure.dll
 CrashUploader.Base.dll
 CrashUploader.Base.UI.dll
@@ -95,3 +93,5 @@ CrashReporter.resources.dll
 REDEngineErrorReporter.exe
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe
+UnityEngine.CrashReportingModule.dll
+UnityEngine.CrashReportingModule.dll.mdb

@@ -1,25 +1,22 @@
 Name: Delete Crashlytics, logs and spyware from Steam and related (game) folders
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.6
-Date: 02.01.2021
+Version: 2.7
+Date: 07.01.2021
 
 File/s:
 del_u3a_en.bat
-Hash: ae85b45853c5f1cd962ada6fb5776a2a6e18c71a941bd36ec522f862a0d6eda6
+Hash: 4102a68299828553ee7230dce2ae1911d8ce34b8a265d0eb280ee3bb3ab5a0b8
 
 --------------------------
 
 Installation:
 
-Copy the file del_u3a_en.bat into your Steam installation folder e.g. "C:\Steam" and run the file
-
-If alternative steam libraries were created, the file must be copied into the respective directory
-and started from there
+Copy the file del_u3a_en.bat into your Steam installation folder and/or additional library folder and run the file
 
 --------------------------
 
-Description:´
+Description:
 
 The batch scans files within the steam folder for crashlytics and logs and deletes associated files.
 Additionally the CrashDump folder (if available) in the user directory is emptied.
@@ -37,7 +34,10 @@ Users who use their own layout modifications for Steam probably know this proced
 
 Latest changes:
 
-- CD Project RED Crashlytics added
+- Function added to delete the Cache folders
+- Changed Menu structure, added Hash, filesize and history
+- UnityEngine.CrashReportingModules added
+- CD Projekt RED Crashlytics added
 - Additional check if steam.cfg exist
 - Better output for Unity Analytics
 - CrashDump folder added
@@ -70,6 +70,8 @@ steamerrorreporter64.exe
 WriteMiniDump.exe
 
 - Third party crashlytics
+*.log
+*.dmp
 CrashUploader.Base.Azure.dll
 CrashUploader.Base.dll
 CrashUploader.Base.UI.dll
@@ -90,3 +92,5 @@ CrashReporter.resources.dll
 REDEngineErrorReporter.exe
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe
+UnityEngine.CrashReportingModule.dll
+UnityEngine.CrashReportingModule.dll.mdb

@@ -1,8 +1,8 @@
 ####Version details####
 
 Steam Layout - PenginUI
-Last changes: 03.01.2021
-Version: 0.99.7
+Last changes: 07.01.2021
+Version: 0.99.8
 
 Steamprofile: https://steamcommunity.com/id/pen-chan/
 Website: https://www.gameindustry.eu/
@@ -12,7 +12,8 @@ License: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
 Unique Steam style. Focus was placed on eliminating unnecessary functions and advertising on the current Steam layout to deliver a minimalistic and clean UI.
 
 #### Latest Changes ####
-- Bugfix for library changes. Category "What's new?" should be hidden again
+- Library overhaul since Valve's latest changes
+- Little beauty adjustments
 
 #### Installation ####
 
@@ -146,4 +147,4 @@ Misc:
 - Hidden rightcol for Daily deal, Spotlight and Recommended specials advertising
 
 ###Additional information###
-The 0.99.7 version is not perfect but a lot of advertising and unnecessary features are gone.
+The 0.99.8 version is not perfect but a lot of advertising and unnecessary features are gone.

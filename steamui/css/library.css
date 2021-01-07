@@ -1,9 +1,11 @@
 /*
-  Template: PenginUI - v0.99.7 - Stand 06.01.2021
+  Template: PenginUI - v0.99.8 - Stand 07.01.2021
   Website: www.gameindustry.eu
   Library Anpassungen: Januar 2021
 */
-
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
+	-webkit-mask:unset !important;
+}
 /* Menüs & Hintergründe */
 .libraryhome_UpdatesContainer_17uEB {
 	display:none !important;
@@ -29,17 +31,27 @@
 .appdetailsgameinfocontainer_Glassy_2QAgO.appdetailsgameinfocontainer_AppGameInfoContainer_25oBZ, .appdetailsoverview_Glassy_2OOzY .appdetailsoverview_ColumnContainer_OhSdL {
 	background: #24282f !important;
 }
-
+.appdetails_Glassy_3Fmxx.appdetails_ScrollContainer_2l416 {
+		background: #24282f !important;
+}
 .sharedappdetailsheader_TopCapsule_NZMJ6.sharedappdetailsheader_TopCapsule_NZMJ6{
 	overflow: hidden !important;
 }
 /* Animation Karten */
 .appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_AnimateHover_QljE8:hover .appdetailstradingcardssection_CardContainer_2DUDv, .appdetailstradingcardssection_Card_1WsOn {
-transform: none !important;
+	transform: none !important;
 }
 /* Erfolge & Badges */
 .appdetailsachievementssection_Icon_zcasg.appdetailsachievementssection_IconGlow_2V3rF {
     box-shadow: 0px 0px 2px 1px rgba(133, 140, 153, 0.6) !important;
+}
+.appactivityday_Event_UVeN0 .appactivityday_EventBody_NEMXh {
+	box-shadow:none !important;
+	background: none !important;
+}
+.appactivityday_ActivityAchievementUnlocked_yJLy7 {
+	background: radial-gradient(100% 80% at 64% 95%, rgba(107, 115, 127, 0.3) 0%, rgba(62, 70, 80, 0.5) 20%, rgba(36, 40, 47, 0.5) 100%);
+	border-bottom:1px solid #4c4c4c !important;
 }
 .appdetailsachievementssection_RareAchievementNoAnimation_D1o1W .appdetailsachievementssection_RareAchievementIconGlow_UVakv {
     animation-play-state: paused !important;
@@ -60,10 +72,27 @@ animation-duration: 0s !important;
 	margin-top: 2px !important;
 	margin-bottom:3px !important;
 }
-/* Werbebanner */
+/* Werbebanner & Teaser */
 .spotlight_MajorEventBackground_388Iu, .spotlight_MajoreEventImageContentContainer_3mREW, .spotlight_MajorEventImageTemplate_lQR9_ {
 	display:none !important;
 }
+.appactivityday_PartnerEventTextOnly_3QRf-, .appactivityday_PartnerEventTextOnly_3QRf-:hover, .appactivityday_PartnerEventMediumImage_Container_1HZy7, .appactivityday_PartnerEventMediumImage_Container_1HZy7:hover {
+  background: transparent !important;
+	border-bottom:1px solid #4c4c4c !important;
+}
+.appactivityday_PartnerEvent_1AYE1 {
+	border:none !important;
+	box-shadow:none !important;
+	background: radial-gradient(100% 80% at 64% 95%, rgba(107, 115, 127, 0.3) 0%, rgba(62, 70, 80, 0.5) 20%, rgba(36, 40, 47, 0.5) 100%);
+}
+.appactivityday_PartnerEventTextOnly_Container_1wJJQ {
+	background: radial-gradient(100% 80% at 64% 95%, rgba(107, 115, 127, 0.3) 0%, rgba(62, 70, 80, 0.5) 20%, rgba(36, 40, 47, 0.5) 100%);
+	border-bottom:1px solid #4c4c4c !important;
+}
+.appactivityday_PartnerEventUpdate_fmLfu {
+	border-image-source:none !important;
+}
+
 .spotlight_MajorEventContainer_dVJB2 {
 	border:1px solid #7c8088 !important;
 }
@@ -73,15 +102,23 @@ animation-duration: 0s !important;
 .spotlight_MajorEventImageContainer_1PkTB {
 	-webkit-mask-image: unset !important;
 }
-.spotlight_MajorEventImageContainer_1PkTB
 /* Buttons */
 .appdetailscommunityfeed_HeaderStyles_2lNdD {
 	background: none !important;
 }
+.smartscrollcontainer_ScrollToTopButton_1J21t div, .appactionbutton_Green_3cI5T > .appactionbutton_ButtonChild_2AzIX, .appactionbutton_ButtonChild_2AzIX {
+	 background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;
+}
+:not(.appactionbutton_Disabled_1Pb6P) > .appactionbutton_ButtonChild_2AzIX svg, :not(.appactionbutton_Disabled_1Pb6P) > .appactionbutton_ButtonChild_2AzIX svg {
+    fill: #acb2b8 !important;
+}
+:not(.appactionbutton_Disabled_1Pb6P) > .appactionbutton_ButtonChild_2AzIX svg line, :not(.appactionbutton_Disabled_1Pb6P) > .appactionbutton_ButtonChild_2AzIX svg polygon {
+    stroke: #acb2b8 !important;
+    fill: #acb2b8 !important;
+}
 /* Kollektionen */
 .allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_CollectionBG_akZKn .allcollections_BackgroundImage_2I7jw {
-    object-fit: cover;
-    /* width: 100%; */
+    width: unset !important;
 }
 .allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_DisplayCaseContainer_3vMgn {
 transform-style:unset !important;

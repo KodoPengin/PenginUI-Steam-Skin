@@ -12,7 +12,7 @@ echo -------------------------------------------------------------------------
 echo # Das Script entfernt Crashlytics, Logs und Analyticsdienste aus dem    #
 echo # Steam-Verzeichnis und dazugehîrigen (Spiele)verzeichnissen um         #
 echo # Uploads vorzubeugen und die eigene Datensicherheit zu verstÑrken      #
-echo # (c) by GameIndustry.eu - 06/01/2021 - Version 2.7                     #
+echo # (c) by GameIndustry.eu - 07/01/2021 - Version 2.7                     #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
 
@@ -69,17 +69,21 @@ echo/
 echo Initialisierung der "%~nx0" fÅr Anwender: %USERNAME%
 echo/
 echo !ESC![92mSteam-Client!ESC![0m
-echo 1) MenÅ: Steam ^& Spieleverzeichnisse sÑubern
+echo 1) Crashlytics ^& Spyware entfernen
+echo 2) Bibliothek-Cache leeren
+echo 3) Download ^& Shadercache
 echo/
 echo !ESC![92mHauptmenÅ!ESC![0m
-echo 2) Versionshistorie
-echo 3) Beenden
+echo 4) Versionshistorie
+echo 5) Beenden
 echo.
 set /p navi=Eingabe:
 if "%navi%"=="1" goto Steam
+if "%navi%"=="2" goto Biblio
+if "%navi%"=="3" goto DL_Cache
 cls
-if "%navi%"=="2" goto Version
-if "%navi%"=="3" goto exit
+if "%navi%"=="4" goto Version
+if "%navi%"=="5" goto exit
 goto home
 
 :Steam
@@ -105,7 +109,7 @@ echo BootStrapperForceSelfUpdate=disable>> steam.cfg
 )
 
 :Crash
-echo !ESC![92m1.!ESC![0m Entferne Daten mit Bezug auf crash.steampowered.com....!ESC![92mOK!ESC![0m
+echo !ESC![92m1.!ESC![0m Entferne Daten mit Bezug auf crash.steampowered.com....
 ::Entferne Daten die fÅr Uploads an crash.steampowered.com zustÑndig sind
 IF EXIST "bin\cef\cef.win7\*.*" del "bin\cef\cef.win7\*.*" /q
 IF EXIST "bin\cef\cef.win7\" RMDIR "bin\cef\cef.win7\" /s /q
@@ -120,11 +124,11 @@ IF EXIST "steamerrorreporter.exe" del "steamerrorreporter.exe" /f /q
 IF EXIST "steamerrorreporter64.exe" del "steamerrorreporter64.exe" /f /q
 IF EXIST "WriteMiniDump.exe" del "WriteMiniDump.exe" /f /q
 
-echo !ESC![92m2.!ESC![0m Entferne (sofern vorhanden) Crashdumps im Systemverzeichnis....!ESC![92mOK!ESC![0m
+echo !ESC![92m2.!ESC![0m Entferne (sofern vorhanden) Crashdumps im Systemverzeichnis....
 ::Entferne Crashdumps
 IF EXIST "%USERPROFILE%\AppData\Local\CrashDumps\*.*" del "%UserProfile%\AppData\Local\CrashDumps\*.*" /q
 
-echo !ESC![92m3.!ESC![0m Entferne Crashlytics, Logs ^& Dumps von Drittanbietern....!ESC![92mOK!ESC![0m
+echo !ESC![92m3.!ESC![0m Entferne Crashlytics, Logs ^& Dumps von Drittanbietern....
 ::Crashlytics von Drittanbietern
 del /s /f /q CrashUploader.Base.Azure.dll >nul 2>nul
 del /s /f /q CrashUploader.Base.dll >nul 2>nul
@@ -152,7 +156,7 @@ del /s /f /q *.log >nul 2>nul
 set ORIGINAL_DIR=%CD%
 set folder="steamapps\common"
 for /f %%i in ('dir UnityCrashHandler*.exe /s /b 2^> nul ^| find "" /v /c') do set VAR=%%i
-echo !ESC![92m4.!ESC![0m Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen....!ESC![92mOK!ESC![0m
+echo !ESC![92m4.!ESC![0m Entferne Unity Spyware und Crashlytics in Spieleverzeichnissen....
 echo/
 if [%VAR%]==[0] echo Super, es befanden sich keine UnityCrashHandler in den Spiele-Verzeichnissen
 if %VAR% gtr 0 echo Es wurden !ESC![92m%VAR%!ESC![0m UnityCrashHandler aus den vorhandenen Spieleverzeichnissen gelîscht
@@ -173,6 +177,58 @@ if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
 Pause
 
+:Biblio
+@cls
+echo Bibliothek-Cache leeren (Dies kann je nach Grî·e des Ordners etwas dauern)
+echo/
+echo !ESC![92m1.!ESC![0m Bibliothek-Cache wird geleert....
+echo/
+IF EXIST "appcache\httpcache\*.*" del "appcache\httpcache\" /q
+IF EXIST "appcache\httpcache\" RMDIR "appcache\httpcache\" /s /q
+IF EXIST "appcache\librarycache\*.*" del "appcache\librarycache\" /q
+IF EXIST "appcache\librarycache\" RMDIR "appcache\librarycache\" /s /q
+IF EXIST "appcache\stats\*.*" del "appcache\stats\" /q
+IF EXIST "appcache\stats\" RMDIR "appcache\stats\" /s /q
+echo/
+echo !ESC![92mFertig :]!ESC![0m
+echo/
+echo 1) ZurÅck zur Auswahl
+echo 2) Batch schlie·en
+echo/
+set /p navi=Eingabe:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
+:DL_Cache
+@cls
+echo Download-Cache ^& Shadercache leeren (Dies kann je nach Grî·e des Ordners etwas dauern)
+echo/
+echo !ESC![92m1.!ESC![0m Download-Cache wird geleert....
+echo/
+IF EXIST "steamapps\downloading\*.*" del "steamapps\downloading\" /q
+IF EXIST "steamapps\downloading" RMDIR "steamapps\downloading" /s /q
+IF EXIST "steamapps\shadercache\*.*" del "steamapps\shadercache\" /q
+IF EXIST "steamapps\shadercache\" RMDIR "steamapps\shadercache\" /s /q
+IF EXIST "steamapps\temp\*.*" del "steamapps\temp\" /q
+IF EXIST "steamapps\temp\" RMDIR "steamapps\temp\" /s /q
+IF EXIST "steamapps\workshop\downloads\*.*" del "steamapps\workshop\downloads\" /q
+IF EXIST "steamapps\workshop\downloads\" RMDIR "steamapps\workshop\downloads\" /s /q
+IF EXIST "steamapps\workshop\temp\*.*" del "steamapps\workshop\temp\" /q
+IF EXIST "steamapps\workshop\temp\" RMDIR "steamapps\workshop\temp\" /s /q
+echo/
+echo !ESC![92mFertig :]!ESC![0m
+echo/
+echo 1) ZurÅck zur Auswahl
+echo 2) Batch schlie·en
+echo/
+set /p navi=Eingabe:
+cls
+if "%navi%"=="1" goto home
+if "%navi%"=="2" exit
+Pause
+
 :Version
 @cls
 echo !ESC![92mDateiname:!ESC![0m %~nx0
@@ -182,6 +238,7 @@ CertUtil -hashfile "%~nx0" SHA256 | find /i /v "SHA256" | find /i /v "certutil"
 echo/
 echo !ESC![92mDatum:!ESC![0m          !ESC![92mBeschreibung:!ESC![0m
 echo 06.01.2021      MenÅ Åberarbeitet, Hash, Dateigrî·e und Historie hinzugefÅgt
+echo                 Datei umbenannt, Funktionen zum Leeren des Steam-Cache's hinzugefÅgt
 echo/
 echo 1) ZurÅck zur Auswahl
 echo 2) Batch schlie·en
@@ -190,4 +247,4 @@ set /p navi=Eingabe:
 cls
 if "%navi%"=="1" goto home
 if "%navi%"=="2" exit
-PauseSome localized OEM text 
+Pause
