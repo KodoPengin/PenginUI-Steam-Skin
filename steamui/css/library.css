@@ -3,9 +3,6 @@
   Website: www.gameindustry.eu
   Library Anpassungen: Januar 2021
 */
-.awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
-	-webkit-mask:unset !important;
-}
 /* Menüs & Hintergründe */
 .libraryhome_UpdatesContainer_17uEB {
 	display:none !important;
@@ -92,8 +89,12 @@ animation-duration: 0s !important;
 .appactivityday_PartnerEventUpdate_fmLfu {
 	border-image-source:none !important;
 }
-
 .spotlight_MajorEventContainer_dVJB2 {
+	border:none !important;
+	box-shadow:none !important;
+	display:unset;
+}
+.spotlight_MajorEventContainer_dVJB2 img {
 	border:1px solid #7c8088 !important;
 }
 .spotlight_MajorEventContainer_dVJB2:hover .spotlight_MajorEventImage_25fL1 {
@@ -126,6 +127,10 @@ transform-style:unset !important;
 /* Hotfix Review-Awards */
 .awardicon_IconList_2cI0L {
     flex-flow: wrap !important;
+}
+/* Avatare */
+.awayOrSnooze .steamavatar_avatarStatus_3xUpb.bottom {
+	-webkit-mask:unset !important;
 }
 /* Ende */
 
