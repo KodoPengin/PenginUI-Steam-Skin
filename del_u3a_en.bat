@@ -10,8 +10,8 @@ SETLOCAL EnableDelayedExpansion
 echo !ESC![92m
 echo -------------------------------------------------------------------------
 echo # This script deletes crashyltics, logs and spyware from the            #
-echo # Steamfolder and from related (game) folders to disallow hidden        #
-echo # data theft and to enhance own privacy.                                #
+echo # Steamfolder and from related (game) folders, clean the cache folders  #
+echo # and creates a hosts file if necessary to block some connections       #
 echo # (c) by GameIndustry.eu - 07 January 2021 - Version 2.7                #
 echo -------------------------------------------------------------------------
 echo/!ESC![0m
@@ -72,7 +72,7 @@ echo !ESC![92mSteam-Client!ESC![0m
 echo 1) Clean Crashlytics ^& Spyware
 echo 3) Clean Library Cache
 echo 3) Clean Picture, Download ^& Shadercache
-echo 4) Clean HTML-Cache
+echo 4) Clean HTML-Cache (Allow Steam to update once after execution)
 echo/
 echo !ESC![92mHosts!ESC![0m
 echo 5) Block Unity Analytics ^& Valve Crashlytics via hosts
