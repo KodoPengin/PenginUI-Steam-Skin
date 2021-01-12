@@ -7,12 +7,11 @@ It's a <b>WIP project</b> and only updated irregularly. Deal with it ;]
 - Removed a lot advertising (e.g. banner, events, endless scrolling) and unnecessary elements on the Steam mainpage, shopping cart, search, product sites and other subcategories
 - Removed background pictures
 - Color overhaul (work in progress)
-- Some library changes ( e.g. stopped animations, removed broadcasting), removed backgrounds and some graphics
+- Some Steam-library theme changes ( e.g. stopped animations, removed broadcasting), removed backgrounds and some graphics
 - Added additional Menu items to the header
-- Complete profile overhaul with transparency and fixed background
+- Complete Steam profile overhaul with transparency and fixed backgrounds
 - Additional Batch Script to delete Spyware and Crashlytics from Steam game folders
-
-The Script can be downloaded as Standalone version: <a href="https://www.gameindustry.eu/downloads/#DelU3A">DelU3A Batch Script</a>
+- Lightweight theme changes, no bloatware, no third party software required
 
 # Installation & readme
 - Copy the whole content into your Steam folder
@@ -37,6 +36,15 @@ Steam Profile: <a href="https://steamcommunity.com/profiles/76561198113455411">ã
 
 License: <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons CC BY-NC-ND 4.0</a>
 
-# Other projects - Security
+# Other projects
+Hosts Templates
 Unique host templates to enhance own privacy in games, websites and regulary software
 Visit <a href="https://github.com/KodoPengin/GameIndustry-hosts-Template">GameIndustry hosts Templates</a>
+
+Collection of IP Adresses
+List of Webserver Security related Ipv4 Adresses
+Visit <a href="https://github.com/KodoPengin/PenginUI">PenginUI - Custom Steam Skin</a>
+
+Steam Cleaner
+Batch to delete Crashlytics from Steam, create hosts automaticilly and clean cache folders 
+Visit <a href="https://github.com/KodoPengin/Del_U3A">Del_U3A</a>
