@@ -36,11 +36,14 @@
 }
 
 /*
-  Template: PenginUI - v0.99.8 - Stand 10.01.2021
-  Website: www.gameindustry.eu
+  Template: PenginUI - v0.99.8 - Stand 12.01.2021
+  © Copyright - www.gameindustry.eu
+  Webkit Anpassungen: Januar 2021
 */
 
 /* Global und Startseite */
+body { font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important; }
+
 a:link { color:#bac0c6 !important; }
 a:visited { color:#bac0c6 !important; }
 a:hover { color:wheat !important; }
@@ -188,6 +191,9 @@ span#ScreenshotUploadLink, a#ScreenshotManagementToggle { border-radius:unset !i
 div#ScreenshotManagementControls { width:946px !important; border: 1px solid rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important;}
 #ScreenshotManagementInstructions { color:#acb2b8 !important; }
 a#ScreenshotUploadLink, #VideoUploadLink { border-radius: unset !important; background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+
+/* Profil: Bugfix */
+.showcase_award { padding: initial !important; }
 
 /* Global: Buttonhorror & Tabs >.< */
 a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; }

@@ -1,17 +1,19 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
 #                                                               #
-#      Additions to "library.css" in folder "steamui/css"       #
+#      Additions to "library.css" & "steamui/css"               #
 #      Ergänzungen für die "library.css" & "webkit.css"         #
-#      Stand: 07.01.2021                                        #
+#      Stand: 12.01.2021                                        #
+#                                                               #
+#      Folders:                                                 #
+#      skins/PenginUI/resource/webkit.css                       #
+#      steamui/css/library.css                                  #
 #                                                               #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
-/* Library.css - Hide friend activities | Aktivitäten von Freunden ausblenden */
-.appactivityday_AppActivityDay_S2Fu9 { display: none; }
-.appdetailsactivitysection_ActivityFeedContainer_3yTl3 .appdetailsactivitysection_FetchMoreContainer_39Zur { display: none; }
-
-/* Library.css - Hide community content | Communityinhalte ausblenden */
-.appdetailscommunityfeed_InnerContainer_3Uy7t { display: none; }
+/* Library.css - Hide activities | Aktivitäten ausblenden */
+div.appdetailssection_AppDetailsSection_2r4TK.appdetailsactivitysection_ActivityFeedContainer_3yTl3, .appdetailssection_AppDetailsSection_2r4TK.appdetailscommunityfeed_CommunityContentContainer_A6G1l, .appactivityday_AppActivityDay_S2Fu9 {
+	display:none !important;
+}
 
 /* Library.css - Hide DevNews/Advertising | Entwicklernews/Werbung ausblenden */
 .appactivityday_AppActivityDay_S2Fu9 .appactivityday_AppActivityDate_19LfM, .appactivityday_Event_UVeN0 .appactivityday_PartnerEvent_1AYE1, .comment_thread_RatingBar_1yWgP { display: none !important; }
