@@ -43,7 +43,7 @@ Visit <a href="https://github.com/KodoPengin/GameIndustry-hosts-Template">GameIn
 
 Collection of IP Adresses
 List of Webserver Security related Ipv4 Adresses
-Visit <a href="https://github.com/KodoPengin/PenginUI">PenginUI - Custom Steam Skin</a>
+Visit <a href="https://github.com/KodoPengin/Collection-of-IP-addresses">Webserver Security</a>
 
 Steam Cleaner
 Batch to delete Crashlytics from Steam, create hosts automaticilly and clean cache folders 
