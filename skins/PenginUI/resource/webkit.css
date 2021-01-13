@@ -164,6 +164,7 @@ a.screenshot_showcase_smallscreenshot.screenshot_count { border: 1px solid #4a54
 .playerAvatar.offline img, .friend_status_offline .friend_block_avatar img, .appHubIconHolder.offline img, .avatar_block_status_offline img { border: none; background: none !important; }
 .playerAvatar.offline, .friend_block_holder.friend_status_offline .friend_block_avatar, .friend_activity.friend_status_offline .friend_block_avatar, .appHubIconHolder.offline, .avatar_block_status_offline, .appHubIconHolder.ignored { border: 1px solid #4a545e; background: none !important; }
 .playerAvatar.offline, .friend_block_holder.friend_status_offline .friend_block_avatar, .friend_activity.friend_status_offline .friend_block_avatar, .appHubIconHolder.offline, .avatar_block_status_offline, .appHubIconHolder.ignored img { filter: contrast(100%) grayscale(1) !important; }
+.friend_block_link_overlay.offline, div.playersection_avatar.border_color_offline img { filter: contrast(100%) grayscale(1) !important; }
 .miniprofile_top { border: 1px solid #4a545e !important; background: #353e47 !important; }
 .miniprofile_favorite_badge, .profile_header_badge { border: 1px solid #4a545e !important; background: #161a1f !important; }
 .profile_comment_area .commentthread_textarea { background-color:transparent !important;}
