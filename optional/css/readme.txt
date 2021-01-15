@@ -19,7 +19,7 @@ div.appdetailssection_AppDetailsSection_2r4TK.appdetailsactivitysection_Activity
 .appactivityday_AppActivityDay_S2Fu9 .appactivityday_AppActivityDate_19LfM, .appactivityday_Event_UVeN0 .appactivityday_PartnerEvent_1AYE1, .comment_thread_RatingBar_1yWgP { display: none !important; }
 
 /* Library.css - Hide What's new? | Was ist neu? ausblenden */
-.libraryhome_UpdatesContainer_17uEB { display:none; position: relative; }
+.libraryhome_UpdatesContainer_17uEB { display:none; }
 
 /* Library.css - Hide header | Headergrafiken ausblenden */
 .appdetails_Header_2gZXh.appdetails_HeaderLoaded_tXlLv { opacity: 1; display: none; }

@@ -8,7 +8,8 @@ body, .appdetailssection_AppDetailsSection_2r4TK {
 	font-family: Arial,Helvetica,sans-serif !important;
 }
 .libraryhome_UpdatesContainer_17uEB {
-	display:none !important;
+	background: none !important; /* Hintergrund ausblenden */
+	display:none !important; /* Kategorie: Was ist neu? verstecken */
 }
 .appdetailsplaysection_Glassy_3DeO9.appdetailsplaysection_PlayBar_3fLo1 {
     background: #24282f!important;
