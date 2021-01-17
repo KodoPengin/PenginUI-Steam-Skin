@@ -1,6 +1,6 @@
 /*
 	Steamclient - Bibliotheks-Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 14.01.2021
+  Template: PenginUI - v0.99.8 - Stand 17.01.2021
   (c) Copyright - www.gameindustry.eu
 */
 /* Menüs & Hintergründe */
@@ -41,6 +41,9 @@ body, .appdetailssection_AppDetailsSection_2r4TK {
 .sharedappdetailsheader_TopCapsule_NZMJ6.sharedappdetailsheader_TopCapsule_NZMJ6{
 	overflow: hidden !important;
 }
+div.appdetailsoverview_Spotlights_11kuV {
+	display:none !important;
+	}
 /* Animation Karten */
 .appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_AnimateHover_QljE8:hover .appdetailstradingcardssection_CardContainer_2DUDv, .appdetailstradingcardssection_Card_1WsOn {
 	transform: none !important;
@@ -175,6 +178,10 @@ div.appdetailssectionheader_Label_1SQ30 {
 div.appdetailssection_AppDetailsSectionContainer_31ptF.appdetailssection_AppDetailsSectionHasLabel_2G5B7 div.appdetailssection_Body_5uvIN.appdetailsbroadcastsection_Body_CFp7F {
 	display:none !important;
 	}
+/* Reviewfenster... */
+div.writereview_DescribeGame_2ZLbG { display: none !important;}
+textarea.writereview_ReviewTextArea_392iE {min-height:300px !important; min}
+
 /* Hotfixes für ein milliardenschweres Unternehmen... */
 .awardicon_IconList_2cI0L {
     flex-flow: wrap !important;

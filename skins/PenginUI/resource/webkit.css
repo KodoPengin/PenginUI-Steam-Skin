@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 14.01.2021
+  Template: PenginUI - v0.99.8 - Stand 17.01.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -87,15 +87,27 @@ body.v6 .store_nav .popup_block_new .popup_body, body.v6 #footer_nav .popup_bloc
 .store_nav .tab:hover > span, .store_nav.tab:hover, .store_nav .tab.focus > span, .store_nav .tab.focus { background: #373e47 !important; color: white !important; }
 div.home_ctn.marketingmessage_area { display:none !important; }
 
-/* Navi */
+/* Navi & Tabs */
 .navigation_bar { background-image: none !important; background-color: rgb(53, 62, 71) !important;}
 a.selected.featured, .navigation_bar > a.selected, .navigation_bar > a:hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); border-radius: 4px; }
 .apphub_sectionTab, a.apphub_sectionTab, .apphub_responsive_tab .responsive_tab_control { background-color: #3A3A3A !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
-.apphub_sectionTab.active > span, .apphub_responsive_tab .responsive_tab_control .responsive_tab_control_inner { background: #2b3338 !important; font-weight: bold; text-decoration: underline; }
 body.v6 .store_nav .popup_menu .hr, body.v6 #footer_nav .popup_menu .hr { background-color: #161a1e !important; }
 .store_nav .tab:hover > span, .store_nav .tab:hover, .store_nav .tab.focus > span, .store_nav .tab.focus { background-image: none !important; }
 .popup_menu_twocol > .popup_menu:not(:first-child):not(:nth-child(4)) { border-left: 1px solid #161a1e !important; }
+.sectionTab.active { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.sectionTab.active > span { background: none !important; }
+.sectionTab:hover { background-color: none !important; }
+div#tabs_baseline.responsive_tab_baseline { background-color: rgba(49, 54, 58, 1) !important; }
+a.apphub_sectionTab:hover { background: none !important; }
+.apphub_sectionTab.active > span, .apphub_responsive_tab .responsive_tab_control .responsive_tab_control_inner { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.apphub_sectionTab.active, .apphub_sectionTab.active:hover, .apphub_responsive_tab .responsive_tab_control { background: none !important; }
+div.apphub_sectionTabsHR.responsive_hidden { background-color: rgba(49, 54, 58, 1) !important;}
+a#tab_general.group_tab.active, a#tab_tools.group_tab.active, a#tab_games.group_tab.active { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.group_tab.active > span { background: none !important; }
+a.group_tab:hover { background-color: transparent !important; }
+a#tab_games.group_tab:hover, a#tab_tools.group_tab:hover, a#tab_general.group_tab:hover { background-color: transparent !important; }
+div.maincontent.discussions_header.responsive_hidden { border-bottom: 5px solid rgba(49, 54, 58, 1) !important; }
 
 /* Remoteplay */
 .rpt_anywhere_header_left, .remoteplay_howto_section, .rpt_anywhere_how_ctn, .rpt_section1_container, .rpt_section2_container, .rpt_section3_container, .rpt_section4_container { background:none !important; background-color: none !important; }
@@ -189,31 +201,38 @@ div.newmodal { max-width: 600px !important;}
 .newmodal_header { border-left:1px solid #bac0c6; border-right:1px solid #bac0c6; border-top: 1px solid #bac0c6; }
 .newmodal_content { border-left:1px solid #bac0c6; border-right:1px solid #bac0c6; border-bottom: 1px solid #bac0c6; }
 div#screenshot_upload_button { height:27px !important; }
-span#ScreenshotUploadLink, a#ScreenshotManagementToggle { border-radius:unset !important; background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+span#ScreenshotUploadLink, a#ScreenshotManagementToggle { border-radius:unset !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 #ScreenshotUploadLink:hover, #VideoUploadLink:hover { color: wheat !important; }
 div#ScreenshotManagementControls { width:946px !important; border: 1px solid rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important;}
 #ScreenshotManagementInstructions { color:#acb2b8 !important; }
-a#ScreenshotUploadLink, #VideoUploadLink { border-radius: unset !important; background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+a#ScreenshotUploadLink, #VideoUploadLink { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Profil: Bugfixes */
 .showcase_award { padding: initial !important; }
 div.showcase_content_bg { margin-bottom: 0px !important; }
 div.showcase_Stats_row.showcase_content_bg, div.showcase_content_bg.showcase_stats_row, div.showcase_content_bg { border-radius:unset !important; }
 
-/* Global: Buttonhorror & Tabs >.< */
-a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; }
-a.btnv6_lightblue_blue.btnv6_border_2px.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; }
-.btn_green_steamui.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+/* Global: Buttonhorror, Dropdowns & Tabs >.< */
+.btn_wrapper { margin-right: 4px !important; }
+a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btnv6_lightblue_blue > span, a.btnv6_lightblue_blue.btnv6_border_2px.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_green_steamui.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui > span { background: none !important; }
 .btn_green_steamui { color: #66c0f4 !important; }
-.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important;	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; }
-.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span, .btn_green_steamui:hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span, .btn_green_steamui:hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui.btn_medium:hover { color: #ffffff; }
 .btnv6_white_transparent > span { border: none !important; }
 .btn_darkblue_white_innerfade > span, .btn_medium > span, .btn_profile_action > span  { background: none !important; }
-a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
-.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
-.home_tab.active .tab_content, .tabarea .tab.active .tab_content, .btn_small_tall > span, input.btn_small_tall { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); }
+.btnv6_blue_blue_innerfade  { background: none !important; }
+.queue_btn_ignore_menu > .queue_ignore_menu_arrow { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+a.searchReport.btnv6_blue_hoverfade.btn_small_thin, .home_tab.active .tab_content, .tabarea .tab.active .tab_content, .btn_small_tall > span, input.btn_small_tall { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_blue_white_innerfade > span, .btn_blue_white_innerfade, .btnv6_blue_hoverfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.salepreviewwidgets_Action_2zssE { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.profileeditshell_Shell_2kqKZ .profileeditshell_Navigation_33Kl1 .profileeditshell_NavLink_3rtIp.profileeditshell_Active_3H7Aw { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_green_white_innerfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Diskussionsbereiche und Warnmeldungen */
 .commentthread_comment.hidden_post { display: none !important; }
@@ -261,6 +280,14 @@ div.itemHolder.disabled { border: 1px solid #4a545e; width:96px !important; heig
 #market_advancedsearch_appselect_options .market_advancedsearch_appname { border-bottom: none !important;}
 #tabcontent_pendinggifts.no_pending_gifts, .view_inventory_page, div#tabcontent_inventory, .filter_tag_options, .trade_item_box { background-color: #353e47 !important; border: none !important; }
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover { filter:drop-shadow(8px 8px 10px gray); background-image: none); background-repeat: no-repeat; border: 1px solid #4a545e; }
+
+/* Workshop */
+div.browseApps { background-color:transparent !important; }
+div.accounement.detailBox { background: none !important; }
+div.workshop_header, div.apphub_HeaderTop.workshop { background-image: none !important; }
+.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.hover_box.shadow_content {background-color: #373e47 !important; }
+div#hover_arrow_left.hover_arrow_left, div#hover_arrow_right.hover_arrow_right { display:none !important; }
 
 /* Events, Sonderaktionen und sonstige Desaster */
 div.partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_SaleSectionTabs_1FPIV.SaleSectionTabs, .SaleBackground .SaleSectionTabs .SaleTab, .SaleBackground .SaleSectionTabs .Selected, .partnersaledisplay_TabButtonsCtn_21-6t .partnersaledisplay_TabButton_1Gz4s { background: transparent !important; box-shadow:none !important; border:none !important; }
