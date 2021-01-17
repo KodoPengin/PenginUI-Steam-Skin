@@ -1,7 +1,7 @@
 ####Versionsdetails####
 
 Steam Layout - PenginUI
-Letzte Änderungen: 07.01.2021
+Letzte Änderungen: 17.01.2021
 Version: 0.99.8
 
 Steamprofil: https://steamcommunity.com/id/pen-chan/
@@ -12,6 +12,7 @@ Lizenz: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.de
 Einzigartiger Steam Style. Es wurde Wert darauf gelegt unnötige Funktionen und Werbung weitesgehend im Client auszublenden und somit eine minimalistische und saubere UI zu erstellen.
 
 #### Letzte Änderungen ####
+- Schaltflächen überarbeitet, kleinere Änderungen
 - Überarbeitete Modifikationen der Bibliothek/Anpassung der letzten Änderungen seitens Valve
 - Kleinere Schönheitskorrekturen
 
@@ -144,6 +145,3 @@ Gruppe/n:
 Sonstiges:
 - Minigrafiken (unten rechts) in den Vorschaubildern für Guide & Workshopobjekte werden ausgeblendet
 - Kommentarabofunktion wird nun in geposteten Statusmeldungen, Screenshots, Favouriten usw. direkt angezeigt
-
-###Zusatzinformationen###
-Die 0.99.8 Version ist bei noch nicht perfekt, aber es ist eine Menge an Werbung und überflüssigen Funktionen verschwunden.
