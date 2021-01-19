@@ -89,7 +89,7 @@ div.home_ctn.marketingmessage_area { display:none !important; }
 
 /* Navi & Tabs */
 .navigation_bar { background-image: none !important; background-color: rgb(53, 62, 71) !important;}
-a.selected.featured, .navigation_bar > a.selected, .navigation_bar > a:hover { background: -webkit-linear-gradient(top, #4c4e5a 0%,#2e3338 100%) !important; background: -moz-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: -o-linear-gradient(top, #4c4e5a 0%,#2e3338 100%);	background: -ms-linear-gradient(top, #4c4e5a 0%,#2e3338 100%); background: linear-gradient(top, #4c4e5a 0%,#2e3338 100%); border-radius: 4px; }
+a.selected.featured, .navigation_bar > a.selected, .navigation_bar > a:hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .apphub_sectionTab, a.apphub_sectionTab, .apphub_responsive_tab .responsive_tab_control { background-color: #3A3A3A !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
 body.v6 .store_nav .popup_menu .hr, body.v6 #footer_nav .popup_menu .hr { background-color: #161a1e !important; }
@@ -148,6 +148,7 @@ p.reason.info:before { display: none !important; }
 div.recommendation_highlight.recommendation_title_offset, div.friend_reviews { display:none !important; }
 div.reviews_info_ctn, div.review_ctn { border:none; }
 div#specials_container, div.contenthub_specials_ctn, div.contenthub_spotlight_container, div.contenthub_dailydeal_container, div.rightcol.cart_rightcol { display:none !important; }
+div.block.responsive_apppage_reviewblock { display: none !important; }
 
 /* Profilanpassungen und Popups */
 div.profile_page.has_profile_background, body.profile_page, div.profile_page {background-color: black !important;}
@@ -191,7 +192,7 @@ div.profile_group_links.profile_count_link_preview_ctn.responsive_groupfriends_e
 div.profile_friend_links.profile_count_link_preview_ctn.responsive_groupfriends_element { visibility:visible !important; }
 
 /* Profil: Unterseite Erfolge */
-.achieveBarProgress, .achievementProgressBar .progress { background: rgba(185, 255, 83, 1.0); background: -webkit-linear-gradient(top, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); background: -moz-linear-gradient(top, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); background: linear-gradient(to bottom, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); }
+.achievement_progress_bar_ctn .progress_bar, .achieveBarProgress, .achievementProgressBar .progress { background: rgba(185, 255, 83, 1.0); background: -webkit-linear-gradient(top, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); background: -moz-linear-gradient(top, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); background: linear-gradient(to bottom, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)) !important; }
 
 /* Profil: PopUp Fenster, Dropdown etc. */
 div.newmodal { max-width: 600px !important;} 
@@ -214,25 +215,28 @@ div.showcase_Stats_row.showcase_content_bg, div.showcase_content_bg.showcase_sta
 
 /* Global: Buttonhorror, Dropdowns & Tabs >.< */
 .btn_wrapper { margin-right: 4px !important; }
-a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btnv6_lightblue_blue > span, a.btnv6_lightblue_blue.btnv6_border_2px.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui > span { background: none !important; }
 .btn_green_steamui { color: #66c0f4 !important; }
-.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
-.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span, .btn_green_steamui:hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_green_steamui:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span, .btn_green_steamui:hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui.btn_medium:hover { color: #ffffff; }
 .btnv6_white_transparent > span { border: none !important; }
 .btn_darkblue_white_innerfade > span, .btn_medium > span, .btn_profile_action > span  { background: none !important; }
 .btnv6_blue_blue_innerfade  { background: none !important; }
 .queue_btn_ignore_menu > .queue_ignore_menu_arrow { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
-.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
-a.searchReport.btnv6_blue_hoverfade.btn_small_thin, .home_tab.active .tab_content, .tabarea .tab.active .tab_content, .btn_small_tall > span, input.btn_small_tall { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
-.btn_blue_white_innerfade > span, .btn_blue_white_innerfade, .btnv6_blue_hoverfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+a.searchReport.btnv6_blue_hoverfade.btn_small_thin, .home_tab.active .tab_content, .tabarea .tab.active .tab_content, .btn_small_tall > span, input.btn_small_tall { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_blue_white_innerfade > span, .btn_blue_white_innerfade, .btnv6_blue_hoverfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .salepreviewwidgets_Action_2zssE { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .profileeditshell_Shell_2kqKZ .profileeditshell_Navigation_33Kl1 .profileeditshell_NavLink_3rtIp.profileeditshell_Active_3H7Aw { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_white_innerfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_green_white_innerfade > span { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; color: rgb(186, 192, 198) !important; }
+.partnereventshared_Button_1ABCO.partnereventshared_Icon_1dDpS { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.salepreviewwidgets_WishList_1djkd { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Diskussionsbereiche und Warnmeldungen */
 .commentthread_comment.hidden_post { display: none !important; }
@@ -251,7 +255,7 @@ div.forum_topic_tooltip { border: 1px solid #4a545e !important; background: #161
 div.bb_code, blockquote.bb_blockquote, .forumtopic_answer .answer_quote, blockquote.bb_blockquote.with_author { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
 div.forum_topic_needs_content_check_notice.forum_newtopic_box img {display: none !important; }
 
-/* Warnmeldungen */
+/* Warnmeldungen & Fehler */
 div.DRM_notice, .ack_message_header, .support_message_header { background: none; background-color: rgba(192,45,46) !important; color: white !important; }
 div.DRM_notice a:hover { color:white; }
 div.ack_message, div.support_message { border:3px solid #cc0000; }
@@ -259,6 +263,7 @@ div#error_display.workshop_paymentinfo_validation_error, div.incompatibleNotific
 div.topic_cannotreply_reason.forum_newtopic_box { background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forum_comment_author_banned { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
+div.error_ctn { background:none !important; }
 
 /* Zeug ohne Kategorie */
 div.market_header, div.page_container.page_container_market { background:none; background-image:none !important; background-color:#161a1f !important; }
@@ -285,7 +290,7 @@ div.itemHolder.disabled { border: 1px solid #4a545e; width:96px !important; heig
 div.browseApps { background-color:transparent !important; }
 div.accounement.detailBox { background: none !important; }
 div.workshop_header, div.apphub_HeaderTop.workshop { background-image: none !important; }
-.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 div.hover_box.shadow_content {background-color: #373e47 !important; }
 div#hover_arrow_left.hover_arrow_left, div#hover_arrow_right.hover_arrow_right { display:none !important; }
 
