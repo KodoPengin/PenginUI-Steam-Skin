@@ -36,8 +36,8 @@
 }
 
 /*
-	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 17.01.2021
+  Steamclient - Webkit Anpassungen
+  Template: PenginUI - v0.99.8 - Stand 22.01.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -183,6 +183,7 @@ a.screenshot_showcase_smallscreenshot.screenshot_count { border: 1px solid #4a54
 .profile_comment_area .commentthread_textarea { background-color:transparent !important;}
 .profile_comment_area .commentthread_entry_quotebox { min-height:50px; max-height:100px; border:1px solid #000 !important; background-color:#2f3841 !important; }
 .profile_subpage_column .maincontent, body.migrated_profile_page .profile_subpage_column #BG_bottom.maincontent {background-image:none !important;}
+div.profile_customization_header {background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Profil: Awards */
 div.profile_count_link_preview_ctn { visibility:hidden !important; }
@@ -193,6 +194,7 @@ div.profile_friend_links.profile_count_link_preview_ctn.responsive_groupfriends_
 
 /* Profil: Unterseite Erfolge */
 .achievement_progress_bar_ctn .progress_bar, .achieveBarProgress, .achievementProgressBar .progress { background: rgba(185, 255, 83, 1.0); background: -webkit-linear-gradient(top, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); background: -moz-linear-gradient(top, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)); background: linear-gradient(to bottom, rgba(185, 255, 83, 1.0), rgba(49, 147, 48, 1.0)) !important; }
+img.achievement_icon { display: none !important; }
 
 /* Profil: PopUp Fenster, Dropdown etc. */
 div.newmodal { max-width: 600px !important;} 
@@ -215,7 +217,8 @@ div.showcase_Stats_row.showcase_content_bg, div.showcase_content_bg.showcase_sta
 
 /* Global: Buttonhorror, Dropdowns & Tabs >.< */
 .btn_wrapper { margin-right: 4px !important; }
-a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.btnv6_blue_hoverfade.btn_medium.queue_btn_inactive { color: rgb(186, 192, 198) !important; }
+a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { color: rgb(186, 192, 198) !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btnv6_lightblue_blue > span, a.btnv6_lightblue_blue.btnv6_border_2px.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_steamui > span { background: none !important; }
@@ -229,14 +232,23 @@ a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_
 .queue_btn_ignore_menu > .queue_ignore_menu_arrow { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 a.btnv6_white_transparent.btn_small_thin.follow_button, a.btnv6_white_transparent.btn_small_tall.btn_uppercase, a.btnv6_white_transparent.btn_small.btn_uppercase, a.btn_darkblue_white_innerfade.btn_medium, a.big_button, a.big_button:hover, .btn_profile_action, a.btn_profile_action.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover, .btn_darkblue_white_innerfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
-a.searchReport.btnv6_blue_hoverfade.btn_small_thin, .home_tab.active .tab_content, .tabarea .tab.active .tab_content, .btn_small_tall > span, input.btn_small_tall { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
-.btn_blue_white_innerfade > span, .btn_blue_white_innerfade, .btnv6_blue_hoverfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+a.searchReport.btnv6_blue_hoverfade.btn_small_thin, .home_tab.active .tab_content, .tabarea .tab.active .tab_content, .btn_small_tall > span, input.btn_small_tall { color: rgb(186, 192, 198) !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btn_blue_white_innerfade > span, .btn_blue_white_innerfade, .btnv6_blue_hoverfade { color: rgb(186, 192, 198) !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .salepreviewwidgets_Action_2zssE { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.salepreviewwidgets_BundleShowButton_2Vu78 .salepreviewwidgets_ShowContentsButton_-VlK4 { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.salepreviewwidgets_BundleShowButton_2Vu78 .salepreviewwidgets_ShowContentsButton_-VlK4:hover { color: wheat !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .profileeditshell_Shell_2kqKZ .profileeditshell_Navigation_33Kl1 .profileeditshell_NavLink_3rtIp.profileeditshell_Active_3H7Aw { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_white_innerfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .btn_green_white_innerfade > span { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; color: rgb(186, 192, 198) !important; }
 .partnereventshared_Button_1ABCO.partnereventshared_Icon_1dDpS { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .salepreviewwidgets_WishList_1djkd { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.pullup_item, a.pullup_item { color: rgb(186, 192, 198) !important; background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.pullup_item:hover, a.pullup_item:hover { color: wheat !important; }
+.apphub_Card.interactable:hover { border:1px solid #373e47 !important; }
+.creatorhomeembed_FollowButton_1HwWX { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.contenthub_page .tabbar_ctn { box-shadow: 0 5px 0 -1px #2b2f34 !important; }
+.tabarea .tab.active { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.tabarea .tab .tab_content:hover { color: rgb(186, 192, 198) !important; background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Diskussionsbereiche und Warnmeldungen */
 .commentthread_comment.hidden_post { display: none !important; }
@@ -286,11 +298,16 @@ div.itemHolder.disabled { border: 1px solid #4a545e; width:96px !important; heig
 #tabcontent_pendinggifts.no_pending_gifts, .view_inventory_page, div#tabcontent_inventory, .filter_tag_options, .trade_item_box { background-color: #353e47 !important; border: none !important; }
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover { filter:drop-shadow(8px 8px 10px gray); background-image: none); background-repeat: no-repeat; border: 1px solid #4a545e; }
 
+/* Guides */
+.btn_grey_white_innerfade { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.detailBox_collection, .detailBox { background:none !important; }
+div.guideTop { background-color:transparent !important; }
+
 /* Workshop */
 div.browseApps { background-color:transparent !important; }
 div.accounement.detailBox { background: none !important; }
 div.workshop_header, div.apphub_HeaderTop.workshop { background-image: none !important; }
-.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.btnv6_blue_hoverfade:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span { color: rgb(186, 192, 198) !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 div.hover_box.shadow_content {background-color: #373e47 !important; }
 div#hover_arrow_left.hover_arrow_left, div#hover_arrow_right.hover_arrow_right { display:none !important; }
 
