@@ -1,7 +1,7 @@
 ####Version details####
 
 Steam Layout - PenginUI
-Last changes: 17.01.2021
+Last changes: 22.01.2021
 Version: 0.99.8
 
 Steamprofile: https://steamcommunity.com/id/pen-chan/
@@ -9,12 +9,7 @@ Website: https://www.gameindustry.eu/
 License: https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en
 
 #### Short Description ####
-Unique Steam style. Focus was placed on eliminating unnecessary functions and advertising on the current Steam layout to deliver a minimalistic and clean UI.
-
-#### Latest Changes ####
-- Button rework and smaller changes
-- Library overhaul since Valve's latest changes
-- Little beauty adjustments
+Unique Steam style. Focus was placed on eliminating unnecessary functions and advertising on the current Steam layout to deliver a minimalistic and clean Steam skin. It's a WIP project, so it isn't perfect and smaller changes can be done in a short or longer time.
 
 #### Installation ####
 
@@ -36,7 +31,7 @@ Optional folder contains some library adjustments which can be used by own prefe
 #### Already an own skin in use? ####
 No problem. The webkit.css from *PenginUI\resource folder can be used too or use as alternative single passsages from my guide/webkit.css for own needs. Make sure to make a backup of an already existing file before.
 
-#### Layout changes (so far) ####
+#### Examples of few layout changes ####
 
 Library:
 - Tradingcard animations attenuated
