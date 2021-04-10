@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 02.02.2021
+  Template: PenginUI - v0.99.8 - Stand 04.10.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -198,7 +198,6 @@ div.profile_friend_links.profile_count_link_preview_ctn.responsive_groupfriends_
 div.showcase_achievementscompletionist_game_num_achievements { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Profil: PopUp Fenster, Dropdown etc. */
-div.newmodal { max-width: 600px !important;} 
 .newmodal_background { background: #161a1f !important; }
 .modal_top_bar { background: none !important; }
 .newmodal_content_border { padding:0px !important; }
