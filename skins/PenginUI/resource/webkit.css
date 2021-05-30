@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 29.04.2021
+  Template: PenginUI - v0.99.8 - Stand 10.05.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -250,6 +250,7 @@ div.pullup_item:hover, a.pullup_item:hover { color: wheat !important; }
 .apphub_Card.interactable:hover { border:1px solid #373e47 !important; }
 .creatorhomeembed_FollowButton_1HwWX { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 div#queue_ignore_menu_arrow.queue_menu_arrow.btn_medium { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.queue_btn_menu > .queue_menu_arrow.queue_btn_active { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .contenthub_page .tabbar_ctn { box-shadow: 0 5px 0 -1px #2b2f34 !important; }
 .tabarea .tab.active { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .tabarea .tab .tab_content:hover { color: rgb(186, 192, 198) !important; background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
@@ -331,7 +332,7 @@ div#home_takeunder_ctn.home_ctn, div.home_page_content_takeunder { display: none
 div.home_page_content.deep_dive_block { display: none !important; }
 div.react_landing_background {background-image: none !important; background-color:transparent !important; }
 div#SaleSection_10548 { display: none; }
-.SaleOuterContainer .SaleSectionTabListContainer:first-child {display:none !important;}
+
 
 /* Kuration & Gruppen */
 .lists_more_container .item .overlay { background: transparent !important; }
