@@ -1,16 +1,25 @@
 /*
   Steamclient - Bibliotheks-Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 22.01.2021
+  Template: PenginUI - v0.99.9 - Stand 09.06.2021
   (c) Copyright - www.gameindustry.eu
 */
-/* Men�s & Hintergr�nde */
+/* Menüs & Hintergründe */
+
 body, .appdetailssection_AppDetailsSection_2r4TK {
 	font-family: Arial,Helvetica,sans-serif !important;
 }
 .libraryhome_UpdatesContainer_17uEB {
-	background: none !important; /* Hintergrund ausblenden */
-	display:none !important; /* Kategorie: Was ist neu? verstecken */
+	/* Display:none; nutzen um die "Was ist Neu?" Kategorie zu verstecken/sichtbar zu machen */
+	background: none !important;
+	/* display:none !important; */
 }
+div.libraryhomenewupdates_GameIconAndName_3_xMy { background:transparent !important; }
+div.libraryhomenewupdates_GameIcon_3tdft img { display:none !important; }
+div.libraryhomenewupdates_GameName_28Iqr span {
+	color: #f1f7ff !important;
+	margin-left:-25px !important;
+
+	}
 .appdetailsplaysection_Glassy_3DeO9.appdetailsplaysection_PlayBar_3fLo1 {
     background: #24282f!important;
     box-shadow: none;
@@ -44,6 +53,13 @@ body, .appdetailssection_AppDetailsSection_2r4TK {
 div.appdetailsoverview_Spotlights_11kuV {
 	display:none !important;
 	}
+div.appdetailssection_Body_5uvIN.appdetailsworkshopsection_WorkshopContainer_176QJ {
+	background: transparent !important;
+	}
+.gamelistentry_FriendIsPlaying_cNZ3w svg circle, .gamelistentry_FriendIsPlaying_cNZ3w svg path {
+    fill: rgba(255, 255, 0, 1) !important;
+}
+
 /* Animation Karten */
 .appdetailstradingcardssection_Card_1WsOn.appdetailstradingcardssection_AnimateHover_QljE8:hover .appdetailstradingcardssection_CardContainer_2DUDv, .appdetailstradingcardssection_Card_1WsOn {
 	transform: none !important;
@@ -150,6 +166,9 @@ input.DialogInput.DialogInputPlaceholder.DialogTextInputBase {
 .appdetailsprimarylinkssection_LinkInner_7k4qm .appdetailsprimarylinkssection_Link_1b6LY {
 	background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; color: rgb(186, 192, 198) !important;
 }
+.collectionview_Container_2q70u .collectionview_Header_2rqTS .collectionview_CollectionName_2oJt3 {
+	text-transform: none !important;
+}
 /* Kollektionen & Titel */
 .allcollections_Collection_3IWn- .allcollections_CollectionImage_2ERAQ .allcollections_CollectionBG_akZKn .allcollections_BackgroundImage_2I7jw {
     width: unset !important;
@@ -189,7 +208,7 @@ div.appdetailssection_AppDetailsSectionContainer_31ptF.appdetailssection_AppDeta
 div.writereview_DescribeGame_2ZLbG { display: none !important;}
 textarea.writereview_ReviewTextArea_392iE {min-height:300px !important; min}
 
-/* Hotfixes f�r ein milliardenschweres Unternehmen... */
+/* Hotfixes für ein milliardenschweres Unternehmen... */
 .awardicon_IconList_2cI0L {
     flex-flow: wrap !important;
 }
@@ -201,7 +220,7 @@ button.DialogButton.appdetailsbutton_AppDetailsButton_3Cdin.appdetailsbutton_Bot
     flex-flow: wrap !important;
     justify-content: space-between;
 }
-/* Ende <�///>< */
+/* Ende <°///>< ヾ(･ω･｡)ｼ */
 .index_Container_2mu1w {
   width: 100%;
   height: 100%;
