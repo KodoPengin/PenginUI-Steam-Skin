@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.8 - Stand 10.05.2021
+  Template: PenginUI - v0.99.9 - Stand 30.06.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -151,6 +151,7 @@ div.reviews_info_ctn, div.review_ctn { border:none; }
 div#specials_container, div.contenthub_specials_ctn, div.contenthub_spotlight_container, div.contenthub_dailydeal_container, div.rightcol.cart_rightcol { display:none !important; }
 div.block.responsive_apppage_reviewblock { display: none !important; }
 div.block.responsive_apppage_details_right.heading, p.reason.for, div.similar_recent_apps_container, hr { display:none !important; }
+div.contenthub_featured_item_spotlight { display:none !important; }
 
 /* Profilanpassungen und Popups */
 div.profile_page.has_profile_background, body.profile_page, div.profile_page {background-color: black !important;}
@@ -332,7 +333,8 @@ div#home_takeunder_ctn.home_ctn, div.home_page_content_takeunder { display: none
 div.home_page_content.deep_dive_block { display: none !important; }
 div.react_landing_background {background-image: none !important; background-color:transparent !important; }
 div#SaleSection_10548 { display: none; }
-
+body.v6.sale_summer2021 .responsive_page_template_content { background:none !important; }
+body.v6.sale_summer2021 .home_page_takeover_sizer { display:none !important; }
 
 /* Kuration & Gruppen */
 .lists_more_container .item .overlay { background: transparent !important; }
@@ -342,3 +344,4 @@ div.grouppage_friendsingroup { display: none; }
 a.group_tab { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 a#group_tab_overview.group_tab.active { color: rgb(186, 192, 198) !important; background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 div.grouppage_header { border-bottom: 5px solid rgb(49, 54, 58) !important; }
+body.v6 #curator_popup_body .popup_body.popup_menu { background-color: rgb(53, 62, 71) !important; }
