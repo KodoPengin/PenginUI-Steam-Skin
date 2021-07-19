@@ -2,7 +2,7 @@
 #                                                               #
 #      Additions to "library.css" & "steamui/css"               #
 #      Ergänzungen für die "library.css" & "webkit.css"         #
-#      Stand: 12.01.2021                                        #
+#      Stand: 19.07.2021                                        #
 #                                                               #
 #      Folders:                                                 #
 #      skins/PenginUI/resource/webkit.css                       #
@@ -30,3 +30,6 @@ div.profile_awards { display:none !important;}
 div.profile_badges_badge { visibility:visible !important; margin-top:-40px !important; }
 div.profile_group_links.profile_count_link_preview_ctn.responsive_groupfriends_element { visibility:visible !important; }
 div.profile_friend_links.profile_count_link_preview_ctn.responsive_groupfriends_element { visibility:visible !important; }
+
+/* Webkit.css - Hide curators | Kuratoren ausblenden */
+div.referring_curator_ctn, div.store_capsule_frame.curator_spotlight.no_bg, div.steam_curators_block.block.responsive_apppage_reviewblock, div.steam_curators_ctn.home_ctn { display: none !important; }
