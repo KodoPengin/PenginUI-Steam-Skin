@@ -80,10 +80,10 @@
 		
 		Games							{	text="#steam_menu_view_games"			shellcmd="steam://nav/games" }
 		Divider							{}
-		ActivateRetail					{	text="#Steam_RegisterProductCode"		command="ActivateRetail" }
-		RedeemWalletVoucher				{	text="#Steam_RedeemWalletVoucher"		shellcmd="steam://url/RedeemWalletVoucher" }
-		ManageGuestPasses				{	text="#Steam_ManageGuestPasses"			command="ManageGuestPasses" }
-		AddShortcut						{	text="#Steam_menu_AddShortcut"			shellcmd="steam://AddNonSteamGame" }
+		ActivateRetail			{	text="#Steam_RegisterProductCode"		command="ActivateRetail" }
+		RedeemWalletVoucher	{	text="#Steam_RedeemWalletVoucher"		shellcmd="steam://url/RedeemWalletVoucher" }
+		ManageGuestPasses		{	text="#Steam_ManageGuestPasses"			command="ManageGuestPasses" }
+		AddShortcut					{	text="#Steam_menu_AddShortcut"			shellcmd="steam://AddNonSteamGame" }
 	}
 
 	Window [$OSX]
@@ -111,6 +111,15 @@
 		SteamStatus	{			"text"		"SteamStatus"	"shellcmd"		"steam://openurl/https://steamstat.us/"	}
 		}
 		
+Shop
+	{
+		text="Shop"
+		Specials						{ text="Specials"			shellcmd="steam://openurl/https://store.steampowered.com/search/?category1=998&specials=1"}
+		SpecialsSoftware		{ text="Specials Software"			shellcmd="steam://openurl/https://store.steampowered.com/search/?category1=994,996&specials=1"}
+		Topseller						{ text="Topseller"			shellcmd="steam://openurl/https://store.steampowered.com/search/?category1=998&os=win&specials=1&filter=topsellers"}		
+		WeekLongDeals				{ text="Week Long Deals"			shellcmd="steam://openurl/https://store.steampowered.com/search/?category1=998&specials=1&filter=weeklongdeals"}
+		}
+		
 	Dev&Security
 	{
 		text="Dev & Security"
@@ -120,6 +129,9 @@
 		Divider							{}
 		ServerAdministration{	text="Server Management"	shellcmd="steam://openurl/https://steamcommunity.com/dev/managegameservers" }
 		Divider							{}
+		Devices							{ text="Device Management"	shellcmd="steam://openurl/https://store.steampowered.com/account/managedevices"}
+		FamilyShare					{ text="Family Share"				shellcmd="steam://openurl/https://store.steampowered.com/parental/set"}
+		Divider							{}	
 		APIKey							{ text="API Key"						shellcmd="steam://openurl/https://steamcommunity.com/dev/apikey"}
 		2FA									{ text="2FA Management"			shellcmd="steam://openurl/https://store.steampowered.com/twofactor/manage"}
 	}
