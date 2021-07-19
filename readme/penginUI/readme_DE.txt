@@ -1,8 +1,8 @@
 ####Versionsdetails####
 
 Steam Layout - PenginUI
-Letzte Änderungen: 22.01.2021
-Version: 0.99.8
+Letzte Änderungen: 19.07.2021
+Version: 0.99.9
 
 Steamprofil: https://steamcommunity.com/id/pen-chan/
 Webseite: https://www.gameindustry.eu/
