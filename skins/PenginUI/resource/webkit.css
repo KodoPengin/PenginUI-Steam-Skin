@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.9 - Stand 30.06.2021
+  Template: PenginUI - v0.99.9 - Stand 15.10.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -283,12 +283,13 @@ div.topic_cannotreply_reason.forum_newtopic_box { background-color: rgba( 192, 4
 .forum_comment_author_banned { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
 div.error_ctn { background:none !important; }
-
+.imgWallItem.banned { background-color:#cc0000 !important; opacity;0.7 !important;}
 /* Zeug ohne Kategorie */
 div.market_header, div.page_container.page_container_market { background:none; background-image:none !important; background-color:#161a1f !important; }
 div.partnersaledisplay_SaleOverlayCtn_3GTIc.SaleOverlayCtn { display: none !important; }
 .reward_bg_1, .reward_bg_2, .reward_bg_3, .reward_bg_4, .reward_bg_5, div#faq.rewards_faq_ctn, div.rewards_badge_levelup_ctn.reward_bg_3, div.rewards_profile_tier.reward_bg_4 , div.partnersaledisplay_SaleSection_1cOoC.eventbbcodeparser_SaleSectionCtn_39HWX, div.reward_items_ctn { background: transparent !important; background-color:transparent !important; }
 div.responsive_page_content, body.v6.labs, .trending_reviews_controls_ctn { background:none !important; background-image:none !important; background-color:#161a1f !important; }
+div.profile_header_valve_employee { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 
 /* Marktanpassungen, Inventar etc */
 .market_headertip { border:1px solid #cc0000; background-color:#161a1f; }
