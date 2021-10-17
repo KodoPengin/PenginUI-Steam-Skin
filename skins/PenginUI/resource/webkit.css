@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.9 - Stand 15.10.2021
+  Template: PenginUI - v0.99.9 - Stand 17.10.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -62,7 +62,8 @@ a.store_capsule.daily_deal.ds_flagged.ds_owned.app_impression_tracked, div.disco
 div.discount_block.discount_block_inline, .home_marketing_message, .home_marketing_message:hover { background:none !important; background-image:none !important; background-color:#373e47 !important; }
 a.recent_game_discussion, .discussions_forum_row, .browse_content .recommendation { background-color: rgb(53, 62, 71) !important; }
 div.recommendation_desc:before, div.recommendation_desc:after { display:none;}
-div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4 { color:#acb2b8 !important; }
+div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4, h2.large_title { color:#EBEBEB !important; }
+div.bb_h1, .bb_wysiwyg h1 { margin-bottom: 5px !important; }
 span.updated_app_date, span.rateUpCount, a.bb_link { color:#ebebeb !important; }
 div.app_tag, div.hover_details_block_full.ellipsis { color:#ebebeb !important; background: #161a1f !important; }
 
@@ -126,6 +127,7 @@ div.early_access_announcements { display: none !important; }
 div.labs_title.home_page_content { display: none !important; }
 a.newspage_labsbanner { display: none !important; }
 a.franchise_notice { display: none !important; }
+div.home_hardware_banner.home_page_content { display: none !important; }
 div#game_area_reviews.game_area_description { display: none !important; }
 div.recommended_by_steam_labs_ctn.home_ctn.ir_ctn { display: none !important; }
 div.home_ctn.community_recommendations_by_steam_labs_ctn { display: none !important; }
@@ -255,6 +257,7 @@ div#queue_ignore_menu_arrow.queue_menu_arrow.btn_medium { background: rgba(0, 0,
 .contenthub_page .tabbar_ctn { box-shadow: 0 5px 0 -1px #2b2f34 !important; }
 .tabarea .tab.active { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .tabarea .tab .tab_content:hover { color: rgb(186, 192, 198) !important; background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.discussionSearchTextContainer { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 
 /* Diskussionsbereiche und Warnmeldungen */
 .commentthread_comment.hidden_post { display: none !important; }
@@ -336,6 +339,8 @@ div.react_landing_background {background-image: none !important; background-colo
 div#SaleSection_10548 { display: none; }
 body.v6.sale_summer2021 .responsive_page_template_content { background:none !important; }
 body.v6.sale_summer2021 .home_page_takeover_sizer { display:none !important; }
+div.page_title_area.game_title_area { display:none !important; }
+div#1.sale_page_n_section_block.n_section_1 { background-color:transparent !important; }
 
 /* Kuration & Gruppen */
 .lists_more_container .item .overlay { background: transparent !important; }
