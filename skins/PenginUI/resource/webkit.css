@@ -62,7 +62,7 @@ a.store_capsule.daily_deal.ds_flagged.ds_owned.app_impression_tracked, div.disco
 div.discount_block.discount_block_inline, .home_marketing_message, .home_marketing_message:hover { background:none !important; background-image:none !important; background-color:#373e47 !important; }
 a.recent_game_discussion, .discussions_forum_row, .browse_content .recommendation { background-color: rgb(53, 62, 71) !important; }
 div.recommendation_desc:before, div.recommendation_desc:after { display:none;}
-div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4, h2, h2.large_title { color:#EBEBEB !important; }
+div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4, h1, h2, h2.large_title { color:#EBEBEB !important; }
 div.bb_h1, .bb_wysiwyg h1 { margin-bottom: 5px !important; }
 span.updated_app_date, span.rateUpCount, a.bb_link { color:#ebebeb !important; }
 div.app_tag, div.hover_details_block_full.ellipsis { color:#ebebeb !important; background: #161a1f !important; }
@@ -154,6 +154,17 @@ div#specials_container, div.contenthub_specials_ctn, div.contenthub_spotlight_co
 div.block.responsive_apppage_reviewblock { display: none !important; }
 div.block.responsive_apppage_details_right.heading, p.reason.for, div.similar_recent_apps_container, hr { display:none !important; }
 div.contenthub_featured_item_spotlight { display:none !important; }
+div.game_area_already_owned.page_content { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+
+/* Graphen */
+div#review_histograms_container { box-shadow:none !important; }
+div#review_histograms_container.has_data { background-color:transparent !important; }
+#review_histogram_recent_section { background:transparent !important; box-shadow:none !important; }
+div.user_reviews_summary_bar { border-bottom:unset !important; }
+div#reviews_filter_options.user_reviews_filter_options.flyout, div#reviews_filter_options.user_reviews_filter_options.flyout.graph_collapsed { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.user_reviews_filter_menu:hover { background-color: #353e47 !important; color: wheat !important; }
+.user_reviews_filter_menu:hover .user_reviews_filter_menu_flyout, .user_reviews_filter_menu_flyout:hover { background-color: #353e47 !important; color: white !important; }
+div.filterselect_options.shadow_content, div.filterselect_options.language.shadow_content, div.filterselect_options.user_reviews_rating_filter.shadow_content { background-color:#353e47 !important; }
 
 /* Profilanpassungen und Popups */
 div.profile_page.has_profile_background, body.profile_page, div.profile_page {background-color: black !important;}
