@@ -1,4 +1,4 @@
-Readme für die Del3UA Spywarecleaner Batch - Version 2.74 - von Gameindustry.eu
+Readme für die Del3UA Spywarecleaner Batch - Version 2.75 - von Gameindustry.eu
 
 Inhalt:
 1. Beschreibung
@@ -29,10 +29,11 @@ Um Steam wie gewohnt zu aktualisieren muss die Steam.cfg (temporär) aus dem Ins
 
 
 
------------------ 2. Installation -----------------
+----------------- 2. Installation & Ausführung -----------------
 
-Die Datei "del_u3a_de.bat" wird in das Hauptverzeichnis von Steam oder des angelegten Bibliothekordners kopiert und kann von dort ausgeführt werden. Zum entfernen, die Datei einfach löschen.
+Die Datei "del_u3a_de.bat" wird in das Hauptverzeichnis von Steam oder des angelegten Bibliothekordners kopiert und kann von dort ausgeführt werden. In den Bibliotheksordnern ist keine steam.cfg notwendig und kann gelöscht werden. Die Steam.cfg im Installationsverzeichnis von Steam selbst nur entfernen für Clientupdates.
 
+Werden nach dem Löschen der vorhanden Spywaredateien und Crashlytics neue Spiele mit denselben Diensten installiert, kann die Batch nochmal gestartet werden um auch diese Dateien zu entfernen.
 
 
 ----------------- 3. Dateien -----------------
@@ -84,6 +85,7 @@ UnityCrashHandler32.exe
 UnityCrashHandler64.exe
 
 Mehr Info - 5. Mögliche Probleme
+GameCrashUploader.exe
 UnityEngine.CrashReportingModule.dll
 UnityEngine.CrashReportingModule.dll.mdb
 UnityEngine.PerformanceReportingModule.dll
@@ -96,7 +98,8 @@ UnityEngine.SpatialTracking.dll
 
 ----------------- 4. Letzte Änderungen -----------------
 
-- Readme Dateien umformatiert und erg„nzt, Unitydateien deaktiviert
+- Amazon's GameCrashUploader unter mögliche Probleme hinzugefügt
+- Readme Dateien umformatiert und ergänzt, Unitydateien deaktiviert
 - UnityEngine.UnityConnectModule.dll entfernt
 - UnrealCEFSubProcess.exe hinzugefügt
 - Abbey Games Crashreporter hinzugefügt
@@ -127,15 +130,17 @@ Die Dateien Unity.MemoryProfiler.dll, UnityEngine.CrashReportingModule.dll, Unit
 
 Eine bessere Lösung gibt es derzeit nicht. Die UnityCrashhandler können ohne Bedenken vom eigenen System entfernt werden.
 
-
+Für die GameCrashUploader.exe reicht es aus die Datei zu löschen und imselben Verzeichnis eine Textdatei mit dem Namen GameCrashUploader zu erstellen und als Exe zu speichern. Die Datei hat dann 0kb Größe und das Produkt läuft dennoch.
+Da die Dateigröße nicht überprüft wird, reicht es somit aus, dem jeweiligem Spiel (New World) etwas vorzugaukeln.
 
 ----------------- 6. Quellenangabe, Hashes -----------------
 
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.74
-Datum: 30.05.2021
+Version: 2.75
+Datum: 15.10.2021
+Readme: 15.10.2021
 
 Datei/en:
 del_u3a_de.bat
-Hash: 18266b36566536e3822ea973ae4bada6456bc247f8ddad5a97ea41458a1f0f9d
+Hash: 508cb61c0edc0d935de3081af5a5e25882a986abc949900dee9df394ef779bf9

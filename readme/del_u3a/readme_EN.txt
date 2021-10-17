@@ -1,4 +1,4 @@
-Readme für die Del3UA Spywarecleaner Batch - Version 2.74 - von Gameindustry.eu
+Readme für die Del3UA Spywarecleaner Batch - Version 2.75 - von Gameindustry.eu
 
 Inhalt:
 1. Description
@@ -26,10 +26,11 @@ Users who use their own layout modifications for Steam probably know this proced
 
 
 
------------------ 2. Installation -----------------
+----------------- 2. Installation & execution -----------------
 
-Copy the file del_u3a_en.bat into your Steam installation folder and/or additional library folder and run the file. To uninstall, simply delete the batch.
+Copy the file del_u3a_en.bat into your Steam installation folder and/or additional library folder and run the file. In the library folders, steam.cfg is not necessary and can be deleted. Remove the Steam.cfg in the installation directory of Steam itself only for client updates.
 
+If new games with the same services are installed after deleting the existing spyware files and crashlytics, the batch can be run again to remove these files as well.
 
 
 ----------------- 3. Deleted files -----------------
@@ -77,6 +78,7 @@ CrashReportClient.pdb
 CrashReporter.resources.dll
 REDEngineErrorReporter.exe
 abbey_crash_reporter.exe
+GameCrashUploader.exe
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe
 
@@ -93,6 +95,7 @@ UnityEngine.SpatialTracking.dll
 
 ----------------- 4. Latest changes -----------------
 
+- Added Amazon GameCrashUploader workaround, see Problems
 - Disabled some Unityfiles and rewritten the readmes
 - Deleted UnityEngine.UnityConnectModule.dll
 - Added UnrealCEFSubProcess.exe
@@ -126,16 +129,18 @@ The files Unity.MemoryProfiler.dll, UnityEngine.CrashReportingModule.dll, UnityE
 
 There is currently no better solution. UnityCrashhandler can be removed from your system without hesitation.
 
-
+For GameCrashUploader.exe it is sufficient to delete the file and create a text file named GameCrashUploader in the same directory and save it as exe. The file then has 0kb size and the product still runs.
+Since the file size is not checked, it is thus sufficient to fool the respective game (New World).
 
 ----------------- 6. Source, Hashes -----------------
 
 
 Source: https://gameindustry.eu/
 Author: Pengin
-Version: 2.74
-Date: 30.05.2021
+Version: 2.75
+Date: 15.10.2021
+Readme: 15.10.2021
 
 File/s:
 del_u3a_en.bat
-Hash: 9194063f4c5bdb3da8d96f7f41ac223cdab693d8d009959b3838c6478c46a8b5
+Hash: c661219b6b100ed8f8004818d51ec1a43379201fa90ebe0e0564a2a9cc84448c
