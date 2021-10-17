@@ -62,7 +62,7 @@ a.store_capsule.daily_deal.ds_flagged.ds_owned.app_impression_tracked, div.disco
 div.discount_block.discount_block_inline, .home_marketing_message, .home_marketing_message:hover { background:none !important; background-image:none !important; background-color:#373e47 !important; }
 a.recent_game_discussion, .discussions_forum_row, .browse_content .recommendation { background-color: rgb(53, 62, 71) !important; }
 div.recommendation_desc:before, div.recommendation_desc:after { display:none;}
-div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4, h2.large_title { color:#EBEBEB !important; }
+div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4, h2, h2.large_title { color:#EBEBEB !important; }
 div.bb_h1, .bb_wysiwyg h1 { margin-bottom: 5px !important; }
 span.updated_app_date, span.rateUpCount, a.bb_link { color:#ebebeb !important; }
 div.app_tag, div.hover_details_block_full.ellipsis { color:#ebebeb !important; background: #161a1f !important; }
@@ -221,7 +221,7 @@ div#modalContent.modal_frame, div#modalContentTitleBar, div.screenshot_popup_mod
 div.showcase_content_bg { margin-bottom: 0px !important; }
 div.showcase_Stats_row.showcase_content_bg, div.showcase_content_bg.showcase_stats_row, div.showcase_content_bg { border-radius:unset !important; }
 
-/* Global: Buttonhorror, Dropdowns & Tabs >.< */
+/* Global: Buttonhorror, Dropdowns, Tabs und sonstige Eingabefelder >.< */
 .btn_wrapper { margin-right: 4px !important; }
 div.btnv6_blue_hoverfade.btn_medium.queue_btn_inactive { color: rgb(186, 192, 198) !important; }
 a#VoteUpBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, a#VoteDownBtn.btnv6_blue_hoverfade.btn_medium.ico_hover, div#VoteUpDownBtnCtn.controlblock.review_create_vote_controls { color: rgb(186, 192, 198) !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5); border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
@@ -258,6 +258,7 @@ div#queue_ignore_menu_arrow.queue_menu_arrow.btn_medium { background: rgba(0, 0,
 .tabarea .tab.active { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 .tabarea .tab .tab_content:hover { color: rgb(186, 192, 198) !important; background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 div.discussionSearchTextContainer { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+input[type=text], input[type=password], input[type=number], select { color: #DFDFDF !important; }
 
 /* Diskussionsbereiche und Warnmeldungen */
 .commentthread_comment.hidden_post { display: none !important; }
@@ -276,13 +277,15 @@ div.forum_topic_tooltip { border: 1px solid #4a545e !important; background: #161
 div.bb_code, blockquote.bb_blockquote, .forumtopic_answer .answer_quote, blockquote.bb_blockquote.with_author { border-width: 1px solid; border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; opacity: 0.7; color: #acb2b8; }
 div.forum_topic_needs_content_check_notice.forum_newtopic_box img {display: none !important; }
 div.mature_content_notice { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
+span.forum_topic_label.sticky_label { color: yellow !important; }
+div.forum_topic_pinned_notice.forum_newtopic_box { padding: 10px !important; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 
 /* Warnmeldungen & Fehler */
 div.DRM_notice, .ack_message_header, .support_message_header { background: none; background-color: rgba(192,45,46) !important; color: white !important; }
 div.DRM_notice a:hover { color:white; }
 div.ack_message, div.support_message { border:3px solid #cc0000; }
 div#error_display.workshop_paymentinfo_validation_error, div.incompatibleNotification, div.forum_topic_needs_content_check_notice.forum_newtopic_box, div#bannedNotification.bannedNotification, div#incompatibleNotification.incompatibleNotification, div#visibilityNotificationPrivate.visibilityNotification, div#visibilityNotificationFriendsOnly.visibilityNotification, div#visibilityNotificationUnlisted.visibilityNotification { background-color: rgba( 192, 45, 46) !important; color: white !important; }
-div.topic_cannotreply_reason.forum_newtopic_box { background-color: rgba( 192, 45, 46) !important; color: white !important; }
+div.topic_cannotReply_reason.forum_newtopic_box { background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forum_comment_author_banned { padding: 3px; border-radius: 2px; background-color: rgba( 192, 45, 46) !important; color: white !important; }
 .forumtopic_comments .commentthread_comment_text .content_check_warning, .forumtopic_comments .commentthread_comment_text .needs_content_check { color: rgb(172, 178, 184); border-color: rgb(74, 84, 94) !important; background: rgb(22, 26, 31) !important; border: 1px solid #56707f; width: 480px; padding: 12px; text-align: center; border-radius: 3px; }
 div.error_ctn { background:none !important; }
