@@ -64,6 +64,7 @@ a.recent_game_discussion, .discussions_forum_row, .browse_content .recommendatio
 div.recommendation_desc:before, div.recommendation_desc:after { display:none;}
 div.bb_h1, div.bb_h2, div.bb_h3, div.bb_h4, h1, h2, h2.large_title { color:#EBEBEB !important; }
 div.bb_h1, .bb_wysiwyg h1 { margin-bottom: 5px !important; }
+div.bb_table div.bb_table_td { border: none !important; }
 span.updated_app_date, span.rateUpCount, a.bb_link { color:#ebebeb !important; }
 div.app_tag, div.hover_details_block_full.ellipsis { color:#ebebeb !important; background: #161a1f !important; }
 
