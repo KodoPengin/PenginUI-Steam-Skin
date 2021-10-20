@@ -22,8 +22,8 @@ Readme files attached in german and english language
 
 # Screenshot/s:
 <p float="left">
-<img src="https://www.gameindustry.eu/images/git/penginui_oct_2021.jpg" alt="Overview" width="400" height="363">
-<img src="https://www.gameindustry.eu/images/git/overhaul.jpg" alt="Less advertising example" width="400" height="363">
+<img src="https://www.gameindustry.eu/images/git/penginui_oct_2021.webp" alt="Overview" width="400" height="363">
+<img src="https://www.gameindustry.eu/images/git/overhaul.webp" alt="Less advertising example" width="400" height="363">
 </p>
 
 # Copyright, Support & License
