@@ -20,12 +20,10 @@ It's my own <b>WIP project</b> and only updated irregularly. Deal with it ;]
 
 Readme files attached in german and english language
 
-# Screenshots:
+# Screenshot/s:
 <p float="left">
-<img src="https://www.gameindustry.eu/images/git/main.webp" alt="Main page" width="400" height="363">
-<img src="https://www.gameindustry.eu/images/git/discussion.webp" alt="Discussions" width="400" height="363">
-<img src="https://www.gameindustry.eu/images/git/library.webp" alt="Library" width="400" height="363">
-<img src="https://www.gameindustry.eu/images/git/profile.webp" alt="Profile" width="400" height="363">
+<img src="https://www.gameindustry.eu/images/git/penginui_oct_2021.jpg" alt="Overview" width="400" height="363">
+<img src="https://www.gameindustry.eu/images/git/overhaul.jpg" alt="Less advertising example" width="400" height="363">
 </p>
 
 # Copyright, Support & License
