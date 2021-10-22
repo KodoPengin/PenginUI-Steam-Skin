@@ -116,6 +116,13 @@ div#TopBarNavigation.top_navigation_bar, div.group_link { background-image: none
 div#personalAchieveTabOn.tab { background:transparent !important; }
 .tabOff, .tabOn { background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
 div#subtabs { background-image: none !important;  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.commentsTab:hover  { color: wheat !important; }
+.commentsTab, a.commentsTab { background-image: none !important;  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+span#PublicCommentsTab.commentsTab.active { color: wheat !important; background-image: none !important;  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+.commentsTab, a.commentsTab { color: unset !important; }
+span#DeveloperCommentsCommentsTab.commentsTab.active { color: white !important; background-image: none !important;  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div#commentsTabFade { background-image: none !important;  background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+div.subSectionTitle { color:white !important; margin-bottom: 0px !important; }
 
 /* Remoteplay */
 .rpt_anywhere_header_left, .remoteplay_howto_section, .rpt_anywhere_how_ctn, .rpt_section1_container, .rpt_section2_container, .rpt_section3_container, .rpt_section4_container { background:none !important; background-color: none !important; }
