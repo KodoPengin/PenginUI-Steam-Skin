@@ -377,8 +377,9 @@ div.page_title_area.game_title_area { display:none !important; }
 div#1.sale_page_n_section_block.n_section_1 { background-color:transparent !important; }
 
 /* Event Okt 2021 */
+/* Crossover für normale Events (Angebote) und Sonderevents (Navigation) div.partnereventshared_SaleSectionContainer_3gb3J */
 video.partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_fullscreen_bg_video_3BU-y { display:none !important; animation-play-state: paused !important; }
-div.partnereventshared_SaleSectionContainer_3gb3J, div#SaleSection_83475.SaleSectionCtn.text_section, div#SaleSection_73545.SaleSectionCtn.broadcast { display:none !important; }
+div#SaleSection_83475.SaleSectionCtn.text_section, div#SaleSection_73545.SaleSectionCtn.broadcast { display:none !important; }
 div#SaleSection_36331.SaleSectionCtn.event_schedule { display:none !important; }
 div.partnersaledisplay_SaleSectionTableListContainer_2VZtq.SaleSectionTabListContainer_2VZtq { display:none !important; }
 div.partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD { display:none !important; }
