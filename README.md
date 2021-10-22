@@ -19,6 +19,7 @@ It's my own <b>WIP project</b> and only updated irregularly. Deal with it ;]
 - Restart the client
 
 Readme files attached in german and english language
+Questions? Alternative Downloads? See Support section
 
 # Screenshot/s:
 <p float="left">
