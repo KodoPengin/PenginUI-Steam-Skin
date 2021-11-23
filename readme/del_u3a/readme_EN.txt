@@ -28,7 +28,8 @@ Users who use their own layout modifications for Steam probably know this proced
 
 ----------------- 2. Installation & execution -----------------
 
-Copy the file del_u3a_en.bat into your Steam installation folder and/or additional library folder and run the file. In the library folders, steam.cfg is not necessary and can be deleted. Remove the Steam.cfg in the installation directory of Steam itself only for client updates.
+Copy the file del_u3a_en.bat into your Steam installation folder and/or additional library folder and run the file. In the library folders, steam.cfg is not necessary and can be deleted.
+Remove the Steam.cfg in the installation directory of Steam itself only for client updates.
 
 If new games with the same services are installed after deleting the existing spyware files and crashlytics, the batch can be run again to remove these files as well.
 
@@ -78,11 +79,13 @@ CrashReportClient.pdb
 CrashReporter.resources.dll
 REDEngineErrorReporter.exe
 abbey_crash_reporter.exe
-GameCrashUploader.exe
+crashmsg.exe
+output_log.txt
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe
 
 See section - 5. Problems
+GameCrashUploader.exe (Manually delete GameCrashUploader.exe and instead create a dummy file with the same name and 0kb size)
 UnityEngine.CrashReportingModule.dll
 UnityEngine.CrashReportingModule.dll.mdb
 UnityEngine.PerformanceReportingModule.dll
@@ -95,6 +98,8 @@ UnityEngine.SpatialTracking.dll
 
 ----------------- 4. Latest changes -----------------
 
+- Added output_log.txt (crossover), Crashdump fix
+- Added Apex Legend crashmsg.exe
 - Added Amazon GameCrashUploader workaround, see Problems
 - Disabled some Unityfiles and rewritten the readmes
 - Deleted UnityEngine.UnityConnectModule.dll
@@ -138,9 +143,9 @@ Since the file size is not checked, it is thus sufficient to fool the respective
 Source: https://gameindustry.eu/
 Author: Pengin
 Version: 2.75
-Date: 15.10.2021
-Readme: 15.10.2021
+Date: 22.11.2021
+Readme: 22.11.2021
 
 File/s:
 del_u3a_en.bat
-Hash: c661219b6b100ed8f8004818d51ec1a43379201fa90ebe0e0564a2a9cc84448c
+Hash: 380d7fe0f5841d2ebddb7310f41bea9954e727acdbd470ba8a8c8c59f5b5c2ca
