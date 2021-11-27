@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.9 - Stand 22.10.2021
+  Template: PenginUI - v0.99.9 - Stand 27.11.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -382,6 +382,12 @@ div#SaleSection_83475.SaleSectionCtn.text_section, div#SaleSection_73545.SaleSec
 div#SaleSection_36331.SaleSectionCtn.event_schedule { display:none !important; }
 div.partnersaledisplay_SaleSectionTableListContainer_2VZtq.SaleSectionTabListContainer_2VZtq { display:none !important; }
 div.partnersaledisplay_SaleSection_1cOoC.partnersaledisplay_CarouselDisplay_mntHD { display:none !important; }
+
+/* Event Nov 2021 */
+body.v6.sale_autumn2021 .home_page_takeover_sizer { display:none !important; }
+body.v6.steamaward.steamaward_nominations_faq.steamaward_nominations_modal { background: none !important; border-bottom:unset !important; background-color:transparent !important;  }
+div.nominations_header_ctn { background: none !important; background-color:transparent !important; }
+div.faq_section.teal, div.faq_section.darkteal { background: none !important; border-top:unset !important; }
 
 /* Kuration & Gruppen */
 .lists_more_container .item .overlay { background: transparent !important; }
