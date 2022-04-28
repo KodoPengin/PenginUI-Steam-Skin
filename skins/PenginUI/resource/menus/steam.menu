@@ -140,8 +140,8 @@ Shop
 		{
 		text="GameIndustry.eu"
 		Hosts						{ text="hosts Download"		shellcmd="steam://openurl/https://hosts.gameindustry.eu/"}
-		Produktsuche		{ text="Search"						shellcmd="steam://openurl/https://www.gameindustry.eu/search/"}
-		Reviews					{ text="Reviews"					shellcmd="steam://openurl/https://www.gameindustry.eu/reviews/"}
+		Produktsuche		{ text="Website"						shellcmd="steam://openurl/https://www.gameindustry.eu/"}
+		Reviews					{ text="Reviews"					shellcmd="steam://openurl/https://www.gameindustry.eu/de/reviews/"}
 		Divider					{}
 		Curation				{ text="Curation"					shellcmd="steam://openurl/https://store.steampowered.com/curator/29092638/"}
 		Steamgruppe			{ text="Steamgroup"				shellcmd="steam://openurl/https://steamcommunity.com/groups/penguindome"}
