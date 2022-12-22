@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.9 - Stand 09.06.2022
+  Template: PenginUI - v0.99.9 - Stand 22.12.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -152,6 +152,7 @@ a#SharePopupLink_Facebook.btn_grey_black.btn_medium { display: none !important; 
 div.miniprofile_nameplatecontainer {background: radial-gradient( ellipse farthest-corner at 20% 30%, rgb( 76, 80, 91 ) 0%, rgb( 52, 55, 63 ) 50%, rgb( 40, 44, 50 ) 100% ) !important;}
 video.miniprofile_nameplate {display:none !important;}
 div.profile_avatar_frame, div.playersection_avatar_frame {display:none !important;}
+div.home_pagecontent_ctn.split_banner_ctn {display:none !important;}
 
 /* Produktseiten */
 div.referring_curator_ctn, div.store_capsule_frame.curator_spotlight.no_bg, div.steam_curators_block.block.responsive_apppage_reviewblock, div.steam_curators_ctn.home_ctn { display: none !important; }
@@ -384,6 +385,7 @@ body.v6.sale_summer2021 .responsive_page_template_content { background:none !imp
 body.v6.sale_summer2021 .home_page_takeover_sizer { display:none !important; }
 div.page_title_area.game_title_area { display:none !important; }
 div#1.sale_page_n_section_block.n_section_1 { background-color:transparent !important; }
+body.v6.sale_winter2022 .home_page_takeover_sizer { display:none !important; }
 
 /* Event Okt 2021 */
 video.partnersaledisplay_SaleBackground_2N8Se.partnersaledisplay_fullscreen_bg_video_3BU-y { display:none !important; animation-play-state: paused !important; }
@@ -409,3 +411,9 @@ div.grouppage_header { border-bottom: 5px solid rgb(49, 54, 58) !important; }
 body.v6 #curator_popup_body .popup_body.popup_menu { background-color: rgb(53, 62, 71) !important; }
 div.grouppage_join_area { background-color:transparent !important; }
 div.joinchat_button { background-image: none !important; background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(49, 54, 58, 1), rgba(43, 46, 52, 1)) repeat scroll 0 0 !important; border: 1px solid transparent !important; border-image: linear-gradient(to bottom, #3a4043 0%, #25282d 100%) !important; border-image-slice: 1 !important; }
+
+/* Selbstbeweihr&auml;ucherungsaktionen und A/B Tests
+Anmerkung: Deutsche Umlaute sprengen das Design */
+div.steamawards_header_bg { display:none !important; }
+body.steamawards_page, .steamawards_page { background: none !important;}
+div.vote_category_ctn, div.vote_category_72, div.vote_category_73, div.vote_category_74, div.vote_category_75, div.vote_category_76, div.vote_category_77, div.vote_category_78, div.vote_category_79, div.vote_category_80, div.vote_category_81, div.vote_category_82, body.v6.steamawards .faq_section { background: none !important;}
