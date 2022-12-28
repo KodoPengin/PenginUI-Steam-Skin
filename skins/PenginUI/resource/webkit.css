@@ -37,7 +37,7 @@
 
 /*
 	Steamclient - Webkit Anpassungen
-  Template: PenginUI - v0.99.9 - Stand 22.12.2021
+  Template: PenginUI - v0.99.9 - Stand 28.12.2021
   (c) Copyright - www.gameindustry.eu
 */
 
@@ -56,6 +56,8 @@ div.grouppage_friendsingroup { background-color: transparent; }
 div#sale_root.react_landing_background, div.sale_page_background_image_color { display: hidden; background-image:none !important; background-color:#161a1f; }
 div.arrow.left, div.arrow.right { background:none !important; }
 div#footer_spacer, div#footer, div#footer.small_footer { display: none; }
+div#sale_discounts_area.home_discounts_ctn { height:unset !imporant;}
+div#image_group_scroll_sale_popular_new, div.home_newupcoming_ctn.home_pagecontent_ctn { display: none; }
 div.home_ctn.home_content_ctn, div#content_none.page_content_ctn.dark, div#content_callout.page_content_ctn.dark, div.home_ctn.home_content_ctn div#content_more div.page_content_ctn { display: none !important; }
 div.discovery_queue_ctn.home_ctn { background-color:#161a1f; }
 a.store_capsule.daily_deal.ds_flagged.ds_owned.app_impression_tracked, div.discount_block.no_discount.discount_block_inline, div.recently_updated_desc, div.recently_updated_announcement_link, div.recommended_creators_container, div.friends_container, div.spotlight_content, .contenthub_featured_item_spotlight { background:none; background-image:none !important; background-color:#353e47 !important; border-top:none !important; }
