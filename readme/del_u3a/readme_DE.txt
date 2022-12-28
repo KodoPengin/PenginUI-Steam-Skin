@@ -1,4 +1,4 @@
-Readme für die Del3UA Spywarecleaner Batch - Version 2.75 - von Gameindustry.eu
+Readme für die Del3UA Spywarecleaner Batch - Version 2.76 - von Gameindustry.eu
 
 Inhalt:
 1. Beschreibung
@@ -45,6 +45,7 @@ Folgende Dateien und Ordner werden mit dieser Batch gelöscht:
 %username%\Appdata\Local\CrashDumps\*.*
 %USERPROFILE%\AppData\LocalLow\Unity.
 %USERPROFILE%\AppData\LocalLow\*.log
+%USERPROFILE%\AppData\Local\T2GP Launcher\app-1.0.4.2070\crashagent64.exe
 
 - Steam
 bin\cef\cef.win7\*.*
@@ -84,6 +85,10 @@ REDEngineErrorReporter.exe
 abbey_crash_reporter.exe
 crashmsg.exe
 output_log.txt
+telemetry64.dll
+BsSndRpt.exe
+BugSplatRc.dll
+BsUnityCrashHandler.exe
 UnityCrashHandler32.exe
 UnityCrashHandler64.exe
 
@@ -101,6 +106,9 @@ UnityEngine.SpatialTracking.dll
 
 ----------------- 4. Letzte Änderungen -----------------
 
+- Korrekturen, leere Ordner löschen und neue Crashlytics hinzugefügt
+- Activision DLogUploader.exe
+- Mafia 3 telemetry.dll und crashagent64.exe
 - output_log.txt (übergreifend), Crashdump fix
 - Apex Legend crashmsg.exe hinzugefügt
 - Amazon's GameCrashUploader unter mögliche Probleme hinzugefügt
@@ -142,10 +150,10 @@ Da die Dateigröße nicht überprüft wird, reicht es somit aus, dem jeweiligem 
 
 Quelle: https://gameindustry.eu/
 Author: Pengin
-Version: 2.75
-Datum: 22.11.2021
-Readme: 22.11.2021
+Version: 2.76
+Datum: 28.12.2022
 
 Datei/en:
 del_u3a_de.bat
-Hash: 2f8cd2d306a992df0795d449cd59f00ee857fff453eee5133c00cb7a2b2a9f43
+Hash: 47f3ab27f7914d601e34a7970f650544356b4792f1e1ba655b5e57202ed30064
+CRC32: 481264d1
