@@ -23,8 +23,7 @@ Questions? Alternative Downloads? See Support section
 
 # Screenshot/s:
 <p float="left">
-<img src="https://www.gameindustry.eu/images/git/penginui_oct_2021.webp" alt="Overview" width="400" height="363">
-<img src="https://www.gameindustry.eu/images/git/overhaul.webp" alt="Less advertising example" width="400" height="363">
+<img src="https://www.gameindustry.eu/images/git/Steamlayout.webp" alt="Overview" width="400" height="363">
 </p>
 
 # Copyright, Support & License
